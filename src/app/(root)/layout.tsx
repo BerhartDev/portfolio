@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { routing } from "@/i18n/routing";
+import { mono, sans } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/site";
+import { themeScript } from "@/lib/theme-script";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -14,8 +17,9 @@ const redirectScript = `(function(){var L=${JSON.stringify(routing.locales)},s;t
 
 export default function RootRedirectLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang={routing.defaultLocale}>
+    <html lang={routing.defaultLocale} className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: redirectScript }} />
         <noscript>
           <meta httpEquiv="refresh" content={`0; url=/${routing.defaultLocale}/`} />
