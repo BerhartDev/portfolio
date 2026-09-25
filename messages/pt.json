@@ -5,5 +5,156 @@
   },
   "root": {
     "continue": "Continuar em português"
+  },
+  "common": {
+    "missing": "[PREENCHER]"
+  },
+  "nav": {
+    "skip": "Pular para o conteúdo",
+    "label": "Seções",
+    "language": "Idioma",
+    "theme": "Escuro"
+  },
+  "localeNames": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "name": "Bernardo Knoblauch",
+    "role": "Desenvolvedor full stack no Rio de Janeiro. Node.js e TypeScript no back, React e Next.js no front.",
+    "lead": "Vim de redes e infraestrutura, migrei para o desenvolvimento e hoje sustento em produção um portal de alto tráfego.",
+    "sub": "Penso como quem já foi acordado de madrugada por servidor caído."
+  },
+  "projects": {
+    "title": "Projetos",
+    "labels": {
+      "context": "Contexto",
+      "problem": "Problema",
+      "work": "O que fiz e por quê",
+      "result": "Resultado"
+    },
+    "items": {
+      "lance": {
+        "name": "Lance!",
+        "tag": "Full-Stack II · 2025–atual",
+        "summary": "Sustentação de um portal esportivo de alto tráfego.",
+        "context": "Portal esportivo de alto tráfego. Front em Next.js, conteúdo em WordPress headless, infraestrutura em AWS e Cloudflare.",
+        "problem": "[PREENCHER]",
+        "work": "Trabalho na sustentação: Core Web Vitals, SEO técnico, observabilidade, resposta a incidentes com análise de causa raiz e CI/CD com rollback.",
+        "result": "[PREENCHER]"
+      },
+      "autoavaliar": {
+        "name": "Auto Avaliar",
+        "tag": "Full-Stack II · 2022–2024",
+        "summary": "Migração de um legado PHP para Node e React na GCP.",
+        "context": "Plataforma com legado em PHP, em migração para Node e React na GCP.",
+        "problem": "[PREENCHER]",
+        "work": "Liderei tecnicamente a migração com strangler pattern, substituindo o legado por partes. No caminho: APIs REST e GraphQL, filas com DLQ, JWT e OAuth2, cache multinível, circuit breakers, SLOs e runbooks.",
+        "result": "[PREENCHER]"
+      },
+      "vamosmarcar": {
+        "name": "VamosMarcar",
+        "tag": "Produto próprio · SaaS",
+        "summary": "Agendamento para barbearias e salões.",
+        "context": "Meu SaaS de agendamento para barbearias e salões.",
+        "problem": "[PREENCHER]",
+        "work": "Cada negócio tem um link público de agendamento. O pedido entra como pendente e o dono confirma no painel. A agenda aceita bloqueios. As mensagens de WhatsApp saem com envio manual, por decisão consciente: [PREENCHER]",
+        "result": "Stack e números: [PREENCHER]"
+      },
+      "bekno": {
+        "name": "BEKNO",
+        "tag": "Empresa própria",
+        "summary": "Sites para pequenos negócios.",
+        "context": "Minha empresa de sites para pequenos negócios.",
+        "problem": "[PREENCHER]",
+        "work": "[PREENCHER]",
+        "result": "[PREENCHER]"
+      }
+    }
+  },
+  "experience": {
+    "title": "Trajetória",
+    "items": {
+      "lance": {
+        "company": "Lance!",
+        "role": "Full-Stack II",
+        "when": "2025–atual",
+        "summary": "Sustentação de portal esportivo de alto tráfego: performance, SEO técnico, observabilidade, incidentes e deploys com rollback."
+      },
+      "auberge": {
+        "company": "Friendly Auberge",
+        "role": "Responsável de TI",
+        "when": "2024–2025 · Toulouse, França",
+        "summary": "Toda a TI de uma auberge com cerca de 30 quartos e restaurante: rede e VLANs, PMS, POS, CFTV, backups e o site em WordPress."
+      },
+      "autoavaliar": {
+        "company": "Auto Avaliar",
+        "role": "Full-Stack II",
+        "when": "2022–2024",
+        "summary": "Liderança técnica da migração do legado PHP para Node e React na GCP."
+      },
+      "jerimum": {
+        "company": "Jerimum Produções",
+        "role": "Gestor de TI e Dev",
+        "when": "2021",
+        "summary": "Estruturei o setor de TI do zero com stack open-source."
+      },
+      "cim3": {
+        "company": "CIM3 Comunicações",
+        "role": "Suporte de TI e Back-End",
+        "when": "2020–2021",
+        "summary": "[PREENCHER]"
+      },
+      "iff": {
+        "company": "IFF",
+        "role": "Assistente de TI",
+        "when": "2018",
+        "summary": "[PREENCHER]"
+      }
+    },
+    "educationTitle": "Formação",
+    "education": {
+      "estacio": {
+        "course": "Tecnólogo em Defesa Cibernética e Perícia Forense",
+        "school": "Estácio"
+      },
+      "iff": {
+        "course": "Técnico em Eletromecânica",
+        "school": "IFF"
+      }
+    },
+    "languagesTitle": "Idiomas",
+    "languages": {
+      "pt": { "name": "Português", "level": "nativo" },
+      "en": { "name": "Inglês", "level": "fluente" },
+      "fr": { "name": "Francês", "level": "intermediário" }
+    }
+  },
+  "stack": {
+    "title": "Stack",
+    "groups": {
+      "frontend": { "name": "Front-end", "items": "React, Next.js, TypeScript, Core Web Vitals, SEO técnico" },
+      "backend": { "name": "Back-end", "items": "Node.js, TypeScript, REST, GraphQL, filas e DLQ, WordPress headless" },
+      "cloud": { "name": "Infra e cloud", "items": "AWS, GCP, Cloudflare, CI/CD com rollback, redes e VLANs, backups" },
+      "reliability": { "name": "Confiabilidade", "items": "Observabilidade, SLOs, runbooks, circuit breakers, cache multinível, análise de causa raiz" },
+      "security": { "name": "Segurança", "items": "JWT, OAuth2, defesa cibernética, perícia forense" }
+    }
+  },
+  "now": {
+    "title": "Agora",
+    "body": "[PREENCHER]"
+  },
+  "contact": {
+    "title": "Contato",
+    "lead": "Sem formulário. Escreva direto ou me chame no LinkedIn.",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "copyright": "© {year} Bernardo Knoblauch",
+    "note": "Site estático, sem rastreamento."
   }
 }

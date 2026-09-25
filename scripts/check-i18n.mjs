@@ -15,7 +15,8 @@ const FORBIDDEN = [
   /algo incr[ií]vel/i, /algo incre[ií]ble/i, /something amazing/i, /quelque chose d['’]incroyable/i,
   /ol[áa], eu sou/i, /hola, soy/i, /\bhi, i['’]m\b/i, /bonjour, je suis/i,
 ];
-const EMOJI = /\p{Extended_Pictographic}/u;
+// ©, ® e ™ são "pictográficos" no Unicode, mas não são emoji.
+const EMOJI = /(?![©®™])\p{Extended_Pictographic}/u;
 
 function flatten(obj, prefix = "") {
   const out = {};

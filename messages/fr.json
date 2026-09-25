@@ -5,5 +5,156 @@
   },
   "root": {
     "continue": "Continuer en français"
+  },
+  "common": {
+    "missing": "[PREENCHER]"
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "label": "Sections",
+    "language": "Langue",
+    "theme": "Sombre"
+  },
+  "localeNames": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "name": "Bernardo Knoblauch",
+    "role": "Développeur full stack à Rio de Janeiro. Node.js et TypeScript côté back, React et Next.js côté front.",
+    "lead": "Je viens des réseaux et de l’infrastructure. Je suis passé au développement et, aujourd’hui, je maintiens en production un portail à fort trafic.",
+    "sub": "Je raisonne comme quelqu’un qu’un serveur en panne a déjà réveillé en pleine nuit."
+  },
+  "projects": {
+    "title": "Projets",
+    "labels": {
+      "context": "Contexte",
+      "problem": "Problème",
+      "work": "Ce que j’ai fait et pourquoi",
+      "result": "Résultat"
+    },
+    "items": {
+      "lance": {
+        "name": "Lance!",
+        "tag": "Full-Stack II · depuis 2025",
+        "summary": "Maintien en production d’un portail sportif à fort trafic.",
+        "context": "Portail sportif à fort trafic. Front en Next.js, contenu dans un WordPress headless, infrastructure sur AWS et Cloudflare.",
+        "problem": "[PREENCHER]",
+        "work": "Je travaille sur le maintien en conditions opérationnelles : Core Web Vitals, SEO technique, observabilité, gestion des incidents avec analyse des causes profondes, CI/CD avec rollback.",
+        "result": "[PREENCHER]"
+      },
+      "autoavaliar": {
+        "name": "Auto Avaliar",
+        "tag": "Full-Stack II · 2022–2024",
+        "summary": "Migration d’un existant PHP vers Node et React sur GCP.",
+        "context": "Une plateforme en PHP legacy, en cours de migration vers Node et React sur GCP.",
+        "problem": "[PREENCHER]",
+        "work": "J’ai assuré le lead technique de la migration avec le strangler pattern, en remplaçant l’existant brique par brique. En chemin : API REST et GraphQL, files avec DLQ, JWT et OAuth2, cache multiniveau, circuit breakers, SLO et runbooks.",
+        "result": "[PREENCHER]"
+      },
+      "vamosmarcar": {
+        "name": "VamosMarcar",
+        "tag": "Produit personnel · SaaS",
+        "summary": "Prise de rendez-vous pour barbiers et salons de coiffure.",
+        "context": "Mon SaaS de prise de rendez-vous pour barbiers et salons de coiffure.",
+        "problem": "[PREENCHER]",
+        "work": "Chaque commerce dispose d’un lien public de réservation. Les demandes arrivent en attente et le gérant les confirme depuis son tableau de bord. L’agenda accepte des créneaux bloqués. Les messages WhatsApp partent à la main, par choix délibéré : [PREENCHER]",
+        "result": "Stack et chiffres : [PREENCHER]"
+      },
+      "bekno": {
+        "name": "BEKNO",
+        "tag": "Mon entreprise",
+        "summary": "Sites web pour petits commerces.",
+        "context": "Mon entreprise qui crée des sites pour les petits commerces.",
+        "problem": "[PREENCHER]",
+        "work": "[PREENCHER]",
+        "result": "[PREENCHER]"
+      }
+    }
+  },
+  "experience": {
+    "title": "Parcours",
+    "items": {
+      "lance": {
+        "company": "Lance!",
+        "role": "Full-Stack II",
+        "when": "depuis 2025",
+        "summary": "Maintien en production d’un portail sportif à fort trafic : performance, SEO technique, observabilité, incidents et déploiements avec rollback."
+      },
+      "auberge": {
+        "company": "Friendly Auberge",
+        "role": "Responsable informatique",
+        "when": "2024–2025 · Toulouse, France",
+        "summary": "Toute l’informatique d’une auberge d’environ 30 chambres avec restaurant : réseau et VLAN, PMS, caisse, vidéosurveillance, sauvegardes et site WordPress."
+      },
+      "autoavaliar": {
+        "company": "Auto Avaliar",
+        "role": "Full-Stack II",
+        "when": "2022–2024",
+        "summary": "Lead technique de la migration de l’existant PHP vers Node et React sur GCP."
+      },
+      "jerimum": {
+        "company": "Jerimum Produções",
+        "role": "Responsable informatique et développeur",
+        "when": "2021",
+        "summary": "J’ai monté le service informatique de zéro, sur une stack open source."
+      },
+      "cim3": {
+        "company": "CIM3 Comunicações",
+        "role": "Support informatique et back-end",
+        "when": "2020–2021",
+        "summary": "[PREENCHER]"
+      },
+      "iff": {
+        "company": "IFF",
+        "role": "Assistant informatique",
+        "when": "2018",
+        "summary": "[PREENCHER]"
+      }
+    },
+    "educationTitle": "Formation",
+    "education": {
+      "estacio": {
+        "course": "Diplôme de technologue en cyberdéfense et investigation numérique",
+        "school": "Estácio"
+      },
+      "iff": {
+        "course": "Technicien en électromécanique",
+        "school": "IFF"
+      }
+    },
+    "languagesTitle": "Langues",
+    "languages": {
+      "pt": { "name": "Portugais", "level": "langue maternelle" },
+      "en": { "name": "Anglais", "level": "courant" },
+      "fr": { "name": "Français", "level": "intermédiaire" }
+    }
+  },
+  "stack": {
+    "title": "Stack",
+    "groups": {
+      "frontend": { "name": "Front-end", "items": "React, Next.js, TypeScript, Core Web Vitals, SEO technique" },
+      "backend": { "name": "Back-end", "items": "Node.js, TypeScript, REST, GraphQL, files et DLQ, WordPress headless" },
+      "cloud": { "name": "Infrastructure et cloud", "items": "AWS, GCP, Cloudflare, CI/CD avec rollback, réseau et VLAN, sauvegardes" },
+      "reliability": { "name": "Fiabilité", "items": "Observabilité, SLO, runbooks, circuit breakers, cache multiniveau, analyse des causes profondes" },
+      "security": { "name": "Sécurité", "items": "JWT, OAuth2, cyberdéfense, investigation numérique" }
+    }
+  },
+  "now": {
+    "title": "En ce moment",
+    "body": "[PREENCHER]"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Pas de formulaire. Écrivez-moi directement ou contactez-moi sur LinkedIn.",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "copyright": "© {year} Bernardo Knoblauch",
+    "note": "Site statique, sans pistage."
   }
 }

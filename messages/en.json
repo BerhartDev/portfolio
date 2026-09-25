@@ -5,5 +5,156 @@
   },
   "root": {
     "continue": "Continue in English"
+  },
+  "common": {
+    "missing": "[PREENCHER]"
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "label": "Sections",
+    "language": "Language",
+    "theme": "Dark"
+  },
+  "localeNames": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  },
+  "hero": {
+    "name": "Bernardo Knoblauch",
+    "role": "Full stack developer in Rio de Janeiro. Node.js and TypeScript on the back end, React and Next.js on the front end.",
+    "lead": "I came from networking and infrastructure, moved into software development, and today I keep a high-traffic portal running in production.",
+    "sub": "I think like someone who has been woken up in the middle of the night by a server going down."
+  },
+  "projects": {
+    "title": "Projects",
+    "labels": {
+      "context": "Context",
+      "problem": "Problem",
+      "work": "What I did and why",
+      "result": "Outcome"
+    },
+    "items": {
+      "lance": {
+        "name": "Lance!",
+        "tag": "Full-Stack II · 2025–present",
+        "summary": "Running a high-traffic sports portal in production.",
+        "context": "High-traffic sports portal. Next.js front end, headless WordPress for content, infrastructure on AWS and Cloudflare.",
+        "problem": "[PREENCHER]",
+        "work": "I work on keeping it running: Core Web Vitals, technical SEO, observability, incident response with root cause analysis, and CI/CD with rollback.",
+        "result": "[PREENCHER]"
+      },
+      "autoavaliar": {
+        "name": "Auto Avaliar",
+        "tag": "Full-Stack II · 2022–2024",
+        "summary": "Migrating a legacy PHP system to Node and React on GCP.",
+        "context": "A platform built on legacy PHP, moving to Node and React on GCP.",
+        "problem": "[PREENCHER]",
+        "work": "I was the technical lead on the migration, using the strangler pattern to replace the legacy system piece by piece. Along the way: REST and GraphQL APIs, queues with DLQs, JWT and OAuth2, multi-level caching, circuit breakers, SLOs and runbooks.",
+        "result": "[PREENCHER]"
+      },
+      "vamosmarcar": {
+        "name": "VamosMarcar",
+        "tag": "My own product · SaaS",
+        "summary": "Booking for barbershops and salons.",
+        "context": "My SaaS for booking appointments at barbershops and salons.",
+        "problem": "[PREENCHER]",
+        "work": "Each business gets a public booking link. Requests come in as pending and the owner confirms them in the dashboard. The calendar supports blocked time. WhatsApp messages are sent manually, on purpose: [PREENCHER]",
+        "result": "Stack and numbers: [PREENCHER]"
+      },
+      "bekno": {
+        "name": "BEKNO",
+        "tag": "My own company",
+        "summary": "Websites for small businesses.",
+        "context": "My company building websites for small businesses.",
+        "problem": "[PREENCHER]",
+        "work": "[PREENCHER]",
+        "result": "[PREENCHER]"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "items": {
+      "lance": {
+        "company": "Lance!",
+        "role": "Full-Stack II",
+        "when": "2025–present",
+        "summary": "Running a high-traffic sports portal: performance, technical SEO, observability, incidents, and deploys with rollback."
+      },
+      "auberge": {
+        "company": "Friendly Auberge",
+        "role": "IT Lead",
+        "when": "2024–2025 · Toulouse, France",
+        "summary": "All IT for an inn with about 30 rooms and a restaurant: network and VLANs, PMS, POS, CCTV, backups, and the WordPress site."
+      },
+      "autoavaliar": {
+        "company": "Auto Avaliar",
+        "role": "Full-Stack II",
+        "when": "2022–2024",
+        "summary": "Technical lead on migrating the legacy PHP system to Node and React on GCP."
+      },
+      "jerimum": {
+        "company": "Jerimum Produções",
+        "role": "IT Manager and Developer",
+        "when": "2021",
+        "summary": "Built the IT department from scratch on an open-source stack."
+      },
+      "cim3": {
+        "company": "CIM3 Comunicações",
+        "role": "IT Support and Back-End",
+        "when": "2020–2021",
+        "summary": "[PREENCHER]"
+      },
+      "iff": {
+        "company": "IFF",
+        "role": "IT Assistant",
+        "when": "2018",
+        "summary": "[PREENCHER]"
+      }
+    },
+    "educationTitle": "Education",
+    "education": {
+      "estacio": {
+        "course": "Technology degree in Cyber Defense and Digital Forensics",
+        "school": "Estácio"
+      },
+      "iff": {
+        "course": "Electromechanical Technician",
+        "school": "IFF"
+      }
+    },
+    "languagesTitle": "Languages",
+    "languages": {
+      "pt": { "name": "Portuguese", "level": "native" },
+      "en": { "name": "English", "level": "fluent" },
+      "fr": { "name": "French", "level": "intermediate" }
+    }
+  },
+  "stack": {
+    "title": "Stack",
+    "groups": {
+      "frontend": { "name": "Front end", "items": "React, Next.js, TypeScript, Core Web Vitals, technical SEO" },
+      "backend": { "name": "Back end", "items": "Node.js, TypeScript, REST, GraphQL, queues and DLQs, headless WordPress" },
+      "cloud": { "name": "Infrastructure and cloud", "items": "AWS, GCP, Cloudflare, CI/CD with rollback, networking and VLANs, backups" },
+      "reliability": { "name": "Reliability", "items": "Observability, SLOs, runbooks, circuit breakers, multi-level caching, root cause analysis" },
+      "security": { "name": "Security", "items": "JWT, OAuth2, cyber defense, digital forensics" }
+    }
+  },
+  "now": {
+    "title": "Now",
+    "body": "[PREENCHER]"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "No form. Email me directly or reach out on LinkedIn.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "copyright": "© {year} Bernardo Knoblauch",
+    "note": "Static site, no tracking."
   }
 }
