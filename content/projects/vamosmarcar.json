@@ -1,0 +1,135 @@
+{
+  "order": 3,
+  "stack": [
+    "[PREENCHER]"
+  ],
+  "links": [
+    {
+      "url": "https://vamosmarcar.com"
+    }
+  ],
+  "pt": {
+    "title": "VamosMarcar",
+    "tag": "Produto próprio · SaaS",
+    "summary": "Agendamento para barbearias e salões.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Meu SaaS de agendamento para barbearias e salões."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Cada negócio tem um link público de agendamento. O pedido entra como pendente e o dono confirma no painel. A agenda aceita bloqueios. As mensagens de WhatsApp saem com envio manual, por decisão consciente: [PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Stack e números: [PREENCHER]"
+        }
+      ]
+    }
+  },
+  "en": {
+    "title": "VamosMarcar",
+    "tag": "My own product · SaaS",
+    "summary": "Booking for barbershops and salons.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "My SaaS for booking appointments at barbershops and salons."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Each business gets a public booking link. Requests come in as pending and the owner confirms them in the dashboard. The calendar supports blocked time. WhatsApp messages are sent manually, on purpose: [PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Stack and numbers: [PREENCHER]"
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "VamosMarcar",
+    "tag": "Produit personnel · SaaS",
+    "summary": "Prise de rendez-vous pour barbiers et salons de coiffure.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Mon SaaS de prise de rendez-vous pour barbiers et salons de coiffure."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Chaque commerce dispose d’un lien public de réservation. Les demandes arrivent en attente et le gérant les confirme depuis son tableau de bord. L’agenda accepte des créneaux bloqués. Les messages WhatsApp partent à la main, par choix délibéré : [PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Stack et chiffres : [PREENCHER]"
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "VamosMarcar",
+    "tag": "Producto propio · SaaS",
+    "summary": "Reservas para barberías y salones de belleza.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Mi SaaS de reservas para barberías y salones de belleza."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Cada negocio tiene un enlace público de reservas. Las solicitudes entran como pendientes y el dueño las confirma en el panel. La agenda admite bloqueos. Los mensajes de WhatsApp se envían a mano, por decisión consciente: [PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Stack y números: [PREENCHER]"
+        }
+      ]
+    }
+  }
+}

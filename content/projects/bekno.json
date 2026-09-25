@@ -1,0 +1,135 @@
+{
+  "order": 4,
+  "stack": [
+    "[PREENCHER]"
+  ],
+  "links": [
+    {
+      "url": "https://berhartdev.github.io/bekno-landing-page/pt/"
+    }
+  ],
+  "pt": {
+    "title": "BEKNO",
+    "tag": "Empresa própria",
+    "summary": "Sites para pequenos negócios.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Minha empresa de sites para pequenos negócios."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "en": {
+    "title": "BEKNO",
+    "tag": "My own company",
+    "summary": "Websites for small businesses.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "My company building websites for small businesses."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "BEKNO",
+    "tag": "Mon entreprise",
+    "summary": "Sites web pour petits commerces.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Mon entreprise qui crée des sites pour les petits commerces."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "BEKNO",
+    "tag": "Empresa propia",
+    "summary": "Sitios web para pequeños negocios.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Mi empresa de sitios web para pequeños negocios."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  }
+}

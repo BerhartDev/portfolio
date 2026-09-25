@@ -1,0 +1,137 @@
+{
+  "order": 2,
+  "period": "2022–2024",
+  "stack": [
+    "Node.js",
+    "React",
+    "GCP",
+    "REST",
+    "GraphQL",
+    "JWT",
+    "OAuth2"
+  ],
+  "pt": {
+    "title": "Auto Avaliar",
+    "tag": "Full-Stack II · 2022–2024",
+    "summary": "Migração de um legado PHP para Node e React na GCP.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Plataforma com legado em PHP, em migração para Node e React na GCP."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Liderei tecnicamente a migração com strangler pattern, substituindo o legado por partes. No caminho: APIs REST e GraphQL, filas com DLQ, JWT e OAuth2, cache multinível, circuit breakers, SLOs e runbooks."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "en": {
+    "title": "Auto Avaliar",
+    "tag": "Full-Stack II · 2022–2024",
+    "summary": "Migrating a legacy PHP system to Node and React on GCP.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "A platform built on legacy PHP, moving to Node and React on GCP."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "I was the technical lead on the migration, using the strangler pattern to replace the legacy system piece by piece. Along the way: REST and GraphQL APIs, queues with DLQs, JWT and OAuth2, multi-level caching, circuit breakers, SLOs and runbooks."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Auto Avaliar",
+    "tag": "Full-Stack II · 2022–2024",
+    "summary": "Migration d’un existant PHP vers Node et React sur GCP.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Une plateforme en PHP legacy, en cours de migration vers Node et React sur GCP."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "J’ai assuré le lead technique de la migration avec le strangler pattern, en remplaçant l’existant brique par brique. En chemin : API REST et GraphQL, files avec DLQ, JWT et OAuth2, cache multiniveau, circuit breakers, SLO et runbooks."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Auto Avaliar",
+    "tag": "Full-Stack II · 2022–2024",
+    "summary": "Migración de un legado PHP a Node y React en GCP.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Una plataforma con legado en PHP, en migración a Node y React en GCP."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Lideré técnicamente la migración con el patrón strangler, reemplazando el legado por partes. En el camino: APIs REST y GraphQL, colas con DLQ, JWT y OAuth2, caché multinivel, circuit breakers, SLOs y runbooks."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  }
+}

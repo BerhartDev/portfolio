@@ -1,10 +1,12 @@
-// Verifica os arquivos de messages/: mesmas chaves nos 4 idiomas, termos proibidos e emojis.
-// Sai com código 1 se houver erro. [PREENCHER] é contado, mas não falha.
-import { readFileSync } from "node:fs";
+// Verifica messages/ (mesmas chaves nos 4 idiomas) e content/projects/ (4 idiomas em cada projeto).
+// Em ambos: textos vazios, termos proibidos e emojis. Sai com código 1 se houver erro.
+// [PREENCHER] é contado, mas não falha. O formato dos projetos é validado no build (src/lib/projects.ts).
+import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const LOCALES = ["pt", "en", "fr", "es"];
 const DIR = join(import.meta.dirname, "..", "messages");
+const PROJECTS_DIR = join(import.meta.dirname, "..", "content", "projects");
 
 const FORBIDDEN = [
   /apaixonad/i, /apasionad/i, /passionn/i, /passionate/i,
@@ -40,16 +42,35 @@ for (const key of allKeys) {
   if (missing.length) errors.push(`chave "${key}" ausente em: ${missing.join(", ")}`);
 }
 
-for (const locale of LOCALES) {
-  for (const [key, text] of Object.entries(byLocale[locale])) {
-    if (!text.trim()) errors.push(`${locale}: "${key}" vazio`);
-    if (EMOJI.test(text)) errors.push(`${locale}: "${key}" contém emoji`);
-    for (const re of FORBIDDEN) if (re.test(text)) errors.push(`${locale}: "${key}" contém termo proibido (${re.source})`);
-    if (text.includes("[PREENCHER]")) placeholders++;
-  }
+function checkText(where, key, text) {
+  if (!text.trim()) errors.push(`${where}: "${key}" vazio`);
+  if (EMOJI.test(text)) errors.push(`${where}: "${key}" contém emoji`);
+  for (const re of FORBIDDEN) if (re.test(text)) errors.push(`${where}: "${key}" contém termo proibido (${re.source})`);
+  if (text.includes("[PREENCHER]")) placeholders++;
 }
 
-console.log(`${allKeys.size} chaves × ${LOCALES.length} idiomas · ${placeholders} [PREENCHER]`);
+for (const locale of LOCALES) {
+  for (const [key, text] of Object.entries(byLocale[locale])) checkText(locale, key, text);
+}
+
+const projectFiles = readdirSync(PROJECTS_DIR).filter((f) => f.endsWith(".json"));
+for (const file of projectFiles) {
+  const where = `content/projects/${file}`;
+  let project;
+  try {
+    project = JSON.parse(readFileSync(join(PROJECTS_DIR, file), "utf8"));
+  } catch (error) {
+    errors.push(`${where}: JSON inválido (${error.message})`);
+    continue;
+  }
+  const missing = LOCALES.filter((l) => !(l in project));
+  if (missing.length) errors.push(`${where}: idiomas ausentes: ${missing.join(", ")}`);
+  for (const [key, text] of Object.entries(flatten(project))) checkText(where, key, text);
+}
+
+console.log(
+  `${allKeys.size} chaves × ${LOCALES.length} idiomas · ${projectFiles.length} projetos · ${placeholders} [PREENCHER]`,
+);
 if (errors.length) {
   console.error(errors.map((e) => `  ✗ ${e}`).join("\n"));
   process.exit(1);

@@ -1,0 +1,136 @@
+{
+  "order": 1,
+  "period": "2025–",
+  "stack": [
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "WordPress headless",
+    "AWS",
+    "Cloudflare"
+  ],
+  "pt": {
+    "title": "Lance!",
+    "tag": "Full-Stack II · 2025–atual",
+    "summary": "Sustentação de um portal esportivo de alto tráfego.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Portal esportivo de alto tráfego. Front em Next.js, conteúdo em WordPress headless, infraestrutura em AWS e Cloudflare."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Trabalho na sustentação: Core Web Vitals, SEO técnico, observabilidade, resposta a incidentes com análise de causa raiz e CI/CD com rollback."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "en": {
+    "title": "Lance!",
+    "tag": "Full-Stack II · 2025–present",
+    "summary": "Running a high-traffic sports portal in production.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "High-traffic sports portal. Next.js front end, headless WordPress for content, infrastructure on AWS and Cloudflare."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "I work on keeping it running: Core Web Vitals, technical SEO, observability, incident response with root cause analysis, and CI/CD with rollback."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Lance!",
+    "tag": "Full-Stack II · depuis 2025",
+    "summary": "Maintien en production d’un portail sportif à fort trafic.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Portail sportif à fort trafic. Front en Next.js, contenu dans un WordPress headless, infrastructure sur AWS et Cloudflare."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Je travaille sur le maintien en conditions opérationnelles : Core Web Vitals, SEO technique, observabilité, gestion des incidents avec analyse des causes profondes, CI/CD avec rollback."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Lance!",
+    "tag": "Full-Stack II · 2025–actualidad",
+    "summary": "Operación en producción de un portal deportivo de alto tráfico.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Portal deportivo de alto tráfico. Front en Next.js, contenido en WordPress headless, infraestructura en AWS y Cloudflare."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Trabajo en mantenerlo en marcha: Core Web Vitals, SEO técnico, observabilidad, respuesta a incidentes con análisis de causa raíz y CI/CD con rollback."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "[PREENCHER]"
+        }
+      ]
+    }
+  }
+}
