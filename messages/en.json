@@ -127,19 +127,43 @@
     },
     "languagesTitle": "Languages",
     "languages": {
-      "pt": { "name": "Portuguese", "level": "native" },
-      "en": { "name": "English", "level": "fluent" },
-      "fr": { "name": "French", "level": "intermediate" }
+      "pt": {
+        "name": "Portuguese",
+        "level": "native"
+      },
+      "en": {
+        "name": "English",
+        "level": "fluent"
+      },
+      "fr": {
+        "name": "French",
+        "level": "intermediate"
+      }
     }
   },
   "stack": {
     "title": "Stack",
     "groups": {
-      "frontend": { "name": "Front end", "items": "React, Next.js, TypeScript, Core Web Vitals, technical SEO" },
-      "backend": { "name": "Back end", "items": "Node.js, TypeScript, REST, GraphQL, queues and DLQs, headless WordPress" },
-      "cloud": { "name": "Infrastructure and cloud", "items": "AWS, GCP, Cloudflare, CI/CD with rollback, networking and VLANs, backups" },
-      "reliability": { "name": "Reliability", "items": "Observability, SLOs, runbooks, circuit breakers, multi-level caching, root cause analysis" },
-      "security": { "name": "Security", "items": "JWT, OAuth2, cyber defense, digital forensics" }
+      "frontend": {
+        "name": "Front end",
+        "items": "React, Next.js, TypeScript, Core Web Vitals, technical SEO"
+      },
+      "backend": {
+        "name": "Back end",
+        "items": "Node.js, TypeScript, REST, GraphQL, queues and DLQs, headless WordPress"
+      },
+      "cloud": {
+        "name": "Infrastructure and cloud",
+        "items": "AWS, GCP, Cloudflare, CI/CD with rollback, networking and VLANs, backups"
+      },
+      "reliability": {
+        "name": "Reliability",
+        "items": "Observability, SLOs, runbooks, circuit breakers, multi-level caching, root cause analysis"
+      },
+      "security": {
+        "name": "Security",
+        "items": "JWT, OAuth2, cyber defense, digital forensics"
+      }
     }
   },
   "now": {
@@ -156,5 +180,9 @@
   "footer": {
     "copyright": "© {year} Bernardo Knoblauch",
     "note": "Static site, no tracking."
+  },
+  "notFound": {
+    "title": "Page not found.",
+    "back": "Back to the home page"
   }
 }

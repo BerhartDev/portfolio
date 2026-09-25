@@ -127,19 +127,43 @@
     },
     "languagesTitle": "Idiomas",
     "languages": {
-      "pt": { "name": "Português", "level": "nativo" },
-      "en": { "name": "Inglês", "level": "fluente" },
-      "fr": { "name": "Francês", "level": "intermediário" }
+      "pt": {
+        "name": "Português",
+        "level": "nativo"
+      },
+      "en": {
+        "name": "Inglês",
+        "level": "fluente"
+      },
+      "fr": {
+        "name": "Francês",
+        "level": "intermediário"
+      }
     }
   },
   "stack": {
     "title": "Stack",
     "groups": {
-      "frontend": { "name": "Front-end", "items": "React, Next.js, TypeScript, Core Web Vitals, SEO técnico" },
-      "backend": { "name": "Back-end", "items": "Node.js, TypeScript, REST, GraphQL, filas e DLQ, WordPress headless" },
-      "cloud": { "name": "Infra e cloud", "items": "AWS, GCP, Cloudflare, CI/CD com rollback, redes e VLANs, backups" },
-      "reliability": { "name": "Confiabilidade", "items": "Observabilidade, SLOs, runbooks, circuit breakers, cache multinível, análise de causa raiz" },
-      "security": { "name": "Segurança", "items": "JWT, OAuth2, defesa cibernética, perícia forense" }
+      "frontend": {
+        "name": "Front-end",
+        "items": "React, Next.js, TypeScript, Core Web Vitals, SEO técnico"
+      },
+      "backend": {
+        "name": "Back-end",
+        "items": "Node.js, TypeScript, REST, GraphQL, filas e DLQ, WordPress headless"
+      },
+      "cloud": {
+        "name": "Infra e cloud",
+        "items": "AWS, GCP, Cloudflare, CI/CD com rollback, redes e VLANs, backups"
+      },
+      "reliability": {
+        "name": "Confiabilidade",
+        "items": "Observabilidade, SLOs, runbooks, circuit breakers, cache multinível, análise de causa raiz"
+      },
+      "security": {
+        "name": "Segurança",
+        "items": "JWT, OAuth2, defesa cibernética, perícia forense"
+      }
     }
   },
   "now": {
@@ -156,5 +180,9 @@
   "footer": {
     "copyright": "© {year} Bernardo Knoblauch",
     "note": "Site estático, sem rastreamento."
+  },
+  "notFound": {
+    "title": "Página não encontrada.",
+    "back": "Voltar para o início"
   }
 }

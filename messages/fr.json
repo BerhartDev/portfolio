@@ -127,19 +127,43 @@
     },
     "languagesTitle": "Langues",
     "languages": {
-      "pt": { "name": "Portugais", "level": "langue maternelle" },
-      "en": { "name": "Anglais", "level": "courant" },
-      "fr": { "name": "Français", "level": "intermédiaire" }
+      "pt": {
+        "name": "Portugais",
+        "level": "langue maternelle"
+      },
+      "en": {
+        "name": "Anglais",
+        "level": "courant"
+      },
+      "fr": {
+        "name": "Français",
+        "level": "intermédiaire"
+      }
     }
   },
   "stack": {
     "title": "Stack",
     "groups": {
-      "frontend": { "name": "Front-end", "items": "React, Next.js, TypeScript, Core Web Vitals, SEO technique" },
-      "backend": { "name": "Back-end", "items": "Node.js, TypeScript, REST, GraphQL, files et DLQ, WordPress headless" },
-      "cloud": { "name": "Infrastructure et cloud", "items": "AWS, GCP, Cloudflare, CI/CD avec rollback, réseau et VLAN, sauvegardes" },
-      "reliability": { "name": "Fiabilité", "items": "Observabilité, SLO, runbooks, circuit breakers, cache multiniveau, analyse des causes profondes" },
-      "security": { "name": "Sécurité", "items": "JWT, OAuth2, cyberdéfense, investigation numérique" }
+      "frontend": {
+        "name": "Front-end",
+        "items": "React, Next.js, TypeScript, Core Web Vitals, SEO technique"
+      },
+      "backend": {
+        "name": "Back-end",
+        "items": "Node.js, TypeScript, REST, GraphQL, files et DLQ, WordPress headless"
+      },
+      "cloud": {
+        "name": "Infrastructure et cloud",
+        "items": "AWS, GCP, Cloudflare, CI/CD avec rollback, réseau et VLAN, sauvegardes"
+      },
+      "reliability": {
+        "name": "Fiabilité",
+        "items": "Observabilité, SLO, runbooks, circuit breakers, cache multiniveau, analyse des causes profondes"
+      },
+      "security": {
+        "name": "Sécurité",
+        "items": "JWT, OAuth2, cyberdéfense, investigation numérique"
+      }
     }
   },
   "now": {
@@ -156,5 +180,9 @@
   "footer": {
     "copyright": "© {year} Bernardo Knoblauch",
     "note": "Site statique, sans pistage."
+  },
+  "notFound": {
+    "title": "Page introuvable.",
+    "back": "Retour à l’accueil"
   }
 }

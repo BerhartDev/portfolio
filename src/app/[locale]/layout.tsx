@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { mono, sans } from "@/lib/fonts";
 import { resolveLocale, type LocaleParams } from "@/lib/locale";
+import { languageAlternates, localePath, ogLocales } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { themeScript } from "@/lib/theme-script";
 import "@/styles/globals.css";
@@ -19,10 +20,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params);
   const t = await getTranslations({ locale, namespace: "meta" });
+  const title = t("title");
+  const description = t("description");
   return {
     metadataBase: new URL(SITE_URL),
-    title: t("title"),
-    description: t("description"),
+    title,
+    description,
+    alternates: { canonical: localePath(locale), languages: languageAlternates() },
+    openGraph: { type: "website", url: localePath(locale), siteName: "Bernardo Knoblauch", title, description, ...ogLocales(locale) },
+    twitter: { card: "summary", title, description },
   };
 }
 
