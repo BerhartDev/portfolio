@@ -1,0 +1,21 @@
+.body {
+  max-width: var(--measure);
+  font-size: var(--text-lg);
+}
+
+.offers {
+  margin-top: var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.offers li {
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.terms {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}

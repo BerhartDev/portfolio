@@ -35,44 +35,39 @@
       "work": "Ce que j’ai fait et pourquoi",
       "result": "Résultat"
     },
-    "items": {
-      "lance": {
-        "name": "Lance!",
-        "tag": "Full-Stack II · depuis 2025",
-        "summary": "Maintien en production d’un portail sportif à fort trafic.",
-        "context": "Portail sportif à fort trafic. Front en Next.js, contenu dans un WordPress headless, infrastructure sur AWS et Cloudflare.",
-        "problem": "[PREENCHER]",
-        "work": "Je travaille sur le maintien en conditions opérationnelles : Core Web Vitals, SEO technique, observabilité, gestion des incidents avec analyse des causes profondes, CI/CD avec rollback.",
-        "result": "[PREENCHER]"
-      },
-      "autoavaliar": {
-        "name": "Auto Avaliar",
-        "tag": "Full-Stack II · 2022–2024",
-        "summary": "Migration d’un existant PHP vers Node et React sur GCP.",
-        "context": "Une plateforme en PHP legacy, en cours de migration vers Node et React sur GCP.",
-        "problem": "[PREENCHER]",
-        "work": "J’ai assuré le lead technique de la migration avec le strangler pattern, en remplaçant l’existant brique par brique. En chemin : API REST et GraphQL, files avec DLQ, JWT et OAuth2, cache multiniveau, circuit breakers, SLO et runbooks.",
-        "result": "[PREENCHER]"
-      },
-      "vamosmarcar": {
-        "name": "VamosMarcar",
-        "tag": "Produit personnel · SaaS",
-        "summary": "Prise de rendez-vous pour barbiers et salons de coiffure.",
-        "context": "Mon SaaS de prise de rendez-vous pour barbiers et salons de coiffure.",
-        "problem": "[PREENCHER]",
-        "work": "Chaque commerce dispose d’un lien public de réservation. Les demandes arrivent en attente et le gérant les confirme depuis son tableau de bord. L’agenda accepte des créneaux bloqués. Les messages WhatsApp partent à la main, par choix délibéré : [PREENCHER]",
-        "result": "Stack et chiffres : [PREENCHER]"
-      },
-      "bekno": {
-        "name": "BEKNO",
-        "tag": "Mon entreprise",
-        "summary": "Sites web pour petits commerces.",
-        "context": "Mon entreprise qui crée des sites pour les petits commerces.",
-        "problem": "[PREENCHER]",
-        "work": "[PREENCHER]",
-        "result": "[PREENCHER]"
+    "all": "Tous les projets"
+  },
+  "projectsPage": {
+    "title": "Projets",
+    "metaTitle": "Projets · Bernardo Knoblauch",
+    "description": "Études de cas de Bernardo Knoblauch : un portail sportif à fort trafic, la migration d’un existant PHP vers Node et React, et mes propres produits.",
+    "lead": "Ce que j’ai construit et ce que je maintiens en production, présenté en études de cas : contexte, problème, ce que j’ai fait et le résultat.",
+    "companies": {
+      "title": "Pour les entreprises",
+      "body": "Je travaille sur le front et le back en TypeScript, et je m’occupe de ce qui se passe après le déploiement. Ce que j’apporte :",
+      "items": {
+        "performance": "Performance et Core Web Vitals",
+        "seo": "SEO technique",
+        "observability": "Observabilité et gestion des incidents avec analyse des causes profondes",
+        "migration": "Migration d’un existant brique par brique, sans arrêter le produit",
+        "delivery": "CI/CD avec rollback"
       }
-    }
+    },
+    "clients": {
+      "title": "Pour les petits commerces",
+      "body": "Avec BEKNO, je crée des sites pour les petits commerces. VamosMarcar est mon outil de prise de rendez-vous pour barbiers et salons de coiffure.",
+      "terms": "Délais, périmètre et tarifs : [PREENCHER]"
+    },
+    "cases": "Études de cas"
+  },
+  "article": {
+    "metaTitle": "{title} · Bernardo Knoblauch",
+    "period": "Période",
+    "stack": "Stack",
+    "links": "Liens",
+    "more": "Autres projets",
+    "prev": "Précédent",
+    "next": "Suivant"
   },
   "experience": {
     "title": "Parcours",

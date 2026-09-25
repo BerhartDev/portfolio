@@ -35,44 +35,39 @@
       "work": "Qué hice y por qué",
       "result": "Resultado"
     },
-    "items": {
-      "lance": {
-        "name": "Lance!",
-        "tag": "Full-Stack II · 2025–actualidad",
-        "summary": "Operación en producción de un portal deportivo de alto tráfico.",
-        "context": "Portal deportivo de alto tráfico. Front en Next.js, contenido en WordPress headless, infraestructura en AWS y Cloudflare.",
-        "problem": "[PREENCHER]",
-        "work": "Trabajo en mantenerlo en marcha: Core Web Vitals, SEO técnico, observabilidad, respuesta a incidentes con análisis de causa raíz y CI/CD con rollback.",
-        "result": "[PREENCHER]"
-      },
-      "autoavaliar": {
-        "name": "Auto Avaliar",
-        "tag": "Full-Stack II · 2022–2024",
-        "summary": "Migración de un legado PHP a Node y React en GCP.",
-        "context": "Una plataforma con legado en PHP, en migración a Node y React en GCP.",
-        "problem": "[PREENCHER]",
-        "work": "Lideré técnicamente la migración con el patrón strangler, reemplazando el legado por partes. En el camino: APIs REST y GraphQL, colas con DLQ, JWT y OAuth2, caché multinivel, circuit breakers, SLOs y runbooks.",
-        "result": "[PREENCHER]"
-      },
-      "vamosmarcar": {
-        "name": "VamosMarcar",
-        "tag": "Producto propio · SaaS",
-        "summary": "Reservas para barberías y salones de belleza.",
-        "context": "Mi SaaS de reservas para barberías y salones de belleza.",
-        "problem": "[PREENCHER]",
-        "work": "Cada negocio tiene un enlace público de reservas. Las solicitudes entran como pendientes y el dueño las confirma en el panel. La agenda admite bloqueos. Los mensajes de WhatsApp se envían a mano, por decisión consciente: [PREENCHER]",
-        "result": "Stack y números: [PREENCHER]"
-      },
-      "bekno": {
-        "name": "BEKNO",
-        "tag": "Empresa propia",
-        "summary": "Sitios web para pequeños negocios.",
-        "context": "Mi empresa de sitios web para pequeños negocios.",
-        "problem": "[PREENCHER]",
-        "work": "[PREENCHER]",
-        "result": "[PREENCHER]"
+    "all": "Todos los proyectos"
+  },
+  "projectsPage": {
+    "title": "Proyectos",
+    "metaTitle": "Proyectos · Bernardo Knoblauch",
+    "description": "Casos de estudio de Bernardo Knoblauch: un portal deportivo de alto tráfico, la migración de un legado PHP a Node y React, y productos propios.",
+    "lead": "Lo que construí y mantengo en producción, contado como caso de estudio: contexto, problema, qué hice y el resultado.",
+    "companies": {
+      "title": "Para empresas",
+      "body": "Trabajo en front y back con TypeScript y me ocupo de lo que pasa después del deploy. Lo que aporto:",
+      "items": {
+        "performance": "Rendimiento y Core Web Vitals",
+        "seo": "SEO técnico",
+        "observability": "Observabilidad y respuesta a incidentes con análisis de causa raíz",
+        "migration": "Migración de legado por partes, sin detener el producto",
+        "delivery": "CI/CD con rollback"
       }
-    }
+    },
+    "clients": {
+      "title": "Para pequeños negocios",
+      "body": "Con BEKNO hago sitios web para pequeños negocios. VamosMarcar es mi sistema de reservas para barberías y salones de belleza.",
+      "terms": "Plazos, alcance y precio: [PREENCHER]"
+    },
+    "cases": "Casos de estudio"
+  },
+  "article": {
+    "metaTitle": "{title} · Bernardo Knoblauch",
+    "period": "Período",
+    "stack": "Stack",
+    "links": "Enlaces",
+    "more": "Otros proyectos",
+    "prev": "Anterior",
+    "next": "Siguiente"
   },
   "experience": {
     "title": "Trayectoria",

@@ -38,7 +38,7 @@ Os 4 idiomas e as 4 seções são obrigatórios. Cada seção precisa de pelo me
 | `list` | `items` (lista de textos) | lista com marcadores |
 | `quote` | `text`, `cite` (opcional) | citação |
 | `code` | `code`, `lang` (opcional) | trecho de código |
-| `image` | `src`, `alt`, `caption` (opcional) | imagem; arquivo em `public/projects/<slug>/`, `src` começa com `/` |
+| `image` | `src`, `alt`, `caption`, `width`, `height` (os três últimos opcionais) | imagem; arquivo em `public/projects/<slug>/`, `src` começa com `/`. Informe `width` e `height` em pixels para a página não pular ao carregar |
 
 Os textos são texto puro, sem HTML nem Markdown. Faltou um dado, escreva `[PREENCHER]`.
 

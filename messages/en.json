@@ -35,44 +35,39 @@
       "work": "What I did and why",
       "result": "Outcome"
     },
-    "items": {
-      "lance": {
-        "name": "Lance!",
-        "tag": "Full-Stack II · 2025–present",
-        "summary": "Running a high-traffic sports portal in production.",
-        "context": "High-traffic sports portal. Next.js front end, headless WordPress for content, infrastructure on AWS and Cloudflare.",
-        "problem": "[PREENCHER]",
-        "work": "I work on keeping it running: Core Web Vitals, technical SEO, observability, incident response with root cause analysis, and CI/CD with rollback.",
-        "result": "[PREENCHER]"
-      },
-      "autoavaliar": {
-        "name": "Auto Avaliar",
-        "tag": "Full-Stack II · 2022–2024",
-        "summary": "Migrating a legacy PHP system to Node and React on GCP.",
-        "context": "A platform built on legacy PHP, moving to Node and React on GCP.",
-        "problem": "[PREENCHER]",
-        "work": "I was the technical lead on the migration, using the strangler pattern to replace the legacy system piece by piece. Along the way: REST and GraphQL APIs, queues with DLQs, JWT and OAuth2, multi-level caching, circuit breakers, SLOs and runbooks.",
-        "result": "[PREENCHER]"
-      },
-      "vamosmarcar": {
-        "name": "VamosMarcar",
-        "tag": "My own product · SaaS",
-        "summary": "Booking for barbershops and salons.",
-        "context": "My SaaS for booking appointments at barbershops and salons.",
-        "problem": "[PREENCHER]",
-        "work": "Each business gets a public booking link. Requests come in as pending and the owner confirms them in the dashboard. The calendar supports blocked time. WhatsApp messages are sent manually, on purpose: [PREENCHER]",
-        "result": "Stack and numbers: [PREENCHER]"
-      },
-      "bekno": {
-        "name": "BEKNO",
-        "tag": "My own company",
-        "summary": "Websites for small businesses.",
-        "context": "My company building websites for small businesses.",
-        "problem": "[PREENCHER]",
-        "work": "[PREENCHER]",
-        "result": "[PREENCHER]"
+    "all": "All projects"
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "metaTitle": "Projects · Bernardo Knoblauch",
+    "description": "Case studies by Bernardo Knoblauch: a high-traffic sports portal, a legacy PHP migration to Node and React, and my own products.",
+    "lead": "What I have built and keep running in production, written up as case studies: context, problem, what I did and the outcome.",
+    "companies": {
+      "title": "For companies",
+      "body": "I work across the front end and back end in TypeScript, and I look after what happens after the deploy. What I deliver:",
+      "items": {
+        "performance": "Performance and Core Web Vitals",
+        "seo": "Technical SEO",
+        "observability": "Observability and incident response with root cause analysis",
+        "migration": "Legacy migration piece by piece, without stopping the product",
+        "delivery": "CI/CD with rollback"
       }
-    }
+    },
+    "clients": {
+      "title": "For small businesses",
+      "body": "Through BEKNO, I build websites for small businesses. VamosMarcar is my booking system for barbershops and salons.",
+      "terms": "Timeline, scope and pricing: [PREENCHER]"
+    },
+    "cases": "Case studies"
+  },
+  "article": {
+    "metaTitle": "{title} · Bernardo Knoblauch",
+    "period": "Period",
+    "stack": "Stack",
+    "links": "Links",
+    "more": "More projects",
+    "prev": "Previous",
+    "next": "Next"
   },
   "experience": {
     "title": "Experience",

@@ -1,0 +1,23 @@
+.all {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: baseline;
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.all:hover .link::after,
+.all:focus-visible .link::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.arrow {
+  transition: transform var(--dur) var(--ease);
+}
+
+.all:hover .arrow,
+.all:focus-visible .arrow {
+  transform: translateX(6px);
+}

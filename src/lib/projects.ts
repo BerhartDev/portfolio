@@ -14,7 +14,7 @@ export type Block =
   | { type: "list"; items: string[] }
   | { type: "quote"; text: string; cite?: string }
   | { type: "code"; code: string; lang?: string }
-  | { type: "image"; src: string; alt: string; caption?: string };
+  | { type: "image"; src: string; alt: string; caption?: string; width?: number; height?: number };
 
 export type ProjectText = {
   title: string;
@@ -57,6 +57,12 @@ function optStr(ctx: Ctx, value: unknown, path: string): string | undefined {
   return value === undefined ? undefined : str(ctx, value, path);
 }
 
+function optInt(ctx: Ctx, value: unknown, path: string): number | undefined {
+  if (value === undefined) return undefined;
+  if (!Number.isInteger(value) || (value as number) <= 0) throw new ContentError(ctx.file, path, "deve ser um inteiro positivo");
+  return value as number;
+}
+
 function arr(ctx: Ctx, value: unknown, path: string): unknown[] {
   if (!Array.isArray(value)) throw new ContentError(ctx.file, path, "deve ser uma lista");
   return value;
@@ -85,7 +91,14 @@ function parseBlock(ctx: Ctx, value: unknown, path: string): Block {
     case "image": {
       const src = str(ctx, b.src, `${path}.src`);
       if (!src.startsWith("/")) throw new ContentError(ctx.file, `${path}.src`, "deve começar com / (arquivo em public/)");
-      return { type: "image", src, alt: str(ctx, b.alt, `${path}.alt`), caption: optStr(ctx, b.caption, `${path}.caption`) };
+      return {
+        type: "image",
+        src,
+        alt: str(ctx, b.alt, `${path}.alt`),
+        caption: optStr(ctx, b.caption, `${path}.caption`),
+        width: optInt(ctx, b.width, `${path}.width`),
+        height: optInt(ctx, b.height, `${path}.height`),
+      };
     }
     default:
       throw new ContentError(ctx.file, `${path}.type`, "deve ser p, h, list, quote, code ou image");

@@ -1,16 +1,8 @@
-// Dados de contato e links. Textos visíveis ficam em messages/.
+// Dados de contato e links. Textos visíveis ficam em messages/; projetos em content/projects/.
 export const profile = {
   email: undefined as string | undefined, // [PREENCHER]
   github: undefined as string | undefined, // [PREENCHER] URL completa do perfil
   linkedin: "https://www.linkedin.com/in/bernardoknoblauch",
-};
-
-export const PROJECTS = ["lance", "autoavaliar", "vamosmarcar", "bekno"] as const;
-export type ProjectKey = (typeof PROJECTS)[number];
-
-export const projectLinks: Partial<Record<ProjectKey, string>> = {
-  vamosmarcar: "https://vamosmarcar.com",
-  bekno: "https://berhartdev.github.io/bekno-landing-page/pt/",
 };
 
 export const EXPERIENCE = ["lance", "auberge", "autoavaliar", "jerimum", "cim3", "iff"] as const;

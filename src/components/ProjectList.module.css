@@ -1,0 +1,91 @@
+.list {
+  border-bottom: 1px solid var(--line);
+}
+
+.list li + li {
+  border-top: 1px solid var(--line);
+}
+
+/* Linha do projeto: inverte no hover, a seta anda. */
+.row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  gap: var(--space-1) var(--space-4);
+  align-items: baseline;
+  padding: var(--space-5) var(--space-3);
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.row:hover,
+.row:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+  outline-offset: -2px;
+}
+
+.num,
+.tag,
+.meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.row:hover :is(.num, .tag, .meta, .summary),
+.row:focus-visible :is(.num, .tag, .meta, .summary) {
+  color: inherit;
+}
+
+.name {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.summary,
+.tag,
+.meta {
+  grid-column: 2 / -1;
+}
+
+.summary {
+  color: var(--muted);
+}
+
+.arrow {
+  grid-column: 3;
+  grid-row: 1;
+  font-family: var(--font-mono);
+  transition: transform var(--dur) var(--ease);
+}
+
+.row:hover .arrow,
+.row:focus-visible .arrow {
+  transform: translateX(6px);
+}
+
+@media (min-width: 48rem) {
+  .row {
+    grid-template-columns: 2.5rem minmax(9rem, 1fr) 2fr auto 1.5rem;
+  }
+
+  .summary {
+    grid-column: 3;
+  }
+
+  .tag {
+    grid-column: 4;
+    text-align: right;
+  }
+
+  .meta {
+    grid-column: 3 / 5;
+  }
+
+  .arrow {
+    grid-column: 5;
+  }
+}
