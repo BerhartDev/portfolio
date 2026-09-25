@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-25 · Imagens de exemplo nos projetos
+- Pedido: gerar imagens de exemplo para os projetos.
+- Feito: 3 wireframes SVG em tons de cinza por projeto (`public/projects/<slug>/exemplo-{1,2,3}.svg`: página desktop 1600×1000, painel 1200×900, mobile 1200×900), com a faixa "IMAGEM DE EXEMPLO". Registrados em `images` nos 4 JSONs, com alt nos 4 idiomas dizendo que não é tela real e legenda "Imagem de exemplo. [PREENCHER]".
+- Pendente: trocar pelas capturas reais de cada projeto e apagar os `exemplo-*.svg`.
+
 ## 2026-09-25 · CTA, bloco único e galeria de imagens
 - Pedido: CTA "Ver projetos" na página de projetos; lugar para várias imagens por projeto; tirar a separação "para empresas / para clientes" e fazer um texto completo.
 - Feito: CTA na abertura de `/<idioma>/<segmento>/` levando à lista de estudos de caso; bloco único "O que entrego" (texto corrido com o que já estava no perfil, lista de 6 entregas, linha de formato de trabalho `[PREENCHER]`); campo `images` nos JSONs, validado no loader, com componente `Gallery` no artigo; pastas `public/projects/<slug>/`; loader sem cache no dev; `content/projects/README.md`, `docs/decisoes.md` e `docs/status.md` atualizados.

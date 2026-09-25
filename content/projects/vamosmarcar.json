@@ -8,7 +8,59 @@
       "url": "https://vamosmarcar.com"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "/projects/vamosmarcar/exemplo-1.svg",
+      "width": 1600,
+      "height": 1000,
+      "alt": {
+        "pt": "Imagem de exemplo 1 de VamosMarcar: wireframe genérico, não é uma tela real do projeto.",
+        "en": "Sample image 1 for VamosMarcar: a generic wireframe, not a real screen from the project.",
+        "fr": "Image d’exemple 1 pour VamosMarcar : wireframe générique, pas un écran réel du projet.",
+        "es": "Imagen de ejemplo 1 de VamosMarcar: wireframe genérico, no es una pantalla real del proyecto."
+      },
+      "caption": {
+        "pt": "Imagem de exemplo. [PREENCHER]",
+        "en": "Sample image. [PREENCHER]",
+        "fr": "Image d’exemple. [PREENCHER]",
+        "es": "Imagen de ejemplo. [PREENCHER]"
+      }
+    },
+    {
+      "src": "/projects/vamosmarcar/exemplo-2.svg",
+      "width": 1200,
+      "height": 900,
+      "alt": {
+        "pt": "Imagem de exemplo 2 de VamosMarcar: wireframe genérico, não é uma tela real do projeto.",
+        "en": "Sample image 2 for VamosMarcar: a generic wireframe, not a real screen from the project.",
+        "fr": "Image d’exemple 2 pour VamosMarcar : wireframe générique, pas un écran réel du projet.",
+        "es": "Imagen de ejemplo 2 de VamosMarcar: wireframe genérico, no es una pantalla real del proyecto."
+      },
+      "caption": {
+        "pt": "Imagem de exemplo. [PREENCHER]",
+        "en": "Sample image. [PREENCHER]",
+        "fr": "Image d’exemple. [PREENCHER]",
+        "es": "Imagen de ejemplo. [PREENCHER]"
+      }
+    },
+    {
+      "src": "/projects/vamosmarcar/exemplo-3.svg",
+      "width": 1200,
+      "height": 900,
+      "alt": {
+        "pt": "Imagem de exemplo 3 de VamosMarcar: wireframe genérico, não é uma tela real do projeto.",
+        "en": "Sample image 3 for VamosMarcar: a generic wireframe, not a real screen from the project.",
+        "fr": "Image d’exemple 3 pour VamosMarcar : wireframe générique, pas un écran réel du projet.",
+        "es": "Imagen de ejemplo 3 de VamosMarcar: wireframe genérico, no es una pantalla real del proyecto."
+      },
+      "caption": {
+        "pt": "Imagem de exemplo. [PREENCHER]",
+        "en": "Sample image. [PREENCHER]",
+        "fr": "Image d’exemple. [PREENCHER]",
+        "es": "Imagen de ejemplo. [PREENCHER]"
+      }
+    }
+  ],
   "pt": {
     "title": "VamosMarcar",
     "tag": "Produto próprio · SaaS",
