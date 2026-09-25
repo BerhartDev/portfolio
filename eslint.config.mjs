@@ -5,7 +5,13 @@ const config = [
   ...nextVitals,
   ...nextTs,
   { ignores: [".next/**", "out/**", "next-env.d.ts"] },
-  { rules: { "@typescript-eslint/no-explicit-any": "error" } },
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": "error",
+      // App Router: não há pages/. Links entre idiomas são <a> de propósito (recarregam o root layout).
+      "@next/next/no-html-link-for-pages": "off",
+    },
+  },
 ];
 
 export default config;
