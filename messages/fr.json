@@ -42,21 +42,19 @@
     "metaTitle": "Projets · Bernardo Knoblauch",
     "description": "Études de cas de Bernardo Knoblauch : un portail sportif à fort trafic, la migration d’un existant PHP vers Node et React, et mes propres produits.",
     "lead": "Ce que j’ai construit et ce que je maintiens en production, présenté en études de cas : contexte, problème, ce que j’ai fait et le résultat.",
-    "companies": {
-      "title": "Pour les entreprises",
-      "body": "Je travaille sur le front et le back en TypeScript, et je m’occupe de ce qui se passe après le déploiement. Ce que j’apporte :",
+    "cta": "Voir les projets",
+    "pitch": {
+      "title": "Ce que j’apporte",
+      "body": "Je travaille sur le front et le back en TypeScript, et je m’occupe de ce qui se passe après le déploiement. Aujourd’hui, je maintiens en production un portail sportif à fort trafic. Avant cela, j’ai mené la migration d’un existant PHP vers Node et React. En parallèle, je gère deux produits : BEKNO, qui crée des sites pour les petits commerces, et VamosMarcar, un outil de prise de rendez-vous pour barbiers et salons de coiffure.",
       "items": {
         "performance": "Performance et Core Web Vitals",
         "seo": "SEO technique",
         "observability": "Observabilité et gestion des incidents avec analyse des causes profondes",
         "migration": "Migration d’un existant brique par brique, sans arrêter le produit",
-        "delivery": "CI/CD avec rollback"
-      }
-    },
-    "clients": {
-      "title": "Pour les petits commerces",
-      "body": "Avec BEKNO, je crée des sites pour les petits commerces. VamosMarcar est mon outil de prise de rendez-vous pour barbiers et salons de coiffure.",
-      "terms": "Délais, périmètre et tarifs : [PREENCHER]"
+        "delivery": "CI/CD avec rollback",
+        "products": "Sites et applications, de zéro à la mise en production"
+      },
+      "terms": "Modalités de collaboration et disponibilité : [PREENCHER]"
     },
     "cases": "Études de cas"
   },
@@ -67,7 +65,8 @@
     "links": "Liens",
     "more": "Autres projets",
     "prev": "Précédent",
-    "next": "Suivant"
+    "next": "Suivant",
+    "images": "Images"
   },
   "experience": {
     "title": "Parcours",

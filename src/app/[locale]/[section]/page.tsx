@@ -13,7 +13,7 @@ import { PROJECTS_SEGMENT, projectsPath } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-const OFFERS = ["performance", "seo", "observability", "migration", "delivery"] as const;
+const OFFERS = ["performance", "seo", "observability", "migration", "delivery", "products"] as const;
 
 export const dynamicParams = false;
 
@@ -40,23 +40,27 @@ export default async function ProjectsPage({ params }: SectionParams) {
       </a>
       <SiteHeader locale={locale} pathFor={projectsPath} />
       <main id="main">
-        <PageIntro title={t("projectsPage.title")} lead={t("projectsPage.lead")} />
-        <Section id="companies" index={1} title={t("projectsPage.companies.title")}>
-          <p className={styles.body}>{t("projectsPage.companies.body")}</p>
+        <PageIntro title={t("projectsPage.title")} lead={t("projectsPage.lead")}>
+          <a href="#cases" className={styles.cta}>
+            {t("projectsPage.cta")}
+            <span className={styles.arrow} aria-hidden="true">
+              ↓
+            </span>
+          </a>
+        </PageIntro>
+        <Section id="pitch" index={1} title={t("projectsPage.pitch.title")}>
+          <p className={styles.body}>{t("projectsPage.pitch.body")}</p>
           <ul className={styles.offers}>
             {OFFERS.map((key) => (
-              <li key={key}>{t(`projectsPage.companies.items.${key}`)}</li>
+              <li key={key}>{t(`projectsPage.pitch.items.${key}`)}</li>
             ))}
           </ul>
+          <p className={styles.terms}>{t("projectsPage.pitch.terms")}</p>
         </Section>
-        <Section id="clients" index={2} title={t("projectsPage.clients.title")}>
-          <p className={styles.body}>{t("projectsPage.clients.body")}</p>
-          <p className={styles.terms}>{t("projectsPage.clients.terms")}</p>
-        </Section>
-        <Section id="cases" index={3} title={t("projectsPage.cases")}>
+        <Section id="cases" index={2} title={t("projectsPage.cases")}>
           <ProjectList locale={locale} projects={getProjects()} detailed />
         </Section>
-        <Contact locale={locale} index={4} />
+        <Contact locale={locale} index={3} />
       </main>
       <SiteFooter locale={locale} />
     </div>

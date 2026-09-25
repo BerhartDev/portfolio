@@ -42,21 +42,19 @@
     "metaTitle": "Projetos · Bernardo Knoblauch",
     "description": "Estudos de caso de Bernardo Knoblauch: portal esportivo de alto tráfego, migração de legado PHP para Node e React, e produtos próprios.",
     "lead": "O que construí e sustento em produção, contado como estudo de caso: contexto, problema, o que fiz e o resultado.",
-    "companies": {
-      "title": "Para empresas",
-      "body": "Trabalho no front e no back com TypeScript e cuido do que vem depois do deploy. Entrego:",
+    "cta": "Ver projetos",
+    "pitch": {
+      "title": "O que entrego",
+      "body": "Trabalho no front e no back com TypeScript e cuido do que vem depois do deploy. Hoje sustento em produção um portal esportivo de alto tráfego. Antes, liderei a migração de um legado PHP para Node e React. Por fora, mantenho dois produtos: a BEKNO, que faz sites para pequenos negócios, e o VamosMarcar, de agendamento para barbearias e salões.",
       "items": {
         "performance": "Performance e Core Web Vitals",
         "seo": "SEO técnico",
         "observability": "Observabilidade e resposta a incidentes com análise de causa raiz",
         "migration": "Migração de legado por partes, sem parar o produto",
-        "delivery": "CI/CD com rollback"
-      }
-    },
-    "clients": {
-      "title": "Para pequenos negócios",
-      "body": "Pela BEKNO, faço sites para pequenos negócios. O VamosMarcar é meu sistema de agendamento para barbearias e salões.",
-      "terms": "Prazo, escopo e preço: [PREENCHER]"
+        "delivery": "CI/CD com rollback",
+        "products": "Sites e sistemas do zero até produção"
+      },
+      "terms": "Formato de trabalho e disponibilidade: [PREENCHER]"
     },
     "cases": "Estudos de caso"
   },
@@ -67,7 +65,8 @@
     "links": "Links",
     "more": "Outros projetos",
     "prev": "Anterior",
-    "next": "Próximo"
+    "next": "Próximo",
+    "images": "Imagens"
   },
   "experience": {
     "title": "Trajetória",

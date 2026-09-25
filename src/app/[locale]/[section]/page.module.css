@@ -19,3 +19,35 @@
   font-size: var(--text-sm);
   color: var(--muted);
 }
+
+/* CTA: borda de 1px, inverte no hover e a seta desce. */
+.cta {
+  display: inline-flex;
+  gap: var(--space-3);
+  align-items: baseline;
+  justify-self: start;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--fg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.arrow {
+  transition: transform var(--dur) var(--ease);
+}
+
+.cta:hover .arrow,
+.cta:focus-visible .arrow {
+  transform: translateY(4px);
+}

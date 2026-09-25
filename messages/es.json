@@ -42,21 +42,19 @@
     "metaTitle": "Proyectos · Bernardo Knoblauch",
     "description": "Casos de estudio de Bernardo Knoblauch: un portal deportivo de alto tráfico, la migración de un legado PHP a Node y React, y productos propios.",
     "lead": "Lo que construí y mantengo en producción, contado como caso de estudio: contexto, problema, qué hice y el resultado.",
-    "companies": {
-      "title": "Para empresas",
-      "body": "Trabajo en front y back con TypeScript y me ocupo de lo que pasa después del deploy. Lo que aporto:",
+    "cta": "Ver proyectos",
+    "pitch": {
+      "title": "Lo que aporto",
+      "body": "Trabajo en front y back con TypeScript y me ocupo de lo que pasa después del deploy. Hoy mantengo en producción un portal deportivo de alto tráfico. Antes lideré la migración de un legado PHP a Node y React. Aparte, llevo dos productos: BEKNO, que hace sitios web para pequeños negocios, y VamosMarcar, un sistema de reservas para barberías y salones de belleza.",
       "items": {
         "performance": "Rendimiento y Core Web Vitals",
         "seo": "SEO técnico",
         "observability": "Observabilidad y respuesta a incidentes con análisis de causa raíz",
         "migration": "Migración de legado por partes, sin detener el producto",
-        "delivery": "CI/CD con rollback"
-      }
-    },
-    "clients": {
-      "title": "Para pequeños negocios",
-      "body": "Con BEKNO hago sitios web para pequeños negocios. VamosMarcar es mi sistema de reservas para barberías y salones de belleza.",
-      "terms": "Plazos, alcance y precio: [PREENCHER]"
+        "delivery": "CI/CD con rollback",
+        "products": "Sitios y sistemas desde cero hasta producción"
+      },
+      "terms": "Modalidad de trabajo y disponibilidad: [PREENCHER]"
     },
     "cases": "Casos de estudio"
   },
@@ -67,7 +65,8 @@
     "links": "Enlaces",
     "more": "Otros proyectos",
     "prev": "Anterior",
-    "next": "Siguiente"
+    "next": "Siguiente",
+    "images": "Imágenes"
   },
   "experience": {
     "title": "Trayectoria",

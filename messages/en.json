@@ -42,21 +42,19 @@
     "metaTitle": "Projects · Bernardo Knoblauch",
     "description": "Case studies by Bernardo Knoblauch: a high-traffic sports portal, a legacy PHP migration to Node and React, and my own products.",
     "lead": "What I have built and keep running in production, written up as case studies: context, problem, what I did and the outcome.",
-    "companies": {
-      "title": "For companies",
-      "body": "I work across the front end and back end in TypeScript, and I look after what happens after the deploy. What I deliver:",
+    "cta": "See projects",
+    "pitch": {
+      "title": "What I deliver",
+      "body": "I work across the front end and back end in TypeScript, and I look after what happens after the deploy. Today I keep a high-traffic sports portal running in production. Before that, I led the migration of a legacy PHP system to Node and React. On the side, I run two products: BEKNO, which builds websites for small businesses, and VamosMarcar, a booking system for barbershops and salons.",
       "items": {
         "performance": "Performance and Core Web Vitals",
         "seo": "Technical SEO",
         "observability": "Observability and incident response with root cause analysis",
         "migration": "Legacy migration piece by piece, without stopping the product",
-        "delivery": "CI/CD with rollback"
-      }
-    },
-    "clients": {
-      "title": "For small businesses",
-      "body": "Through BEKNO, I build websites for small businesses. VamosMarcar is my booking system for barbershops and salons.",
-      "terms": "Timeline, scope and pricing: [PREENCHER]"
+        "delivery": "CI/CD with rollback",
+        "products": "Websites and systems from scratch to production"
+      },
+      "terms": "Engagement model and availability: [PREENCHER]"
     },
     "cases": "Case studies"
   },
@@ -67,7 +65,8 @@
     "links": "Links",
     "more": "More projects",
     "prev": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "images": "Images"
   },
   "experience": {
     "title": "Experience",
