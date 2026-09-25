@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-25 · Botões da barra com o mesmo tamanho
+- Pedido: deixar os botões da barra com tamanho mais parecido.
+- Feito: token `--control-h` (2.5rem); idioma, tema, CTA e menu com 40px de altura, fonte mono `--text-sm` e borda de 1px (idioma e tema em `--line`, CTA e menu em `--fg`); espaço entre controles reduzido. Medido no Edge via CDP: todos com 40px no desktop e no mobile.
+
 ## 2026-09-25 · Barra de navegação da BEKNO
 - Pedido: copiar o funcionamento da barra de navegação da landing da BEKNO, mantendo a identidade visual do portfólio.
 - Feito: `SiteHeader` fixo no topo com CTA "Entrar em contato" e menu mobile; `LocaleSwitcher` virou dropdown; novo `Disclosure` (client) para fechar painéis; token `--header-h` e `scroll-margin-top` ajustados; `nav.cta` e `nav.menu` nos 4 idiomas. Testado no Edge via CDP: barra fixa ao rolar, menu abre e fecha (link, Esc com foco de volta, clique fora), dropdown de idioma.

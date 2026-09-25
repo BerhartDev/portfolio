@@ -32,6 +32,7 @@
   --page-max: 72rem;
   --gutter: clamp(1rem, 4vw, 3rem);
   --header-h: 4.5rem; /* altura da barra fixa; âncoras param abaixo dela */
+  --control-h: 2.5rem; /* altura comum dos controles da barra (idioma, tema, CTA, menu) */
 
   --ease: cubic-bezier(0.2, 0, 0, 1);
   --dur-fast: 120ms;

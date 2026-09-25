@@ -43,7 +43,7 @@
 .controls {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3);
   margin-left: auto;
 }
 
@@ -51,8 +51,9 @@
 .cta {
   display: inline-flex;
   gap: var(--space-2);
-  align-items: baseline;
-  padding: var(--space-2) var(--space-3);
+  align-items: center;
+  height: var(--control-h);
+  padding-inline: var(--space-3);
   border: 1px solid var(--fg);
   white-space: nowrap;
   transition:
@@ -83,8 +84,8 @@
 .burger {
   display: grid;
   place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--control-h);
+  height: var(--control-h);
   border: 1px solid var(--fg);
   cursor: pointer;
   list-style: none;
