@@ -1,19 +1,19 @@
 # Status
 
 ## Etapa atual
-3. Direção visual (fontes, paleta hex dos dois temas, exemplos de hover): proposta enviada, aguardando aprovação.
+4. Implementação concluída. Falta conteúdo real (`[PREENCHER]`) e validação visual/Lighthouse num navegador.
 
 ## Feito
 1. `CLAUDE.md`, `docs/perfil.md`, `docs/status.md`, `docs/decisoes.md`.
-2. Estrutura de pastas e i18n estático: aprovados (ver `docs/decisoes.md`).
+2. Estrutura e i18n estático.
+3. Direção visual: Schibsted Grotesk + IBM Plex Mono, paleta de cinzas, hover por inversão e sublinhado desenhado.
+4. Setup, i18n + redirecionamento da raiz, tema sem flash, seções, SEO (canonical, hreflang, OG, sitemap, robots, 404), README de deploy.
 
-## Próximos passos (após aprovar a etapa 3)
-1. `chore:` setup (package.json, tsconfig strict, eslint, next.config, scripts)
-2. `feat:` i18n estático + redirecionador da raiz
-3. `feat:` tokens, fontes, tema sem flash
-4. `feat:` seções, uma por commit, com textos nos 4 idiomas
-5. `feat:` SEO (metadata, hreflang, sitemap, robots, 404)
-6. `docs:` README de deploy (Vercel e Cloudflare Pages)
+## Próximos passos
+1. Preencher os `[PREENCHER]` em `docs/perfil.md` e depois em `messages/*.json` e `src/lib/profile.ts` (e-mail, GitHub).
+2. Definir o domínio e configurar `NEXT_PUBLIC_SITE_URL`.
+3. Rodar Lighthouse nas 4 rotas e revisar no navegador (dark/light, teclado, mobile).
+4. Opcional: imagem Open Graph.
 
 ## Pendências de conteúdo
-Todos os `[PREENCHER]` de `docs/perfil.md`, principalmente: e-mail, GitHub, domínio do site, resultados de Lance! e Auto Avaliar, stack e números do VamosMarcar, BEKNO, seção "agora".
+E-mail, GitHub, domínio, resultados de Lance! e Auto Avaliar, problema de cada projeto, stack e números do VamosMarcar e motivo do envio manual no WhatsApp, BEKNO, resumos de CIM3 e IFF, seção "agora".

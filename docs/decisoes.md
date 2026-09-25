@@ -20,3 +20,22 @@ Textos via `getTranslations` em Server Components. Componentes client recebem r�
 
 ## 2026-09-25 · Sem framework de testes
 `npm run i18n:check` (Node puro) verifica paridade de chaves nos 4 idiomas, palavras proibidas e emojis.
+
+## 2026-09-25 · Direção visual
+Schibsted Grotesk (sans) + IBM Plex Mono (mono), via `next/font/google` (baixadas no build, servidas pelo site).
+Paleta light: bg `#FAFAFA`, surface `#F0F0F0`, fg `#0A0A0A`, muted `#5E5E5E`, faint `#8A8A8A`, line `#D9D9D9`.
+Paleta dark: bg `#0B0B0B`, surface `#161616`, fg `#EDEDED`, muted `#A1A1A1`, faint `#6E6E6E`, line `#2B2B2B`.
+`--faint` só para texto >= 24px ou decoração. Foco: `outline 2px var(--fg)`.
+Hovers: linha de projeto inverte fg↔bg com seta deslocando 6px; links com sublinhado de 1px que entra pela esquerda e sai pela direita.
+
+## 2026-09-25 · Tema
+Script inline no `<head>` aplica `data-theme` salvo antes da pintura. Sem escolha salva, CSS segue `prefers-color-scheme`. Toggle é `<button aria-pressed>` com `useSyncExternalStore`.
+
+## 2026-09-25 · Projetos como `<details>`
+Estudos de caso em `<details>`/`<summary>`: sem JS, acessível por teclado, conteúdo no HTML. O primeiro vem aberto.
+
+## 2026-09-25 · Mensagens tipadas
+`src/i18n/global.d.ts` tipa as chaves a partir de `messages/pt.json`. Chave errada quebra o typecheck.
+
+## 2026-09-25 · 404 global
+`global-not-found.tsx` (flag `experimental.globalNotFound`) gera `out/404.html` com a mensagem nos 4 idiomas, já que a URL não indica o idioma.
