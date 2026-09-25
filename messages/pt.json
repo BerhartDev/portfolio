@@ -13,7 +13,9 @@
     "skip": "Pular para o conteúdo",
     "label": "Seções",
     "language": "Idioma",
-    "theme": "Escuro"
+    "theme": "Escuro",
+    "cta": "Entrar em contato",
+    "menu": "Menu"
   },
   "localeNames": {
     "pt": "Português",

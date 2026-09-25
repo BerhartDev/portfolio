@@ -13,7 +13,9 @@
     "skip": "Aller au contenu",
     "label": "Sections",
     "language": "Langue",
-    "theme": "Sombre"
+    "theme": "Sombre",
+    "cta": "Me contacter",
+    "menu": "Menu"
   },
   "localeNames": {
     "pt": "Português",

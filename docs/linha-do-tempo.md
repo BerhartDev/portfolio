@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-25 · Barra de navegação da BEKNO
+- Pedido: copiar o funcionamento da barra de navegação da landing da BEKNO, mantendo a identidade visual do portfólio.
+- Feito: `SiteHeader` fixo no topo com CTA "Entrar em contato" e menu mobile; `LocaleSwitcher` virou dropdown; novo `Disclosure` (client) para fechar painéis; token `--header-h` e `scroll-margin-top` ajustados; `nav.cta` e `nav.menu` nos 4 idiomas. Testado no Edge via CDP: barra fixa ao rolar, menu abre e fecha (link, Esc com foco de volta, clique fora), dropdown de idioma.
+- Pendente: `/favicon.ico` dá 500 no dev (não existe favicon e a URL cai em `[locale]`); problema anterior a esta mudança.
+
 ## 2026-09-25 · Carrossel de imagens
 - Pedido: visualização melhor para as imagens, tipo carrossel.
 - Feito: `src/components/Carousel.tsx` (client) + `Carousel.module.css`; `Gallery.tsx` passa a resolver textos no servidor e entregar ao carrossel; rótulos `article.gallery` nos 4 idiomas; `Gallery.module.css` removido. Conferido por screenshot no desktop e em 500px.

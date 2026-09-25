@@ -63,3 +63,6 @@ Campo `images` opcional no JSON do projeto: `src` em `public/projects/<slug>/`, 
 
 ## 2026-09-25 · Carrossel na galeria
 A grade de imagens virou carrossel. Base sem JS: faixa com CSS scroll-snap (rola com toque, trackpad e teclado; foco na faixa) e miniaturas como âncoras. Um componente client (`Carousel`) adiciona botões anterior/próximo, contador `01 / 03` anunciado a leitores de tela e miniatura ativa; é o segundo `"use client"` do site, justificado pela navegação. Moldura com proporção fixa 16:10 e `object-fit: contain`, para imagens de tamanhos diferentes não mudarem a altura. Rolagem suave só sem `prefers-reduced-motion`.
+
+## 2026-09-25 · Barra de navegação no modelo da landing da BEKNO
+Funcionamento copiado de `BerhartDev/bekno-landing-page` (`Header.tsx`): barra fixa no topo, links, idioma em dropdown, CTA de contato e, abaixo de 64rem, botão de menu com painel que fecha ao seguir um link. Adaptado à identidade do portfólio: fundo sólido com linha de 1px (sem blur, sombra, cantos arredondados nem bandeiras), CTA com borda de 1px e inversão, ícone de menu com três linhas de 1px que viram X. Base em `<details>` (funciona sem JS); o componente client `Disclosure` só fecha com clique fora, Esc (devolve o foco) e clique em link. O CTA aponta para `#contact`, que existe em todas as páginas. `--header-h` desconta a barra nas âncoras.
