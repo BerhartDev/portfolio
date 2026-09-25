@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { mono, sans } from "@/lib/fonts";
+import { resolveLocale, type LocaleParams } from "@/lib/locale";
 import { SITE_URL } from "@/lib/site";
 import { themeScript } from "@/lib/theme-script";
 import "@/styles/globals.css";
 
-type Props = { children: ReactNode; params: Promise<{ locale: string }> };
+type Props = LocaleParams & { children: ReactNode };
 
 export const dynamicParams = false;
 
@@ -17,8 +16,8 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Omit<Props, "children">): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = await resolveLocale(params);
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     metadataBase: new URL(SITE_URL),
@@ -28,8 +27,7 @@ export async function generateMetadata({ params }: Omit<Props, "children">): Pro
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) notFound();
+  const locale = await resolveLocale(params);
   setRequestLocale(locale);
 
   return (

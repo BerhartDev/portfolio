@@ -111,3 +111,9 @@ button {
 .skip-link:focus-visible {
   transform: none;
 }
+
+.container {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}

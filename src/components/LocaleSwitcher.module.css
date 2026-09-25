@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  border: 1px solid var(--line);
+}
+
+.list li + li {
+  border-left: 1px solid var(--line);
+}
+
+.item {
+  display: block;
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.item:hover,
+.item[aria-current="true"] {
+  background: var(--fg);
+  color: var(--bg);
+}
