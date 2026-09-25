@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Blocks } from "@/components/Blocks";
 import { Contact } from "@/components/Contact";
+import { Gallery } from "@/components/Gallery";
 import { PageIntro } from "@/components/PageIntro";
 import { Section } from "@/components/Section";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -57,6 +58,10 @@ export default async function ProjectArticlePage({ params }: Params) {
   const prev = projects[i - 1];
   const next = projects[i + 1];
 
+  // Com imagens, a galeria vira a seção 01 e as outras andam uma posição.
+  const hasImages = project.images.length > 0;
+  const offset = hasImages ? 1 : 0;
+
   const meta = [
     project.period && { label: t("article.period"), value: project.period },
     project.stack.length > 0 && { label: t("article.stack"), value: project.stack.join(", ") },
@@ -103,8 +108,13 @@ export default async function ProjectArticlePage({ params }: Params) {
               )}
             </dl>
           </PageIntro>
+          {hasImages && (
+            <Section id="images" index={1} title={t("article.images")}>
+              <Gallery locale={locale} images={project.images} />
+            </Section>
+          )}
           {SECTION_KEYS.map((key, n) => (
-            <Section key={key} id={key} index={n + 1} title={t(`projects.labels.${key}`)}>
+            <Section key={key} id={key} index={n + offset + 1} title={t(`projects.labels.${key}`)}>
               <Blocks blocks={text.sections[key]} />
             </Section>
           ))}
@@ -125,7 +135,7 @@ export default async function ProjectArticlePage({ params }: Params) {
             )}
           </nav>
         )}
-        <Contact locale={locale} index={SECTION_KEYS.length + 1} />
+        <Contact locale={locale} index={SECTION_KEYS.length + offset + 1} />
       </main>
       <SiteFooter locale={locale} />
     </div>

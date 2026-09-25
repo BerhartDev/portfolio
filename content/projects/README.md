@@ -12,6 +12,7 @@ Para adicionar um projeto, crie um arquivo novo. Para tirar um projeto do site, 
   "period": "2025–",                  // opcional, igual em todos os idiomas
   "stack": ["Next.js", "AWS"],        // opcional
   "links": [{ "url": "https://…" }],  // opcional
+  "images": [ /* galeria, ver abaixo */ ],  // opcional
   "pt": {
     "title": "Lance!",
     "tag": "Full-Stack II · 2025–atual",
@@ -28,6 +29,24 @@ Para adicionar um projeto, crie um arquivo novo. Para tirar um projeto do site, 
 ```
 
 Os 4 idiomas e as 4 seções são obrigatórios. Cada seção precisa de pelo menos um bloco.
+
+## Imagens (galeria)
+
+Coloque os arquivos em `public/projects/<slug>/` e liste em `images`. Elas aparecem numa seção "Imagens" no topo do artigo, na ordem da lista; a primeira ocupa a largura toda. Sem imagens, a seção não aparece.
+
+```jsonc
+"images": [
+  {
+    "src": "/projects/lance/home.png",
+    "width": 1600,
+    "height": 1000,
+    "alt": { "pt": "…", "en": "…", "fr": "…", "es": "…" },
+    "caption": { "pt": "…", "en": "…", "fr": "…", "es": "…" }  // opcional
+  }
+]
+```
+
+`src`, `width`, `height` (em pixels, do arquivo real) e `alt` nos 4 idiomas são obrigatórios. O `alt` descreve o que a imagem mostra, para quem não a vê.
 
 ## Blocos
 
