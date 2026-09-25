@@ -1,0 +1,160 @@
+.carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* a faixa nunca alarga a coluna */
+  gap: var(--space-4);
+}
+
+/* Faixa com scroll-snap: um slide por vez, rola nativamente. */
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track:focus-visible {
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .track {
+    scroll-behavior: smooth;
+  }
+}
+
+.slide {
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-margin-top: var(--space-6);
+}
+
+/* Moldura com proporção fixa: imagens de tamanhos diferentes não fazem a página pular. */
+.frame {
+  aspect-ratio: 16 / 10;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.caption {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+}
+
+.buttons {
+  display: flex;
+}
+
+/* Botões quadrados de 1px: invertem no hover, a seta anda. */
+.button {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--fg);
+  font-family: var(--font-mono);
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.button + .button {
+  border-left: 0;
+}
+
+.button span {
+  transition: transform var(--dur) var(--ease);
+}
+
+.button:hover:not(:disabled),
+.button:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.button:first-child:hover:not(:disabled) span {
+  transform: translateX(-3px);
+}
+
+.button:last-child:hover:not(:disabled) span {
+  transform: translateX(3px);
+}
+
+.button:disabled {
+  border-color: var(--line);
+  color: var(--faint);
+  cursor: default;
+}
+
+.button + .button:disabled,
+.button:disabled + .button {
+  border-left: 1px solid var(--line);
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  gap: var(--space-2);
+}
+
+.thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  opacity: 0.55;
+  transition:
+    opacity var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb:hover,
+.thumb:focus-visible,
+.thumb[aria-current="true"] {
+  opacity: 1;
+  border-color: var(--fg);
+}
+
+@media (min-width: 48rem) {
+  .thumbs {
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  }
+}

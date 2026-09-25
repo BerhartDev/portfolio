@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-25 · Carrossel de imagens
+- Pedido: visualização melhor para as imagens, tipo carrossel.
+- Feito: `src/components/Carousel.tsx` (client) + `Carousel.module.css`; `Gallery.tsx` passa a resolver textos no servidor e entregar ao carrossel; rótulos `article.gallery` nos 4 idiomas; `Gallery.module.css` removido. Conferido por screenshot no desktop e em 500px.
+- Pendente: testar no navegador real a navegação por botões, miniaturas e teclado.
+
 ## 2026-09-25 · Imagens de exemplo nos projetos
 - Pedido: gerar imagens de exemplo para os projetos.
 - Feito: 3 wireframes SVG em tons de cinza por projeto (`public/projects/<slug>/exemplo-{1,2,3}.svg`: página desktop 1600×1000, painel 1200×900, mobile 1200×900), com a faixa "IMAGEM DE EXEMPLO". Registrados em `images` nos 4 JSONs, com alt nos 4 idiomas dizendo que não é tela real e legenda "Imagem de exemplo. [PREENCHER]".

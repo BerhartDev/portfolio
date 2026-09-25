@@ -60,3 +60,6 @@ Os blocos "Para empresas" e "Para pequenos negócios" viraram um único "O que e
 
 ## 2026-09-25 · Galeria de imagens por projeto
 Campo `images` opcional no JSON do projeto: `src` em `public/projects/<slug>/`, `width` e `height` obrigatórios (sem layout shift), `alt` e `caption` nos 4 idiomas. Renderizada com `<img>` direto (export estático sem otimização de imagem). No dev, o loader relê os JSONs a cada requisição.
+
+## 2026-09-25 · Carrossel na galeria
+A grade de imagens virou carrossel. Base sem JS: faixa com CSS scroll-snap (rola com toque, trackpad e teclado; foco na faixa) e miniaturas como âncoras. Um componente client (`Carousel`) adiciona botões anterior/próximo, contador `01 / 03` anunciado a leitores de tela e miniatura ativa; é o segundo `"use client"` do site, justificado pela navegação. Moldura com proporção fixa 16:10 e `object-fit: contain`, para imagens de tamanhos diferentes não mudarem a altura. Rolagem suave só sem `prefers-reduced-motion`.

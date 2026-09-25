@@ -66,7 +66,13 @@
     "more": "Otros proyectos",
     "prev": "Anterior",
     "next": "Siguiente",
-    "images": "Imágenes"
+    "images": "Imágenes",
+    "gallery": {
+      "label": "Imágenes del proyecto",
+      "prev": "Imagen anterior",
+      "next": "Imagen siguiente",
+      "slide": "Imagen {n} de {total}"
+    }
   },
   "experience": {
     "title": "Trayectoria",

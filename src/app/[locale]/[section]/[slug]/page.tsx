@@ -110,7 +110,7 @@ export default async function ProjectArticlePage({ params }: Params) {
           </PageIntro>
           {hasImages && (
             <Section id="images" index={1} title={t("article.images")}>
-              <Gallery locale={locale} images={project.images} />
+              <Gallery locale={locale} images={project.images} id={`${project.slug}-image`} />
             </Section>
           )}
           {SECTION_KEYS.map((key, n) => (
