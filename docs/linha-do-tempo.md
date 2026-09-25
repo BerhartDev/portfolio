@@ -11,6 +11,15 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-25 · CTA, bloco único e galeria de imagens
+- Pedido: CTA "Ver projetos" na página de projetos; lugar para várias imagens por projeto; tirar a separação "para empresas / para clientes" e fazer um texto completo.
+- Feito: CTA na abertura de `/<idioma>/<segmento>/` levando à lista de estudos de caso; bloco único "O que entrego" (texto corrido com o que já estava no perfil, lista de 6 entregas, linha de formato de trabalho `[PREENCHER]`); campo `images` nos JSONs, validado no loader, com componente `Gallery` no artigo; pastas `public/projects/<slug>/`; loader sem cache no dev; `content/projects/README.md`, `docs/decisoes.md` e `docs/status.md` atualizados.
+- Pendente: as imagens de cada projeto; formato de trabalho e disponibilidade.
+
+## 2026-09-25 · Como rodar o projeto
+- Pedido: por que precisa de Python para ver o build; depois, rodar o projeto.
+- Feito: explicado que o Python era só um servidor estático (alternativas: `npm run dev` ou `npx serve out`). Dev server iniciado na porta 3001, porque a 3000 estava ocupada por outro `next-server`. Sem mudança de código.
+
 ## 2026-09-25 · Página de projetos e artigo por projeto
 - Pedido: página separada de projetos para "vender o peixe", falando com empresas e com pequenos negócios, e uma página por projeto em formato de artigo, carregando os dados de um JSON editável.
 - Escolhas: um JSON por projeto com os 4 idiomas; home vira lista com links; URLs traduzidas (`/pt/projetos/`, `/en/projects/`, `/fr/projets/`, `/es/proyectos/`).

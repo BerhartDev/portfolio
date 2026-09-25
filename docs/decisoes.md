@@ -54,3 +54,9 @@ O acordeão saiu. Cada linha da home leva ao artigo; "Todos os projetos" leva à
 
 ## 2026-09-25 · Página de projetos fala com dois públicos
 Empresas (o que entrego em produção) e pequenos negócios (BEKNO, VamosMarcar). Prazo, escopo e preço: [PREENCHER].
+
+## 2026-09-25 · Página de projetos com um bloco só
+Os blocos "Para empresas" e "Para pequenos negócios" viraram um único "O que entrego", com texto corrido e lista de entregas. CTA "Ver projetos" na abertura leva a `#cases`. Substitui a decisão "Página de projetos fala com dois públicos".
+
+## 2026-09-25 · Galeria de imagens por projeto
+Campo `images` opcional no JSON do projeto: `src` em `public/projects/<slug>/`, `width` e `height` obrigatórios (sem layout shift), `alt` e `caption` nos 4 idiomas. Renderizada com `<img>` direto (export estático sem otimização de imagem). No dev, o loader relê os JSONs a cada requisição.

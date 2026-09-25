@@ -8,7 +8,7 @@
 2. Estrutura e i18n estático.
 3. Direção visual: Schibsted Grotesk + IBM Plex Mono, paleta de cinzas, hover por inversão e sublinhado desenhado.
 4. Setup, i18n + redirecionamento da raiz, tema sem flash, seções, SEO (canonical, hreflang, OG, sitemap, robots, 404), README de deploy.
-5. Projetos em `content/projects/*.json`, página de projetos com URLs traduzidas, artigo por projeto, home com lista em links, seletor de idioma que mantém a página.
+5. Projetos em `content/projects/*.json`, página de projetos com URLs traduzidas, artigo por projeto, home com lista em links, seletor de idioma que mantém a página. Página de projetos com bloco único "O que entrego" e CTA; galeria de imagens por projeto.
 
 ## Próximos passos
 1. Preencher os `[PREENCHER]` em `docs/perfil.md` e depois em `content/projects/*.json`, `messages/*.json` e `src/lib/profile.ts` (e-mail, GitHub).
@@ -17,4 +17,4 @@
 4. Opcional: imagem Open Graph.
 
 ## Pendências de conteúdo
-E-mail, GitHub, domínio, resultados de Lance! e Auto Avaliar, problema de cada projeto, stack e números do VamosMarcar e motivo do envio manual no WhatsApp, BEKNO, resumos de CIM3 e IFF, seção "agora", prazo/escopo/preço para pequenos negócios, stack do VamosMarcar e da BEKNO nos JSONs.
+E-mail, GitHub, domínio, resultados de Lance! e Auto Avaliar, problema de cada projeto, stack e números do VamosMarcar e motivo do envio manual no WhatsApp, BEKNO, resumos de CIM3 e IFF, seção "agora", formato de trabalho e disponibilidade, imagens dos projetos, stack do VamosMarcar e da BEKNO nos JSONs.
