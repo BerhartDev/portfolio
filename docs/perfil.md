@@ -57,6 +57,8 @@ Estruturei o setor de TI do zero com stack open-source.
 ## Projetos (estudo de caso)
 Formato: contexto → problema → o que fiz e por quê → resultado.
 
+O texto publicado dos projetos fica em `content/projects/<slug>.json` (4 idiomas). Esta seção guarda os dados de referência; ao completar um `[PREENCHER]` aqui, atualize o JSON do projeto também.
+
 ### 1. Lance!
 - Contexto: portal esportivo de alto tráfego em produção.
 - Problema: [PREENCHER]

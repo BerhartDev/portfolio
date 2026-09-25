@@ -39,3 +39,18 @@ Estudos de caso em `<details>`/`<summary>`: sem JS, acessível por teclado, cont
 
 ## 2026-09-25 · 404 global
 `global-not-found.tsx` (flag `experimental.globalNotFound`) gera `out/404.html` com a mensagem nos 4 idiomas, já que a URL não indica o idioma.
+
+## 2026-09-25 · Linha do tempo do projeto
+Todo pedido, com ou sem mudança de código, é registrado em `docs/linha-do-tempo.md`: data, pedido, o que foi feito e o que ficou pendente. Entradas novas no topo, antigas nunca reescritas.
+
+## 2026-09-25 · Projetos em JSON
+Um arquivo por projeto em `content/projects/<slug>.json`, com os 4 idiomas e as 4 seções (contexto, problema, o que fiz, resultado) em blocos tipados (`p`, `h`, `list`, `quote`, `code`, `image`). Lido com `fs` no build por `src/lib/projects.ts`, que valida o formato sem dependência nova e derruba o build com arquivo e campo do erro. `projects.items` saiu de `messages/`. `i18n:check` também verifica os JSONs.
+
+## 2026-09-25 · URLs traduzidas para projetos
+`/pt/projetos/`, `/en/projects/`, `/fr/projets/`, `/es/proyectos/`; slug do projeto igual nos 4 idiomas. Rotas `[locale]/[section]` e `[locale]/[section]/[slug]` com `generateStaticParams` gerando só as combinações válidas e `dynamicParams = false`. Segmentos em `src/lib/routes.ts`. x-default das páginas internas aponta para a versão em inglês.
+
+## 2026-09-25 · Home com lista de projetos em links
+O acordeão saiu. Cada linha da home leva ao artigo; "Todos os projetos" leva à página de projetos. O item "Projetos" do menu também. O seletor de idioma troca para a mesma página no outro idioma.
+
+## 2026-09-25 · Página de projetos fala com dois públicos
+Empresas (o que entrego em produção) e pequenos negócios (BEKNO, VamosMarcar). Prazo, escopo e preço: [PREENCHER].
