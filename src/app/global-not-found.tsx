@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { mono, sans } from "@/lib/fonts";
-import { localePath } from "@/lib/seo";
+import { homePath } from "@/lib/routes";
 import { themeScript } from "@/lib/theme-script";
 import "@/styles/globals.css";
 import styles from "./global-not-found.module.css";
@@ -35,7 +35,7 @@ export default async function GlobalNotFound() {
             {messages.map(({ locale, title, back }) => (
               <li key={locale} lang={locale} className={styles.item}>
                 <span>{title}</span>
-                <a href={localePath(locale)} hrefLang={locale} className="link">
+                <a href={homePath(locale)} hrefLang={locale} className="link">
                   {back}
                 </a>
               </li>

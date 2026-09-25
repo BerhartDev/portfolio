@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Stack } from "@/components/Stack";
 import { resolveLocale, type LocaleParams } from "@/lib/locale";
+import { homePath } from "@/lib/routes";
 
 export default async function HomePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params);
@@ -19,7 +20,7 @@ export default async function HomePage({ params }: LocaleParams) {
       <a href="#main" className="skip-link">
         {t("skip")}
       </a>
-      <SiteHeader locale={locale} />
+      <SiteHeader locale={locale} pathFor={homePath} />
       <main id="main">
         <Hero locale={locale} />
         <Projects locale={locale} index={1} />

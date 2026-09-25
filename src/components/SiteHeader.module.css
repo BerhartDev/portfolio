@@ -28,7 +28,8 @@
 }
 
 .sections a:hover,
-.sections a:focus-visible {
+.sections a:focus-visible,
+.sections a[aria-current="page"] {
   color: var(--fg);
 }
 
