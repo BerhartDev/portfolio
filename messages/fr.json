@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Bernardo Knoblauch · Développeur full stack",
-    "description": "Développeur full stack basé à Rio de Janeiro. Node.js, TypeScript, React et Next.js, avec un solide bagage en infrastructure, observabilité et sécurité.",
-    "ogAlt": "Bernardo Knoblauch, développeur full stack."
+    "title": "Bernardo Knoblauch · Développeur full stack Node.js",
+    "description": "Développeur full stack Node.js à Rio de Janeiro. API et services en Node.js et TypeScript, files, cache et observabilité, avec React et Next.js côté front.",
+    "ogAlt": "Bernardo Knoblauch, développeur full stack Node.js."
   },
   "root": {
     "continue": "Continuer en français"
@@ -27,7 +27,7 @@
   },
   "hero": {
     "name": "Bernardo Knoblauch",
-    "role": "Développeur full stack à Rio de Janeiro. Node.js et TypeScript côté back, React et Next.js côté front.",
+    "role": "Développeur full stack Node.js à Rio de Janeiro. API et services en Node.js et TypeScript ; React et Next.js côté front.",
     "lead": "Je viens des réseaux et de l’infrastructure. Je suis passé au développement et, aujourd’hui, je maintiens en production un portail à fort trafic.",
     "sub": "Je raisonne comme quelqu’un qu’un serveur en panne a déjà réveillé en pleine nuit.",
     "photoAlt": "Photo en noir et blanc de Bernardo Knoblauch.",
@@ -46,13 +46,14 @@
   "projectsPage": {
     "title": "Projets",
     "metaTitle": "Projets · Bernardo Knoblauch",
-    "description": "Études de cas de Bernardo Knoblauch : un portail sportif à fort trafic, la migration d’un existant PHP vers Node et React, et mes propres produits.",
+    "description": "Études de cas de Bernardo Knoblauch, développeur full stack Node.js : un portail sportif à fort trafic, la migration d’un monolithe PHP vers Node et mes propres produits.",
     "lead": "Ce que j’ai construit et ce que je maintiens en production, présenté en études de cas : contexte, problème, ce que j’ai fait et le résultat.",
     "cta": "Voir les projets",
     "pitch": {
       "title": "Ce que j’apporte",
-      "body": "Je travaille sur le front et le back en TypeScript, et je m’occupe de ce qui se passe après le déploiement. Aujourd’hui, je maintiens en production un portail sportif à fort trafic. Avant cela, j’ai mené la migration d’un existant PHP vers Node et React. En parallèle, je gère deux produits : BEKNO, qui crée des sites pour les petits commerces, et VamosMarcar, un outil de prise de rendez-vous pour barbiers et salons de coiffure.",
+      "body": "Je conçois et fais tourner des API et des services en Node.js et TypeScript, et je m’occupe de ce qui se passe après le déploiement. Aujourd’hui, je maintiens en production un portail sportif à fort trafic, avec Next.js côté front. Avant cela, j’ai mené la migration d’un monolithe PHP vers des services Node sur GCP. En parallèle, je gère deux produits : BEKNO, qui crée des sites pour les petits commerces, et VamosMarcar, un outil de prise de rendez-vous pour barbiers et salons de coiffure.",
       "items": {
+        "api": "API et services Node.js et TypeScript : REST, GraphQL, files et cache",
         "performance": "Performance et Core Web Vitals",
         "seo": "SEO technique",
         "observability": "Observabilité et gestion des incidents avec analyse des causes profondes",
@@ -86,16 +87,16 @@
     "items": {
       "lance": {
         "company": "Lance!",
-        "role": "Développeur full stack II",
+        "role": "Développeur full stack Node.js",
         "when": "juil. 2025 – aujourd’hui",
         "place": "Rio de Janeiro, Brésil",
-        "summary": "Maintien en production d’un portail d’actualité sportive à fort trafic : stabilité, gestion des incidents et évolutions sûres avec les squads produit.",
+        "summary": "Back-end Node.js et TypeScript et front Next.js pour un portail d’actualité sportive à fort trafic : stabilité en production, gestion des incidents et évolutions sûres avec les squads produit.",
         "points": {
-          "p1": "Core Web Vitals : LCP, CLS et INP via la priorisation des ressources, l’optimisation des images et la compression.",
-          "p2": "SEO technique et CMS : canoniques, sitemap, contrôle de l’indexation et WordPress headless avec des blocks standardisés.",
+          "p1": "API Node.js : endpoints stables, modélisation des données, cache et optimisation des requêtes.",
+          "p2": "Core Web Vitals et SEO technique : LCP, CLS et INP, canoniques, sitemap et contrôle de l’indexation.",
           "p3": "Exploitation : métriques, logs et traces, analyse des causes profondes, cache et redirections Cloudflare, CI/CD avec rollback."
         },
-        "stack": "Next.js · React · Node.js · TypeScript · WordPress headless · AWS · Cloudflare"
+        "stack": "Node.js · TypeScript · Next.js · React · WordPress headless · AWS · Cloudflare"
       },
       "auberge": {
         "company": "Friendly Auberge",
@@ -112,16 +113,16 @@
       },
       "autoavaliar": {
         "company": "Auto Avaliar",
-        "role": "Développeur full stack II",
+        "role": "Développeur full stack Node.js",
         "when": "févr. 2022 – avr. 2024",
         "place": "São Paulo, Brésil",
-        "summary": "Lead technique du remplacement d’un monolithe PHP par un front React et des services Node sur GCP, pour un produit aux règles métier et flux complexes.",
+        "summary": "Lead technique du remplacement d’un monolithe PHP par des services Node.js et TypeScript sur GCP, avec un front React, pour un produit aux règles métier et flux complexes.",
         "points": {
           "p1": "Migration par strangler pattern jusqu’au cutover : contrats REST/GraphQL et suppression des couplages de l’existant.",
           "p2": "Fiabilité : cache multiniveau, timeouts et circuit breakers ; files, workers, retries et DLQ avec idempotence.",
           "p3": "Plateforme : conteneurs, IaC, gestion des secrets, JWT/OAuth2, TDD, CI/CD avec rollback, SLO et runbooks."
         },
-        "stack": "React · Node.js · TypeScript · GCP · REST · GraphQL · Containers"
+        "stack": "Node.js · TypeScript · GCP · REST · GraphQL · React · Containers"
       },
       "jerimum": {
         "company": "Jerimum Produções",
@@ -223,13 +224,13 @@
   "stack": {
     "title": "Stack",
     "groups": {
+      "backend": {
+        "name": "Back-end",
+        "items": "Node.js, TypeScript, REST, GraphQL, files, workers et DLQ, cache, JWT et OAuth2, WordPress headless"
+      },
       "frontend": {
         "name": "Front-end",
         "items": "React, Next.js, TypeScript, Core Web Vitals, SEO technique"
-      },
-      "backend": {
-        "name": "Back-end",
-        "items": "Node.js, TypeScript, REST, GraphQL, files et DLQ, WordPress headless"
       },
       "cloud": {
         "name": "Infrastructure et cloud",

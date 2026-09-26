@@ -32,7 +32,7 @@ export const EXPERIENCE = ["lance", "auberge", "autoavaliar", "jerimum", "cim3",
 export const EDUCATION = ["estacio", "iff", "ihb"] as const;
 export const AWARDS = ["iff2018", "feliciano2017", "nilton2013"] as const;
 export const LANGUAGES = ["pt", "en", "fr"] as const;
-export const STACK_GROUPS = ["frontend", "backend", "cloud", "reliability", "security"] as const;
+export const STACK_GROUPS = ["backend", "frontend", "cloud", "reliability", "security"] as const;
 
 /** "https://www.exemplo.com/a/" → "exemplo.com/a" */
 export function displayUrl(url: string): string {

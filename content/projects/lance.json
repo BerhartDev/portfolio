@@ -2,9 +2,10 @@
   "order": 1,
   "period": "2025–",
   "stack": [
-    "Next.js",
     "Node.js",
     "TypeScript",
+    "Next.js",
+    "React",
     "WordPress headless",
     "AWS",
     "Cloudflare"
@@ -64,7 +65,7 @@
   ],
   "pt": {
     "title": "Lance!",
-    "tag": "Full-Stack II · 2025–atual",
+    "tag": "Node.js Full Stack · 2025–atual",
     "summary": "Sustentação de um portal esportivo de alto tráfego.",
     "sections": {
       "context": [
@@ -95,7 +96,7 @@
   },
   "en": {
     "title": "Lance!",
-    "tag": "Full-Stack II · 2025–present",
+    "tag": "Node.js Full Stack · 2025–present",
     "summary": "Running a high-traffic sports portal in production.",
     "sections": {
       "context": [
@@ -126,7 +127,7 @@
   },
   "fr": {
     "title": "Lance!",
-    "tag": "Full-Stack II · depuis 2025",
+    "tag": "Node.js Full Stack · depuis 2025",
     "summary": "Maintien en production d’un portail sportif à fort trafic.",
     "sections": {
       "context": [
@@ -157,7 +158,7 @@
   },
   "es": {
     "title": "Lance!",
-    "tag": "Full-Stack II · 2025–actualidad",
+    "tag": "Node.js Full Stack · 2025–actualidad",
     "summary": "Operación en producción de un portal deportivo de alto tráfico.",
     "sections": {
       "context": [

@@ -13,7 +13,7 @@ import { PROJECTS_SEGMENT, projectsPath } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-const OFFERS = ["performance", "seo", "observability", "migration", "delivery", "products"] as const;
+const OFFERS = ["api", "performance", "seo", "observability", "migration", "delivery", "products"] as const;
 
 export const dynamicParams = false;
 
