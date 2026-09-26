@@ -153,6 +153,32 @@
       }
     }
   },
+  "awards": {
+    "title": "Distinctions",
+    "items": {
+      "iff2018": {
+        "award": "Mention honorable",
+        "event": "I Feira de Empreendedorismo, Inovação e Talentos",
+        "issuer": "Instituto Federal Fluminense",
+        "when": "mai 2018",
+        "summary": "VIIe Workshop de diffusion scientifique et d’extension. J’ai développé un système à bas coût pour l’irrigation automatique de petits potagers."
+      },
+      "feliciano2017": {
+        "award": "Mention honorable",
+        "event": "II Feira de Ciências, Tecnologia e Conhecimento",
+        "issuer": "Colégio Estadual Dr. Feliciano Sodré",
+        "when": "nov. 2017",
+        "summary": "Projet Bicoptère : stabilisation d’une tige horizontale par régulation PID sur un microcontrôleur ATmega328P, qui pilotait deux moteurs brushless munis d’hélices aux extrémités pour la maintenir en équilibre."
+      },
+      "nilton2013": {
+        "award": "1re place",
+        "event": "I Amostra de Ciências “Água: uma história para contar…”",
+        "issuer": "Escola Municipal Nilton Balthazar",
+        "when": "oct. 2013",
+        "summary": "Un bras hydraulique en matériaux recyclés, actionné par des seringues, qui applique le principe de Pascal : la pression exercée sur un liquide se transmet intégralement en tout point de celui-ci et aux parois du récipient."
+      }
+    }
+  },
   "stack": {
     "title": "Stack",
     "groups": {

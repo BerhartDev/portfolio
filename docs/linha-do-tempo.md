@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Seção de reconhecimentos
+- Pedido: adicionar a seção "Reconhecimentos e prêmios" do LinkedIn (print com 3 itens).
+- Feito: `src/components/Awards.tsx` + `Awards.module.css`, `AWARDS` em `profile.ts`, seção 04 na home (Contato vira 05); namespace `awards` nos 4 idiomas; seção no `docs/perfil.md`; estrutura no `CLAUDE.md`. Conferido no Edge em 1400 e 500px.
+
 ## 2026-09-26 · Locais na trajetória
 - Pedido: adicionar os locais na trajetória: Lance! no Rio de Janeiro, Auberge já tinha, Auto Avaliar em São Paulo, o resto no Rio de Janeiro.
 - Feito: campo novo `experience.items.<empresa>.place` nos 4 idiomas (país traduzido: Brasil/Brazil/Brésil/Brasil, "Río de Janeiro" em espanhol); o local que estava dentro de `when` na Auberge passou para `place`; `Experience.tsx` mostra o local numa linha própria abaixo do período, sem quebrar no meio; tabela de experiência do `docs/perfil.md` preenchida. Conferido no Edge em 1400 e 500px.

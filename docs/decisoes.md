@@ -99,3 +99,6 @@ A seção "Agora" saiu da home (componente `Now`, namespace `now` nos 4 idiomas 
 
 ## 2026-09-26 · Tema sempre visível na barra
 O botão de tema fica na barra também no mobile (nome, idioma, tema, menu) e saiu do painel do menu, que ficou com links e CTA. Cabe em 390px sem rolagem horizontal.
+
+## 2026-09-26 · Seção de reconhecimentos
+Nova seção "Reconhecimentos" (04) entre trajetória e contato, com os 3 prêmios do LinkedIn. Mesmo formato de linha do tempo da trajetória (reaproveita `Experience.module.css`): data à esquerda; prêmio · evento, instituição em mono e descrição à direita. Nomes de eventos e instituições ficam no original em todos os idiomas; tipo do prêmio, datas e descrições são traduzidos. Não entra na barra.

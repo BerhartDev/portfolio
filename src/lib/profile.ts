@@ -30,6 +30,7 @@ export const socialLinks: Record<SocialNetwork, string | undefined> = {
 
 export const EXPERIENCE = ["lance", "auberge", "autoavaliar", "jerimum", "cim3", "iff"] as const;
 export const EDUCATION = ["estacio", "iff"] as const;
+export const AWARDS = ["iff2018", "feliciano2017", "nilton2013"] as const;
 export const LANGUAGES = ["pt", "en", "fr"] as const;
 export const STACK_GROUPS = ["frontend", "backend", "cloud", "reliability", "security"] as const;
 

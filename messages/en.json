@@ -153,6 +153,32 @@
       }
     }
   },
+  "awards": {
+    "title": "Awards",
+    "items": {
+      "iff2018": {
+        "award": "Honorable mention",
+        "event": "I Feira de Empreendedorismo, Inovação e Talentos",
+        "issuer": "Instituto Federal Fluminense",
+        "when": "May 2018",
+        "summary": "7th Workshop on Science Outreach and Extension. I built a low-cost system that automates irrigation for small vegetable gardens."
+      },
+      "feliciano2017": {
+        "award": "Honorable mention",
+        "event": "II Feira de Ciências, Tecnologia e Conhecimento",
+        "issuer": "Colégio Estadual Dr. Feliciano Sodré",
+        "when": "Nov 2017",
+        "summary": "Bicopter project: stabilizing a horizontal beam with PID control on an ATmega328P microcontroller, which drove two brushless motors with propellers at each end to keep the beam balanced."
+      },
+      "nilton2013": {
+        "award": "1st place",
+        "event": "I Amostra de Ciências “Água: uma história para contar…”",
+        "issuer": "Escola Municipal Nilton Balthazar",
+        "when": "Oct 2013",
+        "summary": "A hydraulic arm made from recycled materials and driven by syringes, applying Pascal’s principle: pressure applied to a liquid is transmitted undiminished to every point in it and to the walls of its container."
+      }
+    }
+  },
   "stack": {
     "title": "Stack",
     "groups": {

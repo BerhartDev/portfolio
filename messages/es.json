@@ -153,6 +153,32 @@
       }
     }
   },
+  "awards": {
+    "title": "Reconocimientos",
+    "items": {
+      "iff2018": {
+        "award": "Mención honorífica",
+        "event": "I Feira de Empreendedorismo, Inovação e Talentos",
+        "issuer": "Instituto Federal Fluminense",
+        "when": "may. 2018",
+        "summary": "VII Taller de Divulgación Científica y Extensión. Desarrollé un sistema de bajo costo para el riego automático de pequeñas huertas."
+      },
+      "feliciano2017": {
+        "award": "Mención honorífica",
+        "event": "II Feira de Ciências, Tecnologia e Conhecimento",
+        "issuer": "Colégio Estadual Dr. Feliciano Sodré",
+        "when": "nov. 2017",
+        "summary": "Proyecto Bicóptero: control de estabilidad de una varilla horizontal con control PID en un microcontrolador ATmega328P, que accionaba dos motores brushless con hélices en los extremos para mantenerla en equilibrio."
+      },
+      "nilton2013": {
+        "award": "1.er puesto",
+        "event": "I Amostra de Ciências “Água: uma história para contar…”",
+        "issuer": "Escola Municipal Nilton Balthazar",
+        "when": "oct. 2013",
+        "summary": "Un brazo hidráulico hecho con material reciclado y accionado con jeringas, que aplica el principio de Pascal: la presión ejercida sobre un líquido se transmite íntegramente a todos sus puntos y a las paredes del recipiente."
+      }
+    }
+  },
   "stack": {
     "title": "Stack",
     "groups": {

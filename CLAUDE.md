@@ -34,7 +34,7 @@ Portfólio pessoal estático em pt, en, fr, es.
 - Proibido: gradientes, glassmorphism, glow, sombras suaves, cards idênticos com ícone, barras de % de skill, fade-in em tudo ao rolar.
 
 ## Estrutura do site
-Home: topo (nome, frase concreta, links, idioma, tema) → stack agrupada por área → projetos (lista com link para cada artigo) → trajetória → contato sem formulário. Ordem pensada para recrutadores.
+Home: topo (nome, frase concreta, links, idioma, tema) → stack agrupada por área → projetos (lista com link para cada artigo) → trajetória → reconhecimentos → contato sem formulário. Ordem pensada para recrutadores.
 
 Página de projetos (`/pt/projetos/`, `/en/projects/`, `/fr/projets/`, `/es/proyectos/`): abertura → para empresas → para pequenos negócios → estudos de caso → contato. Cada projeto tem um artigo em `/<idioma>/<segmento>/<slug>/`: contexto → problema → o que fiz e por quê → resultado.
 

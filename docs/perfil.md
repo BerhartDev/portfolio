@@ -57,6 +57,11 @@ Estruturei o setor de TI do zero com stack open-source.
 ### IFF · Assistente de TI · 2018
 [PREENCHER]
 
+## Reconhecimentos e prêmios
+- Menção Honrosa · I Feira de Empreendedorismo, Inovação e Talentos · Instituto Federal Fluminense · mai. 2018. VII Workshop de Divulgação Científica e Extensão: sistema de baixo custo para controle automático de irrigação de pequenas hortas.
+- Menção Honrosa · II Feira de Ciências, Tecnologia e Conhecimento · Colégio Estadual Dr. Feliciano Sodré · nov. 2017. Projeto "Bicóptero": estabilidade de uma haste horizontal com controle PID em microcontrolador ATmega328P e dois motores brushless com hélices nos extremos.
+- 1º lugar · I Amostra de Ciências "Água: uma história para contar…" · Escola Municipal Nilton Balthazar · out. 2013. Braço hidráulico de material reciclável movido por seringas, aplicando o princípio de Pascal.
+
 ## Projetos (estudo de caso)
 Formato: contexto → problema → o que fiz e por quê → resultado.
 

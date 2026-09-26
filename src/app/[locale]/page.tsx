@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Awards } from "@/components/Awards";
 import { Contact } from "@/components/Contact";
 import { Experience } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
@@ -26,7 +27,8 @@ export default async function HomePage({ params }: LocaleParams) {
         <Stack locale={locale} index={1} />
         <Projects locale={locale} index={2} />
         <Experience locale={locale} index={3} />
-        <Contact locale={locale} index={4} />
+        <Awards locale={locale} index={4} />
+        <Contact locale={locale} index={5} />
       </main>
       <SiteFooter locale={locale} />
     </div>

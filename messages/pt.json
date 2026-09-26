@@ -153,6 +153,32 @@
       }
     }
   },
+  "awards": {
+    "title": "Reconhecimentos",
+    "items": {
+      "iff2018": {
+        "award": "Menção honrosa",
+        "event": "I Feira de Empreendedorismo, Inovação e Talentos",
+        "issuer": "Instituto Federal Fluminense",
+        "when": "mai. 2018",
+        "summary": "VII Workshop de Divulgação Científica e Extensão. Desenvolvi um sistema de baixo custo para controle automático de irrigação de pequenas hortas."
+      },
+      "feliciano2017": {
+        "award": "Menção honrosa",
+        "event": "II Feira de Ciências, Tecnologia e Conhecimento",
+        "issuer": "Colégio Estadual Dr. Feliciano Sodré",
+        "when": "nov. 2017",
+        "summary": "Projeto Bicóptero: controle de estabilidade de uma haste horizontal com controle PID num microcontrolador ATmega328P, que acionava dois motores brushless com hélices nas pontas para manter a haste em equilíbrio."
+      },
+      "nilton2013": {
+        "award": "1º lugar",
+        "event": "I Amostra de Ciências “Água: uma história para contar…”",
+        "issuer": "Escola Municipal Nilton Balthazar",
+        "when": "out. 2013",
+        "summary": "Braço hidráulico feito com material reciclável e movido por seringas, aplicando o princípio de Pascal: a pressão aplicada a um líquido se transmite integralmente a todos os pontos dele e às paredes do recipiente."
+      }
+    }
+  },
   "stack": {
     "title": "Stack",
     "groups": {
