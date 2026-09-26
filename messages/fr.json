@@ -179,6 +179,9 @@
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
+  "social": {
+    "label": "Profils"
+  },
   "footer": {
     "copyright": "© {year} Bernardo Knoblauch",
     "note": "Site statique, sans pistage."

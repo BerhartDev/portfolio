@@ -1,0 +1,51 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Quadrado de 1px como os controles da barra; inverte no hover e sobe um pouco. */
+.link {
+  display: grid;
+  place-items: center;
+  width: var(--control-h);
+  height: var(--control-h);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.link:hover,
+.link:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Rodapé: menor e sem borda, mas com a mesma área de toque. */
+.sm .link {
+  width: 2rem;
+  height: 2rem;
+  border-color: transparent;
+  color: var(--muted);
+}
+
+.sm .link:hover,
+.sm .link:focus-visible {
+  color: var(--bg);
+}
+
+.sm .icon {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
