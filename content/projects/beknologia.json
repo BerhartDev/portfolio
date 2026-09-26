@@ -1,0 +1,413 @@
+{
+  "order": 4,
+  "period": "2026",
+  "stack": [
+    "Node.js",
+    "TypeScript",
+    "Next.js",
+    "Strapi",
+    "PostgreSQL",
+    "Redis",
+    "Firebase Auth",
+    "Turborepo",
+    "Railway"
+  ],
+  "links": [
+    {
+      "url": "https://beknologia.up.railway.app/"
+    }
+  ],
+  "images": [],
+  "pt": {
+    "title": "Beknologia",
+    "tag": "Projeto pessoal · Blog headless · Node.js",
+    "summary": "Blog headless em 4 idiomas: Next.js 16 e Strapi 5 em Node.js, com cache em Redis, Firebase Auth e deploy no Railway.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "O Beknologia é o meu blog, em pt-BR, en-US, fr-FR e es-ES. É um monorepo Turborepo com o front em Next.js 16 (App Router) e o CMS em Strapi 5 self-hosted, os dois em Node.js, com tipos compartilhados no pacote @blog/types."
+        },
+        {
+          "type": "p",
+          "text": "Fiz em julho de 2026, em 10 fases planejadas, da modelagem do conteúdo ao deploy, com 15 decisões registradas em ADRs."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "Um blog multilíngue, com conteúdo gerenciado por idioma, precisa de páginas estáticas rápidas que se atualizem assim que um post é publicado e que continuem de pé se o CMS ou o cache caírem."
+        },
+        {
+          "type": "p",
+          "text": "O cache padrão em disco do Next.js é efêmero no Railway: cada deploy ou restart começaria do zero."
+        }
+      ],
+      "work": [
+        {
+          "type": "h",
+          "text": "Arquitetura e conteúdo"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Strapi 5 com PostgreSQL: Post, Author, Category e Tag com i18n e rascunho/publicação, e um Theme Settings que alimenta as cores do site por CSS custom properties.",
+            "Next.js 16 com SSG e ISR. O Strapi chama um webhook de revalidação a cada publicação e a página é invalidada por tag. Os TTLs (300 s na API, 1 h no ISR) ficam só como rede de segurança.",
+            "Uploads no Cloudinary e cliente de fetch tipado para o Strapi."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Cache em Redis de ponta a ponta"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cache handler próprio do Next.js em Redis, para o cache de ISR sobreviver a deploys e restarts. Testei derrubando o processo do Next.js e pausando o Strapi: um processo novo serviu a página a partir do cache, com a origem fora do ar.",
+            "Rodando o cenário de falha de verdade, achei dois bugs: a promise de conexão rejeitada ficava memorizada e desligava o cache até o fim do processo, e a reconexão padrão do cliente Redis travava toda renderização quando o Redis caía. Corrigi resetando a promise e usando reconnectStrategy: false com timeout de 2 s: com o Redis fora, a página responde em cerca de 0,5 s sem cache e volta a gravar sozinha quando ele sobe.",
+            "Cache da API REST do Strapi em Redis com o plugin da comunidade compatível com Strapi 5, porque o plugin previsto na especificação só suporta a v4."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Autenticação e SEO"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Firebase Auth (e-mail/senha e Google) com papéis leitor, assinante, editor e admin em Custom Claims, definidos só no servidor. Session cookies, proteção de rotas no runtime Node.js e Firebase Admin SDK inicializado sob demanda.",
+            "Conteúdo premium liberado por papel e Draft Mode só para editor e admin.",
+            "SEO por idioma: slug real de cada locale no hreflang, no sitemap e no seletor de idioma; JSON-LD (Article, BreadcrumbList, WebSite), imagem de Open Graph gerada dinamicamente, RSS e robots.",
+            "GA4 só depois do consentimento (LGPD), com eventos de leitura e Web Vitals."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Deploy"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dois serviços no Railway (web e cms), cada um com Dockerfile próprio, mais Postgres e Redis gerenciados em rede privada. Configuração versionada em railway.json, porque o builder definido pelo painel não era respeitado.",
+            "CI no GitHub Actions com install, lint, type-check e build em todo PR e push para main; redeploy automático depois do CI."
+          ]
+        }
+      ],
+      "result": [
+        {
+          "type": "list",
+          "items": [
+            "No ar em beknologia.up.railway.app, nos 4 idiomas.",
+            "10 fases concluídas, smoke test contra produção depois do deploy e 15 ADRs com os trade-offs.",
+            "Cache que sobrevive a restart e, quando o Redis cai, degrada sem travar o site."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Próximos passos"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Testes automatizados. Hoje o CI cobre lint, type-check e build.",
+            "Domínio próprio e CDN da Cloudflare, adiados até o domínio existir."
+          ]
+        }
+      ]
+    }
+  },
+  "en": {
+    "title": "Beknologia",
+    "tag": "Personal project · Headless blog · Node.js",
+    "summary": "Headless blog in 4 languages: Next.js 16 and Strapi 5 on Node.js, with Redis caching, Firebase Auth and deployment on Railway.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Beknologia is my blog, in pt-BR, en-US, fr-FR and es-ES. It is a Turborepo monorepo with a Next.js 16 front end (App Router) and a self-hosted Strapi 5 CMS, both on Node.js, with shared types in the @blog/types package."
+        },
+        {
+          "type": "p",
+          "text": "I built it in July 2026 across 10 planned phases, from content modeling to deployment, with 15 decisions recorded as ADRs."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "A multilingual blog with content managed per language needs fast static pages that update as soon as a post is published and stay up if the CMS or the cache goes down."
+        },
+        {
+          "type": "p",
+          "text": "The default on-disk Next.js cache is ephemeral on Railway: every deploy or restart would start from scratch."
+        }
+      ],
+      "work": [
+        {
+          "type": "h",
+          "text": "Architecture and content"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Strapi 5 on PostgreSQL: Post, Author, Category and Tag with i18n and draft/publish, plus a Theme Settings type that drives the site colors through CSS custom properties.",
+            "Next.js 16 with SSG and ISR. Strapi calls a revalidation webhook on every publish and the page is invalidated by tag. The TTLs (300 s on the API, 1 h on ISR) are only a safety net.",
+            "Uploads on Cloudinary and a typed fetch client for Strapi."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "End-to-end Redis caching"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A custom Next.js cache handler on Redis, so the ISR cache survives deploys and restarts. I tested it by killing the Next.js process and pausing Strapi: a fresh process served the page from cache with the origin down.",
+            "Running the failure scenario for real, I found two bugs: a rejected connection promise stayed memoized and turned the cache off for the rest of the process, and the Redis client's default reconnection hung every render when Redis went down. I fixed them by resetting the promise and using reconnectStrategy: false with a 2 s timeout: with Redis down, the page responds in about 0.5 s without cache, and it starts writing again on its own once Redis is back.",
+            "Strapi REST API caching on Redis with the community plugin that supports Strapi 5, since the plugin named in the spec only supports v4."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Authentication and SEO"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Firebase Auth (email/password and Google) with reader, subscriber, editor and admin roles in Custom Claims, set only on the server. Session cookies, route protection on the Node.js runtime and a lazily initialized Firebase Admin SDK.",
+            "Premium content gated by role and Draft Mode limited to editors and admins.",
+            "Per-language SEO: the real slug of each locale in hreflang, the sitemap and the language switcher; JSON-LD (Article, BreadcrumbList, WebSite), dynamically generated Open Graph images, RSS and robots.",
+            "GA4 only after consent (LGPD), with reading events and Web Vitals."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Deployment"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Two Railway services (web and cms), each with its own Dockerfile, plus managed Postgres and Redis on a private network. Configuration versioned in railway.json, because the builder set in the dashboard was not honored.",
+            "CI on GitHub Actions running install, lint, type-check and build on every PR and push to main; automatic redeploy after CI."
+          ]
+        }
+      ],
+      "result": [
+        {
+          "type": "list",
+          "items": [
+            "Live at beknologia.up.railway.app, in all 4 languages.",
+            "10 phases completed, a post-deploy smoke test against production and 15 ADRs covering the trade-offs.",
+            "A cache that survives restarts and, when Redis goes down, degrades without taking the site with it."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Next steps"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Automated tests. Today CI covers lint, type-check and build.",
+            "A custom domain and Cloudflare CDN, postponed until the domain exists."
+          ]
+        }
+      ]
+    }
+  },
+  "fr": {
+    "title": "Beknologia",
+    "tag": "Projet personnel · Blog headless · Node.js",
+    "summary": "Blog headless en 4 langues : Next.js 16 et Strapi 5 sur Node.js, avec cache Redis, Firebase Auth et déploiement sur Railway.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Beknologia est mon blog, en pt-BR, en-US, fr-FR et es-ES. C’est un monorepo Turborepo avec un front Next.js 16 (App Router) et un CMS Strapi 5 auto-hébergé, tous deux sur Node.js, avec des types partagés dans le paquet @blog/types."
+        },
+        {
+          "type": "p",
+          "text": "Je l’ai réalisé en juillet 2026, en 10 phases planifiées, de la modélisation du contenu au déploiement, avec 15 décisions consignées en ADR."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "Un blog multilingue, avec un contenu géré par langue, a besoin de pages statiques rapides qui se mettent à jour dès qu’un article est publié et qui tiennent si le CMS ou le cache tombe."
+        },
+        {
+          "type": "p",
+          "text": "Le cache disque par défaut de Next.js est éphémère sur Railway : chaque déploiement ou redémarrage repartirait de zéro."
+        }
+      ],
+      "work": [
+        {
+          "type": "h",
+          "text": "Architecture et contenu"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Strapi 5 sur PostgreSQL : Post, Author, Category et Tag avec i18n et brouillon/publication, plus un Theme Settings qui pilote les couleurs du site via des CSS custom properties.",
+            "Next.js 16 en SSG et ISR. Strapi appelle un webhook de revalidation à chaque publication et la page est invalidée par tag. Les TTL (300 s sur l’API, 1 h sur l’ISR) ne servent que de filet de sécurité.",
+            "Uploads sur Cloudinary et client de fetch typé pour Strapi."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Cache Redis de bout en bout"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Un cache handler Next.js maison sur Redis, pour que le cache ISR survive aux déploiements et redémarrages. Je l’ai testé en tuant le processus Next.js et en suspendant Strapi : un nouveau processus a servi la page depuis le cache, origine hors ligne.",
+            "En rejouant réellement le scénario de panne, j’ai trouvé deux bugs : une promise de connexion rejetée restait mémorisée et coupait le cache jusqu’à la fin du processus, et la reconnexion par défaut du client Redis bloquait tout rendu quand Redis tombait. Corrigé en réinitialisant la promise et avec reconnectStrategy: false et un timeout de 2 s : Redis hors ligne, la page répond en 0,5 s environ sans cache, puis se remet à écrire seule quand Redis revient.",
+            "Cache de l’API REST de Strapi sur Redis avec le plugin communautaire compatible Strapi 5, le plugin prévu par la spécification ne gérant que la v4."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Authentification et SEO"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Firebase Auth (e-mail/mot de passe et Google) avec les rôles lecteur, abonné, éditeur et admin en Custom Claims, définis uniquement côté serveur. Session cookies, protection des routes sur le runtime Node.js et Firebase Admin SDK initialisé à la demande.",
+            "Contenu premium réservé par rôle et Draft Mode limité aux éditeurs et admins.",
+            "SEO par langue : slug réel de chaque locale dans le hreflang, le sitemap et le sélecteur de langue ; JSON-LD (Article, BreadcrumbList, WebSite), image Open Graph générée dynamiquement, RSS et robots.",
+            "GA4 seulement après consentement (LGPD), avec événements de lecture et Web Vitals."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Déploiement"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Deux services Railway (web et cms), chacun avec son Dockerfile, plus Postgres et Redis gérés en réseau privé. Configuration versionnée dans railway.json, car le builder défini dans le tableau de bord n’était pas respecté.",
+            "CI sur GitHub Actions avec install, lint, type-check et build sur chaque PR et push sur main ; redéploiement automatique après la CI."
+          ]
+        }
+      ],
+      "result": [
+        {
+          "type": "list",
+          "items": [
+            "En ligne sur beknologia.up.railway.app, dans les 4 langues.",
+            "10 phases terminées, un smoke test en production après le déploiement et 15 ADR documentant les compromis.",
+            "Un cache qui survit aux redémarrages et, quand Redis tombe, se dégrade sans bloquer le site."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Prochaines étapes"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tests automatisés. Aujourd’hui, la CI couvre lint, type-check et build.",
+            "Domaine personnalisé et CDN Cloudflare, reportés en attendant le domaine."
+          ]
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Beknologia",
+    "tag": "Proyecto personal · Blog headless · Node.js",
+    "summary": "Blog headless en 4 idiomas: Next.js 16 y Strapi 5 sobre Node.js, con caché en Redis, Firebase Auth y deploy en Railway.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "Beknologia es mi blog, en pt-BR, en-US, fr-FR y es-ES. Es un monorepo Turborepo con el front en Next.js 16 (App Router) y el CMS en Strapi 5 self-hosted, ambos sobre Node.js, con tipos compartidos en el paquete @blog/types."
+        },
+        {
+          "type": "p",
+          "text": "Lo hice en julio de 2026, en 10 fases planificadas, del modelado del contenido al deploy, con 15 decisiones registradas en ADRs."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "Un blog multilingüe, con contenido gestionado por idioma, necesita páginas estáticas rápidas que se actualicen en cuanto se publica un post y que sigan en pie si el CMS o la caché se caen."
+        },
+        {
+          "type": "p",
+          "text": "La caché en disco por defecto de Next.js es efímera en Railway: cada deploy o reinicio empezaría de cero."
+        }
+      ],
+      "work": [
+        {
+          "type": "h",
+          "text": "Arquitectura y contenido"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Strapi 5 con PostgreSQL: Post, Author, Category y Tag con i18n y borrador/publicación, y un Theme Settings que define los colores del sitio con CSS custom properties.",
+            "Next.js 16 con SSG e ISR. Strapi llama a un webhook de revalidación en cada publicación y la página se invalida por tag. Los TTL (300 s en la API, 1 h en ISR) quedan solo como red de seguridad.",
+            "Uploads en Cloudinary y cliente de fetch tipado para Strapi."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Caché en Redis de punta a punta"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cache handler propio de Next.js en Redis, para que la caché de ISR sobreviva a deploys y reinicios. Lo probé matando el proceso de Next.js y pausando Strapi: un proceso nuevo sirvió la página desde la caché, con el origen caído.",
+            "Al ejecutar el escenario de fallo de verdad encontré dos bugs: la promise de conexión rechazada quedaba memorizada y apagaba la caché hasta el final del proceso, y la reconexión por defecto del cliente Redis colgaba todo render cuando Redis se caía. Lo corregí reiniciando la promise y usando reconnectStrategy: false con timeout de 2 s: con Redis caído, la página responde en unos 0,5 s sin caché y vuelve a escribir sola cuando Redis regresa.",
+            "Caché de la API REST de Strapi en Redis con el plugin de la comunidad compatible con Strapi 5, porque el plugin previsto en la especificación solo soporta la v4."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Autenticación y SEO"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Firebase Auth (email/contraseña y Google) con roles lector, suscriptor, editor y admin en Custom Claims, definidos solo en el servidor. Session cookies, protección de rutas en el runtime de Node.js y Firebase Admin SDK inicializado bajo demanda.",
+            "Contenido premium por rol y Draft Mode solo para editores y admins.",
+            "SEO por idioma: slug real de cada locale en hreflang, sitemap y selector de idioma; JSON-LD (Article, BreadcrumbList, WebSite), imagen de Open Graph generada dinámicamente, RSS y robots.",
+            "GA4 solo después del consentimiento (LGPD), con eventos de lectura y Web Vitals."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Deploy"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dos servicios en Railway (web y cms), cada uno con su Dockerfile, más Postgres y Redis gestionados en red privada. Configuración versionada en railway.json, porque el builder definido en el panel no se respetaba.",
+            "CI en GitHub Actions con install, lint, type-check y build en cada PR y push a main; redeploy automático después del CI."
+          ]
+        }
+      ],
+      "result": [
+        {
+          "type": "list",
+          "items": [
+            "En línea en beknologia.up.railway.app, en los 4 idiomas.",
+            "10 fases completadas, un smoke test contra producción después del deploy y 15 ADRs con los trade-offs.",
+            "Una caché que sobrevive a reinicios y, cuando Redis se cae, se degrada sin tumbar el sitio."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Próximos pasos"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tests automatizados. Hoy el CI cubre lint, type-check y build.",
+            "Dominio propio y CDN de Cloudflare, pospuestos hasta tener el dominio."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Estudo de caso do Beknologia
+- Pedido: fazer o mesmo que no VamosMarcar para o repositório `blog-beknologia`; remover os outros projetos. No meio do trabalho, o pedido mudou: não remover os outros.
+- Feito: lidos README, `CLAUDE.md`, `docs/TASKS.md`, spec de arquitetura e ADRs do blog (repositório só lido). Novo `content/projects/beknologia.json` nos 4 idiomas (Next.js 16 + Strapi 5 em Node.js, cache Redis com os dois bugs de falha real corrigidos, Firebase Auth, SEO por locale, Railway, próximos passos), sem imagens. A remoção de Lance!, Auto Avaliar e BEKNO chegou a ser feita e foi desfeita antes do commit; ordem final: Lance!, Auto Avaliar, VamosMarcar, Beknologia, BEKNO. `docs/perfil.md` com a seção do Beknologia.
+- Pendente: imagens do Beknologia; números de uso.
+
 ## 2026-09-26 · Estudo de caso do VamosMarcar
 - Pedido: ler o projeto VamosMarcar (repositório `sweeney`) e preencher a página dele; imagens ficam para depois.
 - Feito: lidos README, `docs/` (visão geral, backend, banco, fluxo de booking, funcionalidades, comunicação, deploy), manifests e trechos do código (slots, transação de booking, auth). `content/projects/vamosmarcar.json` reescrito nos 4 idiomas: tag, resumo, período `2026–`, stack e as 4 seções (arquitetura, agendamento, segurança/operação, motivo do WhatsApp manual, resultado, próximos passos). Números só do que o repo comprova (111 commits, 11 módulos, 55 rotas, 8 modelos, 12 migrações); uso real `[PREENCHER]`; ausência de testes dita como próximo passo. Imagens não alteradas. `docs/perfil.md` atualizado.

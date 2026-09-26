@@ -108,7 +108,16 @@ Fonte: repositório `~/Github/sweeney` (docs e código), lido em 2026-09-26.
 - WhatsApp manual (motivo): links `wa.me` com custo zero por mensagem, sem Twilio nem WhatsApp Business API; decisão documentada em `docs/gestao-decisoes-comunicacao.md` do repo (matriz de custo fixo, variável e operação). SMS via Twilio existe no código, desligado sem credenciais.
 - Resultado / números de uso: [PREENCHER]
 
-### 4. BEKNO · berhartdev.github.io/bekno-landing-page/pt/
+### 4. Beknologia · beknologia.up.railway.app
+Fonte: repositório `~/Github/blog-beknologia` (README, `docs/`, ADRs), lido em 2026-09-26. É o blog linkado na barra do site.
+- Contexto: blog headless em pt-BR, en-US, fr-FR, es-ES; monorepo Turborepo com Next.js 16 (App Router) e Strapi 5 self-hosted, ambos em Node.js; tipos em `@blog/types`. Julho de 2026, 7 commits, 10 fases (0 a 9) e 15 ADRs.
+- Problema: páginas estáticas rápidas que atualizam na publicação e resistem a queda do CMS/cache; cache em disco do Next.js é efêmero no Railway.
+- Stack: Node.js, TypeScript, Next.js 16, Strapi 5, PostgreSQL, Redis, Firebase Auth/Admin SDK, Cloudinary, next-intl, Tailwind, Turborepo, Docker, Railway, GitHub Actions, GA4.
+- O que fiz: SSG + ISR com webhook de revalidação por tag; cache handler próprio em Redis (sobrevive a restart; dois bugs achados em teste de falha real e corrigidos: promise rejeitada memorizada e reconexão infinita → `reconnectStrategy: false`, timeout 2 s, ~0,5 s degradado); cache REST do Strapi em Redis (plugin da comunidade p/ v5); Firebase Auth com Custom Claims só no servidor, session cookies, Draft Mode e conteúdo premium por papel; SEO por locale (slug real no hreflang/sitemap), JSON-LD, OG dinâmico, RSS; GA4 com consentimento LGPD; Railway com `railway.json` versionado.
+- Sem testes automatizados. Domínio próprio e CDN adiados.
+- Resultado / números de uso: [PREENCHER]
+
+### 5. BEKNO · berhartdev.github.io/bekno-landing-page/pt/
 - Contexto: minha empresa de sites para pequenos negócios.
 - Problema: [PREENCHER]
 - O que fiz e por quê: [PREENCHER]
