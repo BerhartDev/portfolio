@@ -86,6 +86,3 @@ O texto publicado dos projetos fica em `content/projects/<slug>.json` (4 idiomas
 - Problema: [PREENCHER]
 - O que fiz e por quê: [PREENCHER]
 - Resultado: [PREENCHER]
-
-## Agora
-[PREENCHER]

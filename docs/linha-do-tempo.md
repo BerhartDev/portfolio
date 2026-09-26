@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Seção "Agora" removida
+- Pedido: remover a parte "Agora".
+- Feito: `src/components/Now.tsx` e `Now.module.css` apagados; `page.tsx` sem a seção (Contato vira 04); namespace `now` removido dos 4 `messages/*.json`; seção "Agora" tirada de `docs/perfil.md`, da estrutura no `CLAUDE.md` e das pendências do `docs/status.md`.
+
 ## 2026-09-26 · Ordem da home para recrutadores
 - Pedido: reordenar para recrutadores: 1 Stack, 2 Projetos, 3 Experiência.
 - Feito: `src/app/[locale]/page.tsx` com Stack (01), Projetos (02), Trajetória (03), Agora (04), Contato (05); barra na ordem Stack, Projetos, Contato, Blog; estrutura do site no `CLAUDE.md` e decisão atualizadas.

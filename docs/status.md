@@ -17,4 +17,4 @@
 5. Adicionar favicon (hoje `/favicon.ico` dá 500 no dev).
 
 ## Pendências de conteúdo
-E-mail, GitHub, domínio, resultados de Lance! e Auto Avaliar, problema de cada projeto, stack e números do VamosMarcar e motivo do envio manual no WhatsApp, BEKNO, resumos de CIM3 e IFF, seção "agora", formato de trabalho e disponibilidade, imagens dos projetos, stack do VamosMarcar e da BEKNO nos JSONs.
+E-mail, GitHub, domínio, resultados de Lance! e Auto Avaliar, problema de cada projeto, stack e números do VamosMarcar e motivo do envio manual no WhatsApp, BEKNO, resumos de CIM3 e IFF, formato de trabalho e disponibilidade, imagens dos projetos, stack do VamosMarcar e da BEKNO nos JSONs.

@@ -93,3 +93,6 @@ No desktop, a foto fica a 10% da borda direita do conteúdo (fora do canto, sem 
 
 ## 2026-09-26 · Ordem da home para recrutadores
 Home: topo → stack → projetos → trajetória → agora → contato (antes: projetos → trajetória → stack). A barra segue a mesma ordem: Stack, Projetos, Contato, Blog.
+
+## 2026-09-26 · Sem seção "Agora"
+A seção "Agora" saiu da home (componente `Now`, namespace `now` nos 4 idiomas e a seção do `docs/perfil.md`). Home: topo → stack → projetos → trajetória → contato.

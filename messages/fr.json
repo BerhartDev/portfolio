@@ -171,10 +171,6 @@
       }
     }
   },
-  "now": {
-    "title": "En ce moment",
-    "body": "[PREENCHER]"
-  },
   "contact": {
     "title": "Contact",
     "lead": "Pas de formulaire. Écrivez-moi directement ou contactez-moi sur LinkedIn.",
