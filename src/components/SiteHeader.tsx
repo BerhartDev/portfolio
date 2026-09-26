@@ -10,7 +10,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 // Links da barra. "projects" leva à página de projetos; as outras são âncoras da home.
 // Trajetória e Agora ficam só na página, para a barra caber em 1024px.
-const SECTIONS = ["projects", "stack", "contact"] as const;
+const SECTIONS = ["stack", "projects", "contact"] as const;
 
 type Props = { locale: Locale; pathFor: PathFor };
 

@@ -23,9 +23,10 @@ export default async function HomePage({ params }: LocaleParams) {
       <SiteHeader locale={locale} pathFor={homePath} />
       <main id="main">
         <Hero locale={locale} />
-        <Projects locale={locale} index={1} />
-        <Experience locale={locale} index={2} />
-        <Stack locale={locale} index={3} />
+        {/* Ordem pensada para recrutadores: stack, projetos, experiência. */}
+        <Stack locale={locale} index={1} />
+        <Projects locale={locale} index={2} />
+        <Experience locale={locale} index={3} />
         <Now locale={locale} index={4} />
         <Contact locale={locale} index={5} />
       </main>

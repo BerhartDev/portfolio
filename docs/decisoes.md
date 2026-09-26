@@ -90,3 +90,6 @@ A foto do topo passou a 40% da largura anterior, em retrato 3:4 sem corte, no ca
 
 ## 2026-09-26 · Ajustes da foto do topo
 No desktop, a foto fica a 10% da borda direita do conteúdo (fora do canto, sem centralizar). No mobile, o topo usa container query (`container-type: inline-size`) e o nome reserva `40cqw` de altura, para a descrição cobrir só o quarto de baixo da foto. Opacidade no tema claro subiu de 0.28 para 0.7 (`--photo-opacity`), porque a foto quase sumia.
+
+## 2026-09-26 · Ordem da home para recrutadores
+Home: topo → stack → projetos → trajetória → agora → contato (antes: projetos → trajetória → stack). A barra segue a mesma ordem: Stack, Projetos, Contato, Blog.

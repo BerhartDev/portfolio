@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Ordem da home para recrutadores
+- Pedido: reordenar para recrutadores: 1 Stack, 2 Projetos, 3 Experiência.
+- Feito: `src/app/[locale]/page.tsx` com Stack (01), Projetos (02), Trajetória (03), Agora (04), Contato (05); barra na ordem Stack, Projetos, Contato, Blog; estrutura do site no `CLAUDE.md` e decisão atualizadas.
+
 ## 2026-09-26 · Posição da foto, descrição no mobile e tema claro
 - Pedido: deslocar a foto um pouco para a esquerda sem centralizar; no mobile, descer a descrição para não tampar a foto; no tema claro a foto quase não aparecia.
 - Feito: `.photo` com `right: 10%` no desktop; `.hero` com `container-type: inline-size` e `.name` com `min-height: calc(40cqw - var(--space-6))` abaixo de 60rem; `--photo-opacity` do claro de 0.28 para 0.7. Conferido no Edge: 1400px nos dois temas; 500px e 390px com o rosto visível e a descrição cobrindo só a parte de baixo da foto.
