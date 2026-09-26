@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Ícones provisórios de Instagram, LeetCode e Hack The Box
+- Pedido: mostrar os ícones que faltavam, por enquanto levando para a home.
+- Feito: `HOME_PLACEHOLDER` em `src/lib/profile.ts`; `SocialLinks` recebe o `locale` e troca o marcador pela home no idioma atual (`/pt/`, `/fr/`…), sem `rel="me"`. Os 5 ícones aparecem no topo e no rodapé.
+- Pendente: trocar `HOME_PLACEHOLDER` pelas URLs reais.
+
 ## 2026-09-26 · Ícones de redes sociais
 - Pedido: ícones de LinkedIn, GitHub, Instagram, LeetCode e HackTheBox onde fizer sentido; ignorar os que não estiverem disponíveis.
 - Escolhas: GitHub confirmado como github.com/BerhartDev.

@@ -9,7 +9,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className={styles.footer}>
       <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
-      <SocialLinks label={t("social.label")} size="sm" />
+      <SocialLinks locale={locale} label={t("social.label")} size="sm" />
       <p>{t("footer.note")}</p>
     </footer>
   );

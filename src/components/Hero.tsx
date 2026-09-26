@@ -13,7 +13,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         <p className={styles.role}>{t("hero.role")}</p>
         <p className={styles.lead}>{t("hero.lead")}</p>
         <p className={styles.sub}>{t("hero.sub")}</p>
-        <SocialLinks label={t("social.label")} className={styles.social} />
+        <SocialLinks locale={locale} label={t("social.label")} className={styles.social} />
       </div>
     </div>
   );

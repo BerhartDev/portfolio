@@ -72,3 +72,6 @@ Substitui "segue o sistema". Sem tema salvo, o site abre escuro para todo mundo:
 
 ## 2026-09-26 · Ícones de redes sociais
 Ícones no topo da home (abaixo da apresentação, quadrados de 1px como os controles da barra) e no rodapé de todas as páginas (menores, sem borda). A seção Contato continua em texto. Redes em `socialLinks` (`src/lib/profile.ts`), na ordem LinkedIn, GitHub, Instagram, LeetCode, Hack The Box; sem URL, a rede não aparece. Traços do Simple Icons (CC0) copiados para `src/components/social-icons.ts`, sem dependência; LinkedIn da v13, porque a marca saiu das versões seguintes. Links com `rel="me"`.
+
+## 2026-09-26 · Ícones provisórios levam à home
+Instagram, LeetCode e Hack The Box aparecem já, com `HOME_PLACEHOLDER` no lugar da URL: o link vai para a home no idioma atual e não leva `rel="me"`. Trocar pela URL real em `socialLinks` quando houver.

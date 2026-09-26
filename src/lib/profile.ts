@@ -9,12 +9,15 @@ export const profile = {
 export const SOCIAL_NETWORKS = ["linkedin", "github", "instagram", "leetcode", "hackthebox"] as const;
 export type SocialNetwork = (typeof SOCIAL_NETWORKS)[number];
 
+/** Provisório: o ícone aparece, mas o link leva à home do site no idioma atual. */
+export const HOME_PLACEHOLDER = "home";
+
 export const socialLinks: Record<SocialNetwork, string | undefined> = {
   linkedin: profile.linkedin,
   github: profile.github,
-  instagram: undefined, // [PREENCHER] URL completa do perfil
-  leetcode: undefined, // [PREENCHER] URL completa do perfil
-  hackthebox: undefined, // [PREENCHER] URL completa do perfil
+  instagram: HOME_PLACEHOLDER, // [PREENCHER] URL completa do perfil
+  leetcode: HOME_PLACEHOLDER, // [PREENCHER] URL completa do perfil
+  hackthebox: HOME_PLACEHOLDER, // [PREENCHER] URL completa do perfil
 };
 
 export const EXPERIENCE = ["lance", "auberge", "autoavaliar", "jerimum", "cim3", "iff"] as const;
