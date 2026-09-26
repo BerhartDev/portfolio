@@ -1,31 +1,43 @@
+/* Quadrado com borda de 1px, como o botão de menu; inverte no hover. */
 .toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
+  display: grid;
+  place-items: center;
+  width: var(--control-h);
   height: var(--control-h);
-  padding-inline: var(--space-3);
   border: 1px solid var(--line);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--muted);
+  color: var(--fg);
   transition:
+    background-color var(--dur-fast) var(--ease),
     color var(--dur-fast) var(--ease),
     border-color var(--dur-fast) var(--ease);
 }
 
 .toggle:hover,
 .toggle:focus-visible {
-  color: var(--fg);
+  background: var(--fg);
+  color: var(--bg);
   border-color: var(--fg);
 }
 
-.box {
-  width: 0.7em;
-  height: 0.7em;
-  border: 1px solid currentColor;
-  transition: background-color var(--dur-fast) var(--ease);
+.moon,
+.sun {
+  grid-area: 1 / 1;
+  transition: transform var(--dur) var(--ease);
 }
 
-.toggle[aria-pressed="true"] .box {
-  background: currentColor;
+.toggle:hover :is(.moon, .sun) {
+  transform: rotate(-20deg);
+}
+
+/* Ícone do tema atual: lua por padrão (escuro), bolinha quando o claro foi escolhido. */
+.sun {
+  display: none;
+}
+
+:global(:root[data-theme="light"]) .moon {
+  display: none;
+}
+
+:global(:root[data-theme="light"]) .sun {
+  display: block;
 }

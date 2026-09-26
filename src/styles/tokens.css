@@ -1,12 +1,12 @@
-/* Tokens do tema. Toda cor e espaçamento do site vem daqui. */
+/* Tokens do tema. Toda cor e espaçamento do site vem daqui. Escuro por padrão; claro só com data-theme="light". */
 :root {
-  --bg: #fafafa;
-  --surface: #f0f0f0;
-  --fg: #0a0a0a;
-  --muted: #5e5e5e; /* 6.2:1 sobre --bg */
-  --faint: #8a8a8a; /* 3.3:1: só texto >= 24px ou decoração */
-  --line: #d9d9d9; /* só decorativa */
-  color-scheme: light;
+  --bg: #0b0b0b;
+  --surface: #161616;
+  --fg: #ededed;
+  --muted: #a1a1a1; /* 7.6:1 sobre --bg */
+  --faint: #6e6e6e; /* só texto >= 24px ou decoração */
+  --line: #2b2b2b; /* só decorativa */
+  color-scheme: dark;
 
   --font-sans: var(--font-schibsted), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
@@ -39,26 +39,14 @@
   --dur: 220ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0b0b0b;
-    --surface: #161616;
-    --fg: #ededed;
-    --muted: #a1a1a1;
-    --faint: #6e6e6e;
-    --line: #2b2b2b;
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #0b0b0b;
-  --surface: #161616;
-  --fg: #ededed;
-  --muted: #a1a1a1;
-  --faint: #6e6e6e;
-  --line: #2b2b2b;
-  color-scheme: dark;
+:root[data-theme="light"] {
+  --bg: #fafafa;
+  --surface: #f0f0f0;
+  --fg: #0a0a0a;
+  --muted: #5e5e5e; /* 6.2:1 sobre --bg */
+  --faint: #8a8a8a; /* 3.3:1: só texto >= 24px ou decoração */
+  --line: #d9d9d9; /* só decorativa */
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
