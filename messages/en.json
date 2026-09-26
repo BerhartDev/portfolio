@@ -30,7 +30,8 @@
     "role": "Full stack developer in Rio de Janeiro. Node.js and TypeScript on the back end, React and Next.js on the front end.",
     "lead": "I came from networking and infrastructure, moved into software development, and today I keep a high-traffic portal running in production.",
     "sub": "I think like someone who has been woken up in the middle of the night by a server going down.",
-    "photoAlt": "Black and white photo of Bernardo Knoblauch."
+    "photoAlt": "Black and white photo of Bernardo Knoblauch.",
+    "cta": "My work"
   },
   "projects": {
     "title": "Projects",

@@ -110,6 +110,40 @@
   color: var(--muted);
 }
 
+/* CTA: borda de 1px sobre fundo sólido (fica legível sobre a foto), inverte no hover e a seta anda. */
+.cta {
+  display: inline-flex;
+  gap: var(--space-3);
+  align-items: center;
+  justify-self: start;
+  height: var(--control-h);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--fg);
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.arrow {
+  transition: transform var(--dur) var(--ease);
+}
+
+.cta:hover .arrow,
+.cta:focus-visible .arrow {
+  transform: translateX(6px);
+}
+
 @media (min-width: 60rem) {
   .hero {
     grid-template-columns: repeat(12, minmax(0, 1fr));

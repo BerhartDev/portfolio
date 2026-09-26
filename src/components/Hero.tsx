@@ -1,5 +1,6 @@
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { projectsPath } from "@/lib/routes";
 import styles from "./Hero.module.css";
 import { SocialLinks } from "./SocialLinks";
 
@@ -40,6 +41,12 @@ export async function Hero({ locale }: { locale: Locale }) {
           <span className={styles.strip}>{t("hero.sub")}</span>
         </p>
         <SocialLinks locale={locale} label={t("social.label")} className={styles.social} />
+        <a href={projectsPath(locale)} className={styles.cta}>
+          {t("hero.cta")}
+          <span className={styles.arrow} aria-hidden="true">
+            →
+          </span>
+        </a>
       </div>
     </div>
   );

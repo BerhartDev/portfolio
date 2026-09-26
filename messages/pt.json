@@ -30,7 +30,8 @@
     "role": "Desenvolvedor full stack no Rio de Janeiro. Node.js e TypeScript no back, React e Next.js no front.",
     "lead": "Vim de redes e infraestrutura, migrei para o desenvolvimento e hoje sustento em produção um portal de alto tráfego.",
     "sub": "Penso como quem já foi acordado de madrugada por servidor caído.",
-    "photoAlt": "Foto de Bernardo Knoblauch em preto e branco."
+    "photoAlt": "Foto de Bernardo Knoblauch em preto e branco.",
+    "cta": "Meu trabalho"
   },
   "projects": {
     "title": "Projetos",
