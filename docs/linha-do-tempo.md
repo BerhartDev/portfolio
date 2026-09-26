@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Escuro por padrão e ícone no botão de tema
+- Pedido: dark mode como padrão; botão alternando entre bolinha cheia (claro) e meia lua (escuro).
+- Escolhas: o ícone mostra o tema atual; lua crescente.
+- Feito: `tokens.css` com a paleta escura em `:root` e a clara em `[data-theme="light"]`, sem `prefers-color-scheme`; `ThemeToggle` quadrado só com ícone SVG (lua/bolinha escolhidos por CSS), sem `matchMedia`; comentário de `theme-script.ts`; regra do `CLAUDE.md` e decisão atualizadas. Testado no Edge via CDP com o sistema em modo claro: abre escuro com a lua; um clique vai para o claro com a bolinha e grava `light`; ao recarregar continua claro.
+
 ## 2026-09-26 · Rodar o projeto
 - Pedido: rodar o projeto.
 - Feito: `npm run dev` na porta 3000; `/pt/`, `/pt/projetos/` e `/pt/projetos/lance/` respondem 200. Sem mudança de código.

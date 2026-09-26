@@ -30,7 +30,7 @@ Portfólio pessoal estático em pt, en, fr, es.
 - Só preto, branco e cinzas. `border-radius: 0` em tudo. Cores e espaçamentos sempre via variáveis CSS.
 - Editorial/técnico: linhas de 1px, muito espaço em branco. Uma sans com personalidade + uma mono para detalhes. Nada de Inter, Poppins ou Roboto.
 - Hover sóbrio com personalidade: inversão preto↔branco, sublinhado que se desenha, pequeno deslocamento. Respeitar `prefers-reduced-motion`.
-- Dark e light: segue o sistema, toggle manual persistente, sem flash ao carregar. Contraste AA nos dois.
+- Dark e light: escuro por padrão (independente do sistema), toggle manual persistente com ícone do tema atual (lua crescente no escuro, bolinha cheia no claro), sem flash ao carregar. Contraste AA nos dois.
 - Proibido: gradientes, glassmorphism, glow, sombras suaves, cards idênticos com ícone, barras de % de skill, fade-in em tudo ao rolar.
 
 ## Estrutura do site

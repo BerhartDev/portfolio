@@ -8,7 +8,7 @@
 2. Estrutura e i18n estático.
 3. Direção visual: Schibsted Grotesk + IBM Plex Mono, paleta de cinzas, hover por inversão e sublinhado desenhado.
 4. Setup, i18n + redirecionamento da raiz, tema sem flash, seções, SEO (canonical, hreflang, OG, sitemap, robots, 404), README de deploy.
-5. Projetos em `content/projects/*.json`, página de projetos com URLs traduzidas, artigo por projeto, home com lista em links, seletor de idioma que mantém a página. Página de projetos com bloco único "O que entrego" e CTA; galeria de imagens em carrossel; barra de navegação fixa com menu mobile e idioma em dropdown.
+5. Projetos em `content/projects/*.json`, página de projetos com URLs traduzidas, artigo por projeto, home com lista em links, seletor de idioma que mantém a página. Página de projetos com bloco único "O que entrego" e CTA; galeria de imagens em carrossel; barra de navegação fixa com menu mobile e idioma em dropdown; tema escuro por padrão com botão de ícone.
 
 ## Próximos passos
 1. Preencher os `[PREENCHER]` em `docs/perfil.md` e depois em `content/projects/*.json`, `messages/*.json` e `src/lib/profile.ts` (e-mail, GitHub).

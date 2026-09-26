@@ -66,3 +66,6 @@ A grade de imagens virou carrossel. Base sem JS: faixa com CSS scroll-snap (rola
 
 ## 2026-09-25 · Barra de navegação no modelo da landing da BEKNO
 Funcionamento copiado de `BerhartDev/bekno-landing-page` (`Header.tsx`): barra fixa no topo, links, idioma em dropdown, CTA de contato e, abaixo de 64rem, botão de menu com painel que fecha ao seguir um link. Adaptado à identidade do portfólio: fundo sólido com linha de 1px (sem blur, sombra, cantos arredondados nem bandeiras), CTA com borda de 1px e inversão, ícone de menu com três linhas de 1px que viram X. Base em `<details>` (funciona sem JS); o componente client `Disclosure` só fecha com clique fora, Esc (devolve o foco) e clique em link. O CTA aponta para `#contact`, que existe em todas as páginas. `--header-h` desconta a barra nas âncoras.
+
+## 2026-09-26 · Escuro por padrão
+Substitui "segue o sistema". Sem tema salvo, o site abre escuro para todo mundo: a paleta escura está em `:root` e a clara em `:root[data-theme="light"]`; saiu o `prefers-color-scheme`. O script do `<head>` continua aplicando o tema salvo antes da pintura. O botão de tema virou quadrado só com ícone do tema atual (lua crescente no escuro, bolinha cheia no claro); os dois SVGs vêm no HTML e o CSS escolhe, então o ícone certo aparece antes da hidratação. Nome acessível pelo rótulo `nav.theme` oculto + `aria-pressed`.
