@@ -8,8 +8,9 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 import styles from "./SiteHeader.module.css";
 import { ThemeToggle } from "./ThemeToggle";
 
-// Seções da home. "projects" leva à página de projetos; as outras são âncoras da home.
-export const SECTIONS = ["projects", "experience", "stack", "now", "contact"] as const;
+// Links da barra. "projects" leva à página de projetos; as outras são âncoras da home.
+// Trajetória e Agora ficam só na página, para a barra caber em 1024px.
+const SECTIONS = ["projects", "stack", "contact"] as const;
 
 type Props = { locale: Locale; pathFor: PathFor };
 

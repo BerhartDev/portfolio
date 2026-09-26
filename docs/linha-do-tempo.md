@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Barra enxuta para caber em 1024px
+- Pedido: tirar Agora e Trajetória da navbar para funcionar em 1024px.
+- Feito: `SECTIONS` do `SiteHeader` reduzido a projetos, stack e contato (mais Blog); também sai do menu mobile. Ponto de corte do menu de volta a 64rem. Medido no Edge em 1024px: links numa linha em pt, en, fr e es; em 1000px aparece o botão de menu.
+
 ## 2026-09-26 · Link do blog na navegação
 - Pedido: link na nav para o blog, na versão do idioma atual.
 - Feito: `blogUrl` em `src/lib/profile.ts`; "Blog ↗" no fim da barra e do menu mobile (`SiteHeader`), com `hrefLang`; `nav.blog` nos 4 idiomas; menu mobile passa a valer abaixo de 72rem. Medido no Edge em 1152px: links numa linha só em pt, en, fr e es.

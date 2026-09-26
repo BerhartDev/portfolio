@@ -78,3 +78,6 @@ Instagram, LeetCode e Hack The Box aparecem já, com `HOME_PLACEHOLDER` no lugar
 
 ## 2026-09-26 · Link do blog na navegação
 "Blog ↗" é o último link da barra e do menu mobile, apontando para a versão do idioma atual (`blogUrl` em `src/lib/profile.ts`: pt-BR, en-US, fr-FR, es-ES em beknologia.up.railway.app). Com um link a mais, a barra vira menu abaixo de 72rem (antes 64rem), para não quebrar em duas linhas em francês.
+
+## 2026-09-26 · Barra só com Projetos, Stack, Contato e Blog
+Trajetória e Agora saíram da barra e do menu mobile (as seções continuam na home). Com isso, a barra volta a virar menu só abaixo de 64rem e cabe numa linha em 1024px nos 4 idiomas. Substitui o ponto de corte de 72rem da decisão do blog.

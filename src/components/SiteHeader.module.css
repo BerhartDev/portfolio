@@ -193,7 +193,7 @@
   gap: var(--space-4);
 }
 
-@media (max-width: 71.99rem) {
+@media (max-width: 63.99rem) {
   .desktopNav,
   .desktopOnly {
     display: none;
