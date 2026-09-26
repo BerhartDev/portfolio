@@ -3,7 +3,9 @@
 Única fonte de verdade para o conteúdo do site. Não inventar nada além do que está aqui. Faltou dado → `[PREENCHER]`.
 
 ## Quem sou
-Desenvolvedor full stack no Rio de Janeiro. Node.js/TypeScript e React/Next.js, com forte bagagem de infraestrutura, observabilidade e segurança.
+Desenvolvedor Node.js full stack no Rio de Janeiro. APIs e serviços em Node.js/TypeScript, React/Next.js no front, com forte bagagem de infraestrutura, observabilidade e segurança.
+
+**Foco de carreira:** vagas de Node.js. O site apresenta Node primeiro onde ele é real (Lance!, Auto Avaliar); nas experiências de infra/LAMP não se atribui Node.
 
 **Fio condutor:** vim de redes e infra, migrei para desenvolvimento e hoje sustento em produção um portal de alto tráfego. Penso como quem já foi acordado de madrugada por servidor caído.
 
@@ -30,9 +32,9 @@ Fonte: LinkedIn (2026-09-26). Sem métricas registradas; resultados numéricos: 
 
 | Empresa | Cargo | Período | Local | Modalidade |
 |---|---|---|---|---|
-| Lance! | Desenvolvedor Full-Stack II (efetivo) | jul. 2025–atual | Rio de Janeiro, Brasil | presencial |
+| Lance! | Desenvolvedor Node.js Full Stack (título oficial: Desenvolvedor Full-Stack II; efetivo) | jul. 2025–atual | Rio de Janeiro, Brasil | presencial |
 | Friendly Auberge | Responsável de TI (temporário) | jul. 2024–jun. 2025 | Toulouse, França | presencial |
-| Auto Avaliar | Desenvolvedor Full-Stack II | fev. 2022–abr. 2024 | São Paulo, Brasil | remoto |
+| Auto Avaliar | Desenvolvedor Node.js Full Stack (título oficial: Desenvolvedor Full-Stack II) | fev. 2022–abr. 2024 | São Paulo, Brasil | remoto |
 | Jerimum Produções e Promoções | Gestor de TI e Desenvolvedor Full-Stack | abr.–nov. 2021 | Rio de Janeiro, Brasil | híbrido |
 | CIM3 Comunicações e Marketing | Suporte de TI e Desenvolvedor Back-End | abr. 2020–abr. 2021 | Rio de Janeiro, Brasil | híbrido |
 | IFF | Assistente de TI (meio período) | fev.–nov. 2018 | Rio de Janeiro, Brasil | presencial |

@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Posicionamento Node.js full stack
+- Pedido: trocar "Desenvolvedor Full-Stack II" por algo com Node no nome e ligar o site todo a Node, porque o foco são vagas de Node.
+- Escolhas: cargo "Desenvolvedor Node.js Full Stack", sem o "II". Node só onde foi real (Lance!, Auto Avaliar).
+- Feito: `messages/*.json` (meta title/description/ogAlt, `hero.role`, back-end da stack, pitch e item "APIs e serviços em Node.js" no "O que entrego", descrição da página de projetos, cargo/resumo/destaques/stack de Lance! e Auto Avaliar); `STACK_GROUPS` com back-end primeiro; `OFFERS` com `api`; tags e stack em `content/projects/{lance,autoavaliar}.json`; `public/og.jpg` regenerado com "Node.js" em destaque; `docs/perfil.md` com o foco e o título oficial. Conferido no Edge (topo e stack) e no `<title>` gerado.
+
 ## 2026-09-26 · Trajetória sem modalidade e com detalhes no clique
 - Pedido: remover se é remoto ou presencial; mostrar mais informações só se a pessoa clicar.
 - Feito: `mode` removido de `Experience.tsx` e dos 4 `messages/*.json`; destaques e stack dentro de `<details>` com o rótulo `experience.more` ("Mais detalhes", "More details", "Plus de détails", "Más detalles"). Conferido no Edge: 6 blocos recolhidos, o clique abre; sem rolagem horizontal em 500px.
