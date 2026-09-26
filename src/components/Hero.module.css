@@ -1,13 +1,67 @@
 .hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   gap: var(--space-6);
   padding-block: var(--space-8) var(--space-9);
 }
 
+/* Foto ao fundo: sangra até a borda da página, discreta, sem receber clique. */
+.photo {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: calc(-1 * var(--gutter));
+  right: calc(-1 * var(--gutter));
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  opacity: calc(var(--photo-opacity) * 0.7);
+  filter: grayscale(1);
+}
+
+/* Textura: linhas horizontais de 1px a cada 3px, na cor do fundo. Máscara SVG, sem gradiente. */
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0.55;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='3'%3E%3Crect width='3' height='1'/%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='3'%3E%3Crect width='3' height='1'/%3E%3C/svg%3E");
+}
+
+/*
+ * Faixas de leitura: cada linha do texto ganha um fundo sólido de --bg.
+ * O bloco recua o mesmo tanto que a faixa avança, então o texto continua alinhado à grade.
+ */
+.strip {
+  --pad: 0.2em;
+  padding: 0.04em var(--pad);
+  background: var(--bg);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.name,
+.role,
+.lead,
+.sub {
+  margin-left: -0.2em;
+}
+
 .name {
   font-size: var(--text-display);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1.02;
   letter-spacing: -0.035em;
   max-width: 12ch;
 }
@@ -21,12 +75,13 @@
 .role {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
+  line-height: 1.8;
   color: var(--muted);
 }
 
 .lead {
   font-size: var(--text-xl);
-  line-height: 1.3;
+  line-height: 1.4;
   letter-spacing: -0.01em;
 }
 
@@ -34,8 +89,13 @@
   margin-top: var(--space-2);
 }
 
+.social a {
+  background: var(--bg);
+}
+
 .sub {
   font-size: var(--text-lg);
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -43,6 +103,17 @@
   .hero {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--space-6);
+  }
+
+  /* No desktop, a foto ocupa só a metade direita, alinhada à borda do conteúdo. */
+  .photo {
+    left: auto;
+    right: 0;
+    width: min(44rem, 55%);
+  }
+
+  .photo img {
+    opacity: var(--photo-opacity);
   }
 
   .name {

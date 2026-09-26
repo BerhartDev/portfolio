@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "Bernardo Knoblauch · Full stack developer",
-    "description": "Full stack developer based in Rio de Janeiro. Node.js, TypeScript, React and Next.js, with a background in infrastructure, observability and security."
+    "description": "Full stack developer based in Rio de Janeiro. Node.js, TypeScript, React and Next.js, with a background in infrastructure, observability and security.",
+    "ogAlt": "Bernardo Knoblauch, full stack developer."
   },
   "root": {
     "continue": "Continue in English"
@@ -28,7 +29,8 @@
     "name": "Bernardo Knoblauch",
     "role": "Full stack developer in Rio de Janeiro. Node.js and TypeScript on the back end, React and Next.js on the front end.",
     "lead": "I came from networking and infrastructure, moved into software development, and today I keep a high-traffic portal running in production.",
-    "sub": "I think like someone who has been woken up in the middle of the night by a server going down."
+    "sub": "I think like someone who has been woken up in the middle of the night by a server going down.",
+    "photoAlt": "Black and white photo of Bernardo Knoblauch."
   },
   "projects": {
     "title": "Projects",
