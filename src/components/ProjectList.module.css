@@ -43,6 +43,7 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .summary,
@@ -67,25 +68,43 @@
   transform: translateX(6px);
 }
 
+/*
+ * Desktop: nome numa coluna de largura limitada; resumo, etiqueta e meta empilhados na coluna larga.
+ * Nenhuma coluna cresce com o conteúdo, então nome longo ou etiqueta longa não invadem o vizinho.
+ */
 @media (min-width: 48rem) {
   .row {
-    grid-template-columns: 2.5rem minmax(9rem, 1fr) 2fr auto 1.5rem;
+    /* Nome: nunca menor que a palavra mais longa (não quebra no meio), no máximo 16rem. */
+    grid-template-columns: 2.5rem minmax(min-content, 16rem) minmax(0, 1fr) 1.5rem;
+    column-gap: var(--space-5);
   }
 
-  .summary {
+  .name {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    overflow-wrap: normal;
+  }
+
+  .summary,
+  .tag,
+  .meta {
     grid-column: 3;
   }
 
+  .summary {
+    grid-row: 1;
+  }
+
   .tag {
-    grid-column: 4;
-    text-align: right;
+    grid-row: 2;
   }
 
   .meta {
-    grid-column: 3 / 5;
+    grid-row: 3;
   }
 
   .arrow {
-    grid-column: 5;
+    grid-column: 4;
+    grid-row: 1;
   }
 }
