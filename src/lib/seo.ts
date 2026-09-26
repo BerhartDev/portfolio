@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { homePath, type PathFor } from "./routes";
 import { SITE_URL } from "./site";
@@ -38,14 +39,19 @@ type PageMeta = {
   type?: "website" | "article";
 };
 
+/** Imagem de compartilhamento (public/og.jpg), a mesma em todas as páginas e idiomas. */
+const OG_IMAGE = { url: "/og.jpg", width: 1200, height: 630, type: "image/jpeg" } as const;
+
 /** Title, description, canonical, hreflang, Open Graph e Twitter de uma página. */
-export function pageMetadata({ locale, pathFor, title, description, type = "website" }: PageMeta): Metadata {
+export async function pageMetadata({ locale, pathFor, title, description, type = "website" }: PageMeta): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const image = { ...OG_IMAGE, alt: t("ogAlt") };
   const path = pathFor(locale);
   return {
     title,
     description,
     alternates: { canonical: path, languages: languageAlternates(pathFor) },
-    openGraph: { type, url: path, siteName: "Bernardo Knoblauch", title, description, ...ogLocales(locale) },
-    twitter: { card: "summary", title, description },
+    openGraph: { type, url: path, siteName: "Bernardo Knoblauch", title, description, images: [image], ...ogLocales(locale) },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
   };
 }

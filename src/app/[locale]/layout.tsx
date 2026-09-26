@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   // Metadados da home. Páginas internas sobrescrevem com os seus.
   return {
     metadataBase: new URL(SITE_URL),
-    ...pageMetadata({ locale, pathFor: homePath, title: t("title"), description: t("description") }),
+    ...(await pageMetadata({ locale, pathFor: homePath, title: t("title"), description: t("description") })),
   };
 }
 
