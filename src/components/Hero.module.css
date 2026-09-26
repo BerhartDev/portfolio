@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   isolation: isolate;
+  container-type: inline-size; /* cqw: medidas da foto relativas à largura do topo */
   display: grid;
   gap: var(--space-6);
   padding-block: var(--space-8) var(--space-9);
@@ -66,6 +67,16 @@
   max-width: 12ch;
 }
 
+/*
+ * Mobile: a foto (40cqw de largura, 3:4, logo ~53cqw de altura) começa no topo do nome.
+ * O nome reserva 40cqw de altura, então a descrição só cobre o quarto de baixo da foto.
+ */
+@media (max-width: 59.99rem) {
+  .name {
+    min-height: calc(40cqw - var(--space-6));
+  }
+}
+
 .text {
   display: grid;
   gap: var(--space-4);
@@ -105,8 +116,9 @@
     column-gap: var(--space-6);
   }
 
-  /* No desktop: 40% do tamanho anterior (min(44rem, 55%)). */
+  /* No desktop: 40% do tamanho anterior (min(44rem, 55%)), afastada da borda direita sem centralizar. */
   .photo {
+    right: 10%;
     width: calc(0.4 * min(44rem, 55%));
   }
 

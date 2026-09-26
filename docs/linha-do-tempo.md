@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Posição da foto, descrição no mobile e tema claro
+- Pedido: deslocar a foto um pouco para a esquerda sem centralizar; no mobile, descer a descrição para não tampar a foto; no tema claro a foto quase não aparecia.
+- Feito: `.photo` com `right: 10%` no desktop; `.hero` com `container-type: inline-size` e `.name` com `min-height: calc(40cqw - var(--space-6))` abaixo de 60rem; `--photo-opacity` do claro de 0.28 para 0.7. Conferido no Edge: 1400px nos dois temas; 500px e 390px com o rosto visível e a descrição cobrindo só a parte de baixo da foto.
+
 ## 2026-09-26 · Foto do topo 60% menor
 - Pedido: reduzir o tamanho da imagem em 60%.
 - Feito: interpretado como o tamanho exibido no topo. `.photo` em `Hero.module.css` passou a 40% da largura anterior com `aspect-ratio: 3/4`, no canto direito, alinhada ao topo do nome; `sizes` do `<img>` ajustado. Medido no Edge: 232×310px em 1400px; sem rolagem horizontal em 500px. A imagem de Open Graph não mudou.

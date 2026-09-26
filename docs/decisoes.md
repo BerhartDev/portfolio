@@ -87,3 +87,6 @@ A foto de perfil (P&B) fica atrás do topo da home: metade direita no desktop (a
 
 ## 2026-09-26 · Foto do topo menor
 A foto do topo passou a 40% da largura anterior, em retrato 3:4 sem corte, no canto direito e alinhada ao topo do nome (desktop: `0.4 × min(44rem, 55%)`, cerca de 232×310px em 1400px; mobile: 40% da largura). Continua ao fundo, com a mesma opacidade, textura e faixas de leitura.
+
+## 2026-09-26 · Ajustes da foto do topo
+No desktop, a foto fica a 10% da borda direita do conteúdo (fora do canto, sem centralizar). No mobile, o topo usa container query (`container-type: inline-size`) e o nome reserva `40cqw` de altura, para a descrição cobrir só o quarto de baixo da foto. Opacidade no tema claro subiu de 0.28 para 0.7 (`--photo-opacity`), porque a foto quase sumia.
