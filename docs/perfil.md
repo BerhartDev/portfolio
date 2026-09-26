@@ -27,12 +27,12 @@ Desenvolvedor full stack no Rio de Janeiro. Node.js/TypeScript e React/Next.js, 
 ## Experiência
 | Empresa | Cargo | Período | Local |
 |---|---|---|---|
-| Lance! | Full-Stack II | 2025–atual | [PREENCHER] |
+| Lance! | Full-Stack II | 2025–atual | Rio de Janeiro, Brasil |
 | Friendly Auberge | Responsável de TI | 2024–2025 | Toulouse, França |
-| Auto Avaliar | Full-Stack II | 2022–2024 | [PREENCHER] |
-| Jerimum Produções | Gestor de TI e Dev | 2021 | [PREENCHER] |
-| CIM3 Comunicações | Suporte de TI e Back-End | 2020–2021 | [PREENCHER] |
-| IFF | Assistente de TI | 2018 | [PREENCHER] |
+| Auto Avaliar | Full-Stack II | 2022–2024 | São Paulo, Brasil |
+| Jerimum Produções | Gestor de TI e Dev | 2021 | Rio de Janeiro, Brasil |
+| CIM3 Comunicações | Suporte de TI e Back-End | 2020–2021 | Rio de Janeiro, Brasil |
+| IFF | Assistente de TI | 2018 | Rio de Janeiro, Brasil |
 
 ### Lance! · Full-Stack II · 2025–atual
 Sustentação de portal esportivo de alto tráfego.

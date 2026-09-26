@@ -12,7 +12,10 @@ export async function Experience({ locale, index }: { locale: Locale; index: num
       <ol className={styles.timeline}>
         {EXPERIENCE.map((key) => (
           <li key={key} className={styles.item}>
-            <p className={styles.when}>{t(`items.${key}.when`)}</p>
+            <p className={styles.when}>
+              {t(`items.${key}.when`)}
+              <span className={styles.place}>{t(`items.${key}.place`)}</span>
+            </p>
             <div className={styles.what}>
               <h3 className={styles.role}>
                 {t(`items.${key}.role`)} <span className={styles.company}>· {t(`items.${key}.company`)}</span>

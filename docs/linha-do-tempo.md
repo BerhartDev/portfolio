@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Locais na trajetória
+- Pedido: adicionar os locais na trajetória: Lance! no Rio de Janeiro, Auberge já tinha, Auto Avaliar em São Paulo, o resto no Rio de Janeiro.
+- Feito: campo novo `experience.items.<empresa>.place` nos 4 idiomas (país traduzido: Brasil/Brazil/Brésil/Brasil, "Río de Janeiro" em espanhol); o local que estava dentro de `when` na Auberge passou para `place`; `Experience.tsx` mostra o local numa linha própria abaixo do período, sem quebrar no meio; tabela de experiência do `docs/perfil.md` preenchida. Conferido no Edge em 1400 e 500px.
+
 ## 2026-09-26 · Tema visível na barra mobile
 - Pedido: manter o botão de tema visível também na nav mobile.
 - Feito: `ThemeToggle` fora do wrapper `desktopOnly` no `SiteHeader` e removido do painel do menu. Medido no Edge em 390px: um botão de tema visível, sem rolagem horizontal; no desktop continua um só.

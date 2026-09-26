@@ -18,6 +18,12 @@
   color: var(--muted);
 }
 
+/* Local numa linha própria, abaixo do período: não quebra no meio na coluna estreita. */
+.place {
+  display: block;
+  white-space: nowrap;
+}
+
 .role {
   font-size: var(--text-lg);
   font-weight: 600;

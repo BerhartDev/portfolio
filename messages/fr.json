@@ -87,36 +87,42 @@
         "company": "Lance!",
         "role": "Full-Stack II",
         "when": "depuis 2025",
+        "place": "Rio de Janeiro, Brésil",
         "summary": "Maintien en production d’un portail sportif à fort trafic : performance, SEO technique, observabilité, incidents et déploiements avec rollback."
       },
       "auberge": {
         "company": "Friendly Auberge",
         "role": "Responsable informatique",
-        "when": "2024–2025 · Toulouse, France",
+        "when": "2024–2025",
+        "place": "Toulouse, France",
         "summary": "Toute l’informatique d’une auberge d’environ 30 chambres avec restaurant : réseau et VLAN, PMS, caisse, vidéosurveillance, sauvegardes et site WordPress."
       },
       "autoavaliar": {
         "company": "Auto Avaliar",
         "role": "Full-Stack II",
         "when": "2022–2024",
+        "place": "São Paulo, Brésil",
         "summary": "Lead technique de la migration de l’existant PHP vers Node et React sur GCP."
       },
       "jerimum": {
         "company": "Jerimum Produções",
         "role": "Responsable informatique et développeur",
         "when": "2021",
+        "place": "Rio de Janeiro, Brésil",
         "summary": "J’ai monté le service informatique de zéro, sur une stack open source."
       },
       "cim3": {
         "company": "CIM3 Comunicações",
         "role": "Support informatique et back-end",
         "when": "2020–2021",
+        "place": "Rio de Janeiro, Brésil",
         "summary": "[PREENCHER]"
       },
       "iff": {
         "company": "IFF",
         "role": "Assistant informatique",
         "when": "2018",
+        "place": "Rio de Janeiro, Brésil",
         "summary": "[PREENCHER]"
       }
     },

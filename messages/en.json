@@ -87,36 +87,42 @@
         "company": "Lance!",
         "role": "Full-Stack II",
         "when": "2025–present",
+        "place": "Rio de Janeiro, Brazil",
         "summary": "Running a high-traffic sports portal: performance, technical SEO, observability, incidents, and deploys with rollback."
       },
       "auberge": {
         "company": "Friendly Auberge",
         "role": "IT Lead",
-        "when": "2024–2025 · Toulouse, France",
+        "when": "2024–2025",
+        "place": "Toulouse, France",
         "summary": "All IT for an inn with about 30 rooms and a restaurant: network and VLANs, PMS, POS, CCTV, backups, and the WordPress site."
       },
       "autoavaliar": {
         "company": "Auto Avaliar",
         "role": "Full-Stack II",
         "when": "2022–2024",
+        "place": "São Paulo, Brazil",
         "summary": "Technical lead on migrating the legacy PHP system to Node and React on GCP."
       },
       "jerimum": {
         "company": "Jerimum Produções",
         "role": "IT Manager and Developer",
         "when": "2021",
+        "place": "Rio de Janeiro, Brazil",
         "summary": "Built the IT department from scratch on an open-source stack."
       },
       "cim3": {
         "company": "CIM3 Comunicações",
         "role": "IT Support and Back-End",
         "when": "2020–2021",
+        "place": "Rio de Janeiro, Brazil",
         "summary": "[PREENCHER]"
       },
       "iff": {
         "company": "IFF",
         "role": "IT Assistant",
         "when": "2018",
+        "place": "Rio de Janeiro, Brazil",
         "summary": "[PREENCHER]"
       }
     },
