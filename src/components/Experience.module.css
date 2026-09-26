@@ -40,6 +40,33 @@
   max-width: var(--measure);
 }
 
+/* Destaques: travessão em mono como marcador, como nos artigos. */
+.points {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
+  max-width: var(--measure);
+  color: var(--muted);
+}
+
+.points li {
+  display: grid;
+  grid-template-columns: var(--space-5) 1fr;
+}
+
+.points li::before {
+  content: "—";
+  font-family: var(--font-mono);
+}
+
+.stack {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
 .extra {
   display: grid;
   gap: var(--space-6);

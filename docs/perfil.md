@@ -23,39 +23,56 @@ Desenvolvedor full stack no Rio de Janeiro. Node.js/TypeScript e React/Next.js, 
 ## Formação
 - Tecnólogo em Defesa Cibernética e Perícia Forense (Estácio)
 - Técnico em Eletromecânica (IFF)
+- Intercâmbio de inglês, certificado B2 (International House Brisbane · ALS, Brisbane, Austrália, abr.–out. 2019)
 
 ## Experiência
-| Empresa | Cargo | Período | Local |
-|---|---|---|---|
-| Lance! | Full-Stack II | 2025–atual | Rio de Janeiro, Brasil |
-| Friendly Auberge | Responsável de TI | 2024–2025 | Toulouse, França |
-| Auto Avaliar | Full-Stack II | 2022–2024 | São Paulo, Brasil |
-| Jerimum Produções | Gestor de TI e Dev | 2021 | Rio de Janeiro, Brasil |
-| CIM3 Comunicações | Suporte de TI e Back-End | 2020–2021 | Rio de Janeiro, Brasil |
-| IFF | Assistente de TI | 2018 | Rio de Janeiro, Brasil |
+Fonte: LinkedIn (2026-09-26). Sem métricas registradas; resultados numéricos: [PREENCHER].
 
-### Lance! · Full-Stack II · 2025–atual
-Sustentação de portal esportivo de alto tráfego.
-- Stack: Next.js, Node, TypeScript, WordPress headless, AWS, Cloudflare.
-- Frentes: Core Web Vitals, SEO técnico, observabilidade, incidentes e causa raiz, CI/CD com rollback.
+| Empresa | Cargo | Período | Local | Modalidade |
+|---|---|---|---|---|
+| Lance! | Desenvolvedor Full-Stack II (efetivo) | jul. 2025–atual | Rio de Janeiro, Brasil | presencial |
+| Friendly Auberge | Responsável de TI (temporário) | jul. 2024–jun. 2025 | Toulouse, França | presencial |
+| Auto Avaliar | Desenvolvedor Full-Stack II | fev. 2022–abr. 2024 | São Paulo, Brasil | remoto |
+| Jerimum Produções e Promoções | Gestor de TI e Desenvolvedor Full-Stack | abr.–nov. 2021 | Rio de Janeiro, Brasil | híbrido |
+| CIM3 Comunicações e Marketing | Suporte de TI e Desenvolvedor Back-End | abr. 2020–abr. 2021 | Rio de Janeiro, Brasil | híbrido |
+| IFF | Assistente de TI (meio período) | fev.–nov. 2018 | Rio de Janeiro, Brasil | presencial |
+
+### Lance! · Desenvolvedor Full-Stack II
+Sustentação de portal de notícias esportivas de alto tráfego: confiabilidade, desempenho e continuidade; incidentes, prevenção de recorrência e apoio às squads de produto.
+- Stack: React/Next.js, Node.js, TypeScript, WordPress headless, AWS, Cloudflare.
+- Web: componentes reutilizáveis, acessibilidade, UX consistente. APIs: endpoints estáveis, modelagem de dados, cache, otimização de consultas.
+- Core Web Vitals: LCP, CLS e INP via priorização de recursos, imagens e compressão.
+- SEO técnico: canônicos, sitemap, metadados, controle de indexação. CMS: temas/blocks padronizados, integrações headless.
+- Observabilidade: métricas, logs e traces; incidentes e causa raiz. Entrega: Cloudflare (cache/headers/redirects), AWS, CI/CD com testes e rollback.
 - Resultado: [PREENCHER]
 
-### Friendly Auberge · Responsável de TI · 2024–2025 · Toulouse, França
-TI completa de auberge com ~30 quartos e restaurante: rede/VLAN, PMS, POS, CFTV, backups, site WordPress.
+### Friendly Auberge · Responsável de TI
+TI generalista de auberge com ~30 quartos e restaurante, durante visto PVT na França.
+- Rede: Wi-Fi hóspedes e staff, VLAN, roteadores/switches. Suporte a recepção, restaurante e administrativo.
+- PMS/reservas, POS do restaurante, acessos e backups. CFTV, controle de acesso, políticas e atualizações.
+- Site WordPress friendly-auberge.com (não desenvolvido por mim): atualizações, conteúdo, SEO/performance básicos, monitoramento.
 
-### Auto Avaliar · Full-Stack II · 2022–2024
-Liderança técnica da migração de legado PHP para Node + React na GCP com strangler pattern.
-- REST/GraphQL, filas/DLQ, JWT/OAuth2, cache multinível, circuit breakers, SLOs e runbooks.
+### Auto Avaliar · Desenvolvedor Full-Stack II
+Liderança técnica da substituição do legado PHP por front em React e serviços na GCP; produto com características de CMS e regras/fluxos complexos.
+- Migração com strangler pattern até o cutover; contratos REST/GraphQL, modelagem de dados, validações, fim dos acoplamentos do legado.
+- Cloud: deploy containerizado, IaC, segredos, balanceamento, CDN/cache, observabilidade por serviço.
+- Performance: redução de p95/p99 com cache multinível, otimização de consultas e payloads; timeouts e circuit breakers.
+- Assíncrono: filas, workers, retries e DLQ; idempotência. AuthN/AuthZ: JWT/OAuth2, escopos, auditoria, OWASP, hardening.
+- Qualidade: TDD (unit/integração/E2E), code review, CI/CD com rollback. Front: componentes, estado, acessibilidade, DX. SLOs, alertas, runbooks, MTTR.
 - Resultado: [PREENCHER]
 
-### Jerimum Produções · Gestor de TI e Dev · 2021
-Estruturei o setor de TI do zero com stack open-source.
+### Jerimum Produções · Gestor de TI e Desenvolvedor Full-Stack
+Setor de TI do zero em pequena empresa, stack open-source, continuidade e custo.
+- Domínio, Samba (autenticação), Squid (proxy), impressão, diretório, controle de acesso.
+- Servidor web interno LAMP para aplicações internas e intranet.
+- Políticas, hardening, patching, monitoramento, logs, documentação.
 
-### CIM3 Comunicações · Suporte de TI e Back-End · 2020–2021
-[PREENCHER]
+### CIM3 Comunicações · Suporte de TI e Desenvolvedor Back-End
+Redes, servidores e aplicações internas: manutenção, segurança, políticas de acesso.
+- Redes (switches/roteadores); servidor LAMP e administração de SOs; antivírus, políticas de acesso, backups e registros; suporte a usuários.
 
-### IFF · Assistente de TI · 2018
-[PREENCHER]
+### IFF · Assistente de TI
+Projeto e manutenção de redes; instalação de SOs e antivírus; políticas de segurança; controle de acesso aos recursos.
 
 ## Reconhecimentos e prêmios
 - Menção Honrosa · I Feira de Empreendedorismo, Inovação e Talentos · Instituto Federal Fluminense · mai. 2018. VII Workshop de Divulgação Científica e Extensão: sistema de baixo custo para controle automático de irrigação de pequenas hortas.

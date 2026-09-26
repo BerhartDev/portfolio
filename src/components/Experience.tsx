@@ -4,6 +4,8 @@ import { EDUCATION, EXPERIENCE, LANGUAGES } from "@/lib/profile";
 import styles from "./Experience.module.css";
 import { Section } from "./Section";
 
+const POINTS = ["p1", "p2", "p3"] as const;
+
 export async function Experience({ locale, index }: { locale: Locale; index: number }) {
   const t = await getTranslations({ locale, namespace: "experience" });
 
@@ -15,12 +17,19 @@ export async function Experience({ locale, index }: { locale: Locale; index: num
             <p className={styles.when}>
               {t(`items.${key}.when`)}
               <span className={styles.place}>{t(`items.${key}.place`)}</span>
+              <span className={styles.place}>{t(`items.${key}.mode`)}</span>
             </p>
             <div className={styles.what}>
               <h3 className={styles.role}>
                 {t(`items.${key}.role`)} <span className={styles.company}>· {t(`items.${key}.company`)}</span>
               </h3>
               <p className={styles.summary}>{t(`items.${key}.summary`)}</p>
+              <ul className={styles.points}>
+                {POINTS.map((p) => (
+                  <li key={p}>{t(`items.${key}.points.${p}`)}</li>
+                ))}
+              </ul>
+              <p className={styles.stack}>{t(`items.${key}.stack`)}</p>
             </div>
           </li>
         ))}

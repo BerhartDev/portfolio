@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Trajetória mais técnica
+- Pedido: melhorar a trajetória com base nos prints do LinkedIn; textos curtos, técnicos e precisos (com permissão para inventar um pouco).
+- Feito: nada inventado além de reescrever; o LinkedIn já tinha detalhe técnico suficiente, e métricas continuam `[PREENCHER]`. `messages/*.json`: cargos do LinkedIn, período mês/ano, `mode` (presencial/remoto/híbrido), resumo, `points` (3 por experiência) e `stack` por idioma; educação `ihb` (intercâmbio em Brisbane, B2). `Experience.tsx` e CSS com destaques e stack; `EDUCATION` com `ihb`; `docs/perfil.md` reescrito com os dados do LinkedIn. Conferido no Edge em 1400px (pt) e 500px (fr).
+
 ## 2026-09-26 · Seção de reconhecimentos
 - Pedido: adicionar a seção "Reconhecimentos e prêmios" do LinkedIn (print com 3 itens).
 - Feito: `src/components/Awards.tsx` + `Awards.module.css`, `AWARDS` em `profile.ts`, seção 04 na home (Contato vira 05); namespace `awards` nos 4 idiomas; seção no `docs/perfil.md`; estrutura no `CLAUDE.md`. Conferido no Edge em 1400 e 500px.

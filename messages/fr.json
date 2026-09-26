@@ -85,45 +85,87 @@
     "items": {
       "lance": {
         "company": "Lance!",
-        "role": "Full-Stack II",
-        "when": "depuis 2025",
+        "role": "Développeur full stack II",
+        "when": "juil. 2025 – aujourd’hui",
         "place": "Rio de Janeiro, Brésil",
-        "summary": "Maintien en production d’un portail sportif à fort trafic : performance, SEO technique, observabilité, incidents et déploiements avec rollback."
+        "mode": "sur site",
+        "summary": "Maintien en production d’un portail d’actualité sportive à fort trafic : stabilité, gestion des incidents et évolutions sûres avec les squads produit.",
+        "points": {
+          "p1": "Core Web Vitals : LCP, CLS et INP via la priorisation des ressources, l’optimisation des images et la compression.",
+          "p2": "SEO technique et CMS : canoniques, sitemap, contrôle de l’indexation et WordPress headless avec des blocks standardisés.",
+          "p3": "Exploitation : métriques, logs et traces, analyse des causes profondes, cache et redirections Cloudflare, CI/CD avec rollback."
+        },
+        "stack": "Next.js · React · Node.js · TypeScript · WordPress headless · AWS · Cloudflare"
       },
       "auberge": {
         "company": "Friendly Auberge",
         "role": "Responsable informatique",
-        "when": "2024–2025",
+        "when": "juil. 2024 – juin 2025",
         "place": "Toulouse, France",
-        "summary": "Toute l’informatique d’une auberge d’environ 30 chambres avec restaurant : réseau et VLAN, PMS, caisse, vidéosurveillance, sauvegardes et site WordPress."
+        "mode": "sur site",
+        "summary": "L’informatique de bout en bout d’une auberge d’environ 30 chambres avec restaurant, pendant un PVT en France.",
+        "points": {
+          "p1": "Réseau : Wi-Fi clients et personnel isolés par VLAN, routeurs et switchs.",
+          "p2": "Outils métier : PMS de réservation, caisse du restaurant, accès et sauvegardes.",
+          "p3": "Sécurité et web : vidéosurveillance, contrôle d’accès, mises à jour et maintenance du site WordPress."
+        },
+        "stack": "Réseau/VLAN · PMS · POS · Vidéosurveillance · WordPress"
       },
       "autoavaliar": {
         "company": "Auto Avaliar",
-        "role": "Full-Stack II",
-        "when": "2022–2024",
+        "role": "Développeur full stack II",
+        "when": "févr. 2022 – avr. 2024",
         "place": "São Paulo, Brésil",
-        "summary": "Lead technique de la migration de l’existant PHP vers Node et React sur GCP."
+        "mode": "à distance",
+        "summary": "Lead technique du remplacement d’un monolithe PHP par un front React et des services Node sur GCP, pour un produit aux règles métier et flux complexes.",
+        "points": {
+          "p1": "Migration par strangler pattern jusqu’au cutover : contrats REST/GraphQL et suppression des couplages de l’existant.",
+          "p2": "Fiabilité : cache multiniveau, timeouts et circuit breakers ; files, workers, retries et DLQ avec idempotence.",
+          "p3": "Plateforme : conteneurs, IaC, gestion des secrets, JWT/OAuth2, TDD, CI/CD avec rollback, SLO et runbooks."
+        },
+        "stack": "React · Node.js · TypeScript · GCP · REST · GraphQL · Containers"
       },
       "jerimum": {
         "company": "Jerimum Produções",
-        "role": "Responsable informatique et développeur",
-        "when": "2021",
+        "role": "Responsable informatique et développeur full stack",
+        "when": "avr. – nov. 2021",
         "place": "Rio de Janeiro, Brésil",
-        "summary": "J’ai monté le service informatique de zéro, sur une stack open source."
+        "mode": "hybride",
+        "summary": "J’ai monté de zéro l’informatique d’une petite entreprise sur une stack open source, avec un objectif de continuité et de coût maîtrisé.",
+        "points": {
+          "p1": "Services : domaine et authentification avec Samba, proxy Squid, impression et contrôle d’accès.",
+          "p2": "Intranet et applications internes sur LAMP (Linux, Apache, MySQL, PHP).",
+          "p3": "Durcissement, mises à jour, supervision, logs et documentation des procédures."
+        },
+        "stack": "Linux · Samba · Squid · Apache · MySQL · PHP"
       },
       "cim3": {
         "company": "CIM3 Comunicações",
-        "role": "Support informatique et back-end",
-        "when": "2020–2021",
+        "role": "Support informatique et développeur back-end",
+        "when": "avr. 2020 – avr. 2021",
         "place": "Rio de Janeiro, Brésil",
-        "summary": "[PREENCHER]"
+        "mode": "hybride",
+        "summary": "Réseaux, serveurs et applications internes, avec un accent sur la maintenance, la sécurité et les politiques d’accès.",
+        "points": {
+          "p1": "Conception, configuration et maintenance du réseau : switchs et routeurs.",
+          "p2": "Serveur web interne LAMP et administration des systèmes d’exploitation.",
+          "p3": "Sécurité : antivirus, politiques d’accès, sauvegardes et journaux ; support aux utilisateurs."
+        },
+        "stack": "Linux · Apache · MySQL · PHP · Réseau"
       },
       "iff": {
         "company": "IFF",
         "role": "Assistant informatique",
-        "when": "2018",
+        "when": "févr. – nov. 2018",
         "place": "Rio de Janeiro, Brésil",
-        "summary": "[PREENCHER]"
+        "mode": "sur site",
+        "summary": "Infrastructure et support à l’Instituto Federal Fluminense.",
+        "points": {
+          "p1": "Conception et maintenance de réseaux informatiques.",
+          "p2": "Installation et mise à jour des systèmes d’exploitation et des antivirus.",
+          "p3": "Politiques de sécurité et contrôle d’accès aux ressources."
+        },
+        "stack": "Réseau · Windows · Linux"
       }
     },
     "educationTitle": "Formation",
@@ -135,6 +177,10 @@
       "iff": {
         "course": "Technicien en électromécanique",
         "school": "IFF"
+      },
+      "ihb": {
+        "course": "Séjour linguistique en anglais, certificat B2",
+        "school": "International House Brisbane, Australie · 2019"
       }
     },
     "languagesTitle": "Langues",

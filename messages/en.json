@@ -85,45 +85,87 @@
     "items": {
       "lance": {
         "company": "Lance!",
-        "role": "Full-Stack II",
-        "when": "2025–present",
+        "role": "Full-Stack Developer II",
+        "when": "Jul 2025 – present",
         "place": "Rio de Janeiro, Brazil",
-        "summary": "Running a high-traffic sports portal: performance, technical SEO, observability, incidents, and deploys with rollback."
+        "mode": "on-site",
+        "summary": "Running a high-traffic sports news portal: production stability, incident response and safe changes alongside the product squads.",
+        "points": {
+          "p1": "Core Web Vitals: LCP, CLS and INP through resource prioritization, image optimization and compression.",
+          "p2": "Technical SEO and CMS: canonicals, sitemap, indexing control and headless WordPress with standardized blocks.",
+          "p3": "Operations: metrics, logs and traces, root cause analysis, Cloudflare caching and redirects, CI/CD with rollback."
+        },
+        "stack": "Next.js · React · Node.js · TypeScript · WordPress headless · AWS · Cloudflare"
       },
       "auberge": {
         "company": "Friendly Auberge",
         "role": "IT Lead",
-        "when": "2024–2025",
+        "when": "Jul 2024 – Jun 2025",
         "place": "Toulouse, France",
-        "summary": "All IT for an inn with about 30 rooms and a restaurant: network and VLANs, PMS, POS, CCTV, backups, and the WordPress site."
+        "mode": "on-site",
+        "summary": "End-to-end IT for a ~30-room auberge with a restaurant, during a working holiday visa in France.",
+        "points": {
+          "p1": "Network: guest and staff Wi-Fi isolated by VLAN, routers and switches.",
+          "p2": "Business systems: booking PMS, restaurant POS, access management and backup routines.",
+          "p3": "Security and web: CCTV, access control, patching and upkeep of the WordPress site."
+        },
+        "stack": "Networking/VLAN · PMS · POS · CCTV · WordPress"
       },
       "autoavaliar": {
         "company": "Auto Avaliar",
-        "role": "Full-Stack II",
-        "when": "2022–2024",
+        "role": "Full-Stack Developer II",
+        "when": "Feb 2022 – Apr 2024",
         "place": "São Paulo, Brazil",
-        "summary": "Technical lead on migrating the legacy PHP system to Node and React on GCP."
+        "mode": "remote",
+        "summary": "Technical lead on replacing a PHP monolith with a React front end and Node services on GCP, in a product with complex business rules and workflows.",
+        "points": {
+          "p1": "Strangler-pattern migration through cutover: REST/GraphQL contracts and removal of legacy coupling.",
+          "p2": "Reliability: multi-level caching, timeouts and circuit breakers; queues, workers, retries and DLQs with idempotency.",
+          "p3": "Platform: containers, IaC, secrets management, JWT/OAuth2, TDD, CI/CD with rollback, SLOs and runbooks."
+        },
+        "stack": "React · Node.js · TypeScript · GCP · REST · GraphQL · Containers"
       },
       "jerimum": {
         "company": "Jerimum Produções",
-        "role": "IT Manager and Developer",
-        "when": "2021",
+        "role": "IT Manager and Full-Stack Developer",
+        "when": "Apr – Nov 2021",
         "place": "Rio de Janeiro, Brazil",
-        "summary": "Built the IT department from scratch on an open-source stack."
+        "mode": "hybrid",
+        "summary": "Built a small company’s IT from scratch on an open-source stack, with a focus on continuity and cost.",
+        "points": {
+          "p1": "Services: domain and authentication with Samba, Squid proxy, printing and access control.",
+          "p2": "Intranet and internal applications on LAMP (Linux, Apache, MySQL, PHP).",
+          "p3": "Hardening, patching, monitoring, logging and documented routines."
+        },
+        "stack": "Linux · Samba · Squid · Apache · MySQL · PHP"
       },
       "cim3": {
         "company": "CIM3 Comunicações",
-        "role": "IT Support and Back-End",
-        "when": "2020–2021",
+        "role": "IT Support and Back-End Developer",
+        "when": "Apr 2020 – Apr 2021",
         "place": "Rio de Janeiro, Brazil",
-        "summary": "[PREENCHER]"
+        "mode": "hybrid",
+        "summary": "Networks, servers and internal applications, focused on maintenance, security and access policies.",
+        "points": {
+          "p1": "Network design, configuration and maintenance: switches and routers.",
+          "p2": "Internal LAMP web server and operating system administration.",
+          "p3": "Security: antivirus, access policies, backups and logs; user support."
+        },
+        "stack": "Linux · Apache · MySQL · PHP · Networking"
       },
       "iff": {
         "company": "IFF",
         "role": "IT Assistant",
-        "when": "2018",
+        "when": "Feb – Nov 2018",
         "place": "Rio de Janeiro, Brazil",
-        "summary": "[PREENCHER]"
+        "mode": "on-site",
+        "summary": "Infrastructure and support at Instituto Federal Fluminense.",
+        "points": {
+          "p1": "Computer network design and maintenance.",
+          "p2": "Installing and updating operating systems and antivirus software.",
+          "p3": "Security policies and access control to resources."
+        },
+        "stack": "Networking · Windows · Linux"
       }
     },
     "educationTitle": "Education",
@@ -135,6 +177,10 @@
       "iff": {
         "course": "Electromechanical Technician",
         "school": "IFF"
+      },
+      "ihb": {
+        "course": "English exchange program, B2 certificate",
+        "school": "International House Brisbane, Australia · 2019"
       }
     },
     "languagesTitle": "Languages",

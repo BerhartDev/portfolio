@@ -102,3 +102,6 @@ O botão de tema fica na barra também no mobile (nome, idioma, tema, menu) e sa
 
 ## 2026-09-26 · Seção de reconhecimentos
 Nova seção "Reconhecimentos" (04) entre trajetória e contato, com os 3 prêmios do LinkedIn. Mesmo formato de linha do tempo da trajetória (reaproveita `Experience.module.css`): data à esquerda; prêmio · evento, instituição em mono e descrição à direita. Nomes de eventos e instituições ficam no original em todos os idiomas; tipo do prêmio, datas e descrições são traduzidos. Não entra na barra.
+
+## 2026-09-26 · Trajetória mais técnica
+Cada experiência mostra: período mês/ano, local e modalidade (coluna da esquerda); cargo como no LinkedIn · empresa; resumo de uma frase; 3 destaques técnicos (`points.p1..p3`, marcador em travessão); stack em mono. Conteúdo tirado do LinkedIn, reescrito curto e técnico; sem métricas inventadas. Intercâmbio em Brisbane (certificado B2) entrou em Formação.
