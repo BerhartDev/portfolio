@@ -6,14 +6,14 @@
   padding-block: var(--space-8) var(--space-9);
 }
 
-/* Foto ao fundo: sangra até a borda da página, discreta, sem receber clique. */
+/* Foto ao fundo: retrato 3:4 no canto direito, alinhado ao topo do nome, discreto e sem receber clique. */
 .photo {
   position: absolute;
   z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: calc(-1 * var(--gutter));
-  right: calc(-1 * var(--gutter));
+  top: var(--space-8);
+  right: 0;
+  width: 40%;
+  aspect-ratio: 3 / 4;
   pointer-events: none;
   overflow: hidden;
 }
@@ -105,11 +105,9 @@
     column-gap: var(--space-6);
   }
 
-  /* No desktop, a foto ocupa só a metade direita, alinhada à borda do conteúdo. */
+  /* No desktop: 40% do tamanho anterior (min(44rem, 55%)). */
   .photo {
-    left: auto;
-    right: 0;
-    width: min(44rem, 55%);
+    width: calc(0.4 * min(44rem, 55%));
   }
 
   .photo img {

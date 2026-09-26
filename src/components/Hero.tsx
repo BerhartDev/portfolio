@@ -18,7 +18,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         <img
           src="/profile/bernardo-1086.webp"
           srcSet="/profile/bernardo-640.webp 640w, /profile/bernardo-1086.webp 1086w"
-          sizes="(min-width: 60rem) 44rem, 100vw"
+          sizes="(min-width: 60rem) 18rem, 40vw"
           width={1086}
           height={1448}
           alt={t("hero.photoAlt")}

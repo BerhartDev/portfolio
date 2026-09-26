@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Foto do topo 60% menor
+- Pedido: reduzir o tamanho da imagem em 60%.
+- Feito: interpretado como o tamanho exibido no topo. `.photo` em `Hero.module.css` passou a 40% da largura anterior com `aspect-ratio: 3/4`, no canto direito, alinhada ao topo do nome; `sizes` do `<img>` ajustado. Medido no Edge: 232×310px em 1400px; sem rolagem horizontal em 500px. A imagem de Open Graph não mudou.
+
 ## 2026-09-26 · Foto de perfil e imagem de compartilhamento
 - Pedido: adicionar a foto de perfil (com dicas); depois, deixá-la atrás do topo, sem muito destaque, com nome e descrição por cima sobre um fundo que não prejudique a leitura, de um jeito diferente; usar a foto também no Open Graph.
 - Dicas dadas: a foto P&B com fundo escuro combina com a paleta; a nitidez da pele fica forte em tamanho grande, então a exibição é contida e com textura; no tema claro vira bloco escuro, então a opacidade é menor.
