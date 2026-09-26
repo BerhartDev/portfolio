@@ -17,19 +17,24 @@ export async function Experience({ locale, index }: { locale: Locale; index: num
             <p className={styles.when}>
               {t(`items.${key}.when`)}
               <span className={styles.place}>{t(`items.${key}.place`)}</span>
-              <span className={styles.place}>{t(`items.${key}.mode`)}</span>
             </p>
             <div className={styles.what}>
               <h3 className={styles.role}>
                 {t(`items.${key}.role`)} <span className={styles.company}>· {t(`items.${key}.company`)}</span>
               </h3>
               <p className={styles.summary}>{t(`items.${key}.summary`)}</p>
-              <ul className={styles.points}>
-                {POINTS.map((p) => (
-                  <li key={p}>{t(`items.${key}.points.${p}`)}</li>
-                ))}
-              </ul>
-              <p className={styles.stack}>{t(`items.${key}.stack`)}</p>
+              <details className={styles.more}>
+                <summary className={styles.toggle}>
+                  <span className={styles.sign} aria-hidden="true" />
+                  <span className="link">{t("more")}</span>
+                </summary>
+                <ul className={styles.points}>
+                  {POINTS.map((p) => (
+                    <li key={p}>{t(`items.${key}.points.${p}`)}</li>
+                  ))}
+                </ul>
+                <p className={styles.stack}>{t(`items.${key}.stack`)}</p>
+              </details>
             </div>
           </li>
         ))}

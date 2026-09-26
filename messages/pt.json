@@ -82,13 +82,13 @@
   },
   "experience": {
     "title": "Trajetória",
+    "more": "Mais detalhes",
     "items": {
       "lance": {
         "company": "Lance!",
         "role": "Desenvolvedor Full-Stack II",
         "when": "jul. 2025 – atual",
         "place": "Rio de Janeiro, Brasil",
-        "mode": "presencial",
         "summary": "Sustentação de um portal de notícias esportivas de alto tráfego: estabilidade em produção, resposta a incidentes e evolução segura junto às squads de produto.",
         "points": {
           "p1": "Core Web Vitals: LCP, CLS e INP com priorização de recursos, otimização de imagens e compressão.",
@@ -102,7 +102,6 @@
         "role": "Responsável de TI",
         "when": "jul. 2024 – jun. 2025",
         "place": "Toulouse, França",
-        "mode": "presencial",
         "summary": "TI de ponta a ponta de uma auberge com ~30 quartos e restaurante, durante o visto PVT na França.",
         "points": {
           "p1": "Rede: Wi-Fi de hóspedes e equipe isolados por VLAN, roteadores e switches.",
@@ -116,7 +115,6 @@
         "role": "Desenvolvedor Full-Stack II",
         "when": "fev. 2022 – abr. 2024",
         "place": "São Paulo, Brasil",
-        "mode": "remoto",
         "summary": "Liderança técnica da troca de um monólito PHP por front em React e serviços em Node na GCP, num produto com regras de negócio e fluxos complexos.",
         "points": {
           "p1": "Migração com strangler pattern até o cutover: contratos REST/GraphQL e fim dos acoplamentos do legado.",
@@ -130,7 +128,6 @@
         "role": "Gestor de TI e Desenvolvedor Full-Stack",
         "when": "abr. – nov. 2021",
         "place": "Rio de Janeiro, Brasil",
-        "mode": "híbrido",
         "summary": "Estruturei do zero a TI de uma pequena empresa com stack open-source, com foco em continuidade e custo.",
         "points": {
           "p1": "Serviços: domínio e autenticação com Samba, proxy Squid, impressão e controle de acesso.",
@@ -144,7 +141,6 @@
         "role": "Suporte de TI e Desenvolvedor Back-End",
         "when": "abr. 2020 – abr. 2021",
         "place": "Rio de Janeiro, Brasil",
-        "mode": "híbrido",
         "summary": "Redes, servidores e aplicações internas, com foco em manutenção, segurança e políticas de acesso.",
         "points": {
           "p1": "Desenho, configuração e manutenção da rede: switches e roteadores.",
@@ -158,7 +154,6 @@
         "role": "Assistente de TI",
         "when": "fev. – nov. 2018",
         "place": "Rio de Janeiro, Brasil",
-        "mode": "presencial",
         "summary": "Infraestrutura e suporte no Instituto Federal Fluminense.",
         "points": {
           "p1": "Projeto e manutenção de redes de computadores.",

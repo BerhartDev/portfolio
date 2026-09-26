@@ -40,6 +40,72 @@
   max-width: var(--measure);
 }
 
+/* Detalhes recolhidos: abrem no clique (<details>, sem JS). */
+.more {
+  margin-top: var(--space-3);
+}
+
+.toggle {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.toggle::-webkit-details-marker {
+  display: none;
+}
+
+.toggle:hover,
+.toggle:focus-visible,
+.more[open] .toggle {
+  color: var(--fg);
+}
+
+.toggle:hover .link::after,
+.toggle:focus-visible .link::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Sinal de + feito com duas linhas de 1px; a vertical some quando abre (vira −). */
+.sign {
+  position: relative;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.sign::before,
+.sign::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  transition: transform var(--dur) var(--ease);
+}
+
+.sign::before {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+}
+
+.sign::after {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+}
+
+.more[open] .sign::after {
+  transform: scaleY(0);
+}
+
 /* Destaques: travessão em mono como marcador, como nos artigos. */
 .points {
   display: grid;

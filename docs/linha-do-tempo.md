@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Trajetória sem modalidade e com detalhes no clique
+- Pedido: remover se é remoto ou presencial; mostrar mais informações só se a pessoa clicar.
+- Feito: `mode` removido de `Experience.tsx` e dos 4 `messages/*.json`; destaques e stack dentro de `<details>` com o rótulo `experience.more` ("Mais detalhes", "More details", "Plus de détails", "Más detalles"). Conferido no Edge: 6 blocos recolhidos, o clique abre; sem rolagem horizontal em 500px.
+
 ## 2026-09-26 · Trajetória mais técnica
 - Pedido: melhorar a trajetória com base nos prints do LinkedIn; textos curtos, técnicos e precisos (com permissão para inventar um pouco).
 - Feito: nada inventado além de reescrever; o LinkedIn já tinha detalhe técnico suficiente, e métricas continuam `[PREENCHER]`. `messages/*.json`: cargos do LinkedIn, período mês/ano, `mode` (presencial/remoto/híbrido), resumo, `points` (3 por experiência) e `stack` por idioma; educação `ihb` (intercâmbio em Brisbane, B2). `Experience.tsx` e CSS com destaques e stack; `EDUCATION` com `ihb`; `docs/perfil.md` reescrito com os dados do LinkedIn. Conferido no Edge em 1400px (pt) e 500px (fr).

@@ -105,3 +105,6 @@ Nova seção "Reconhecimentos" (04) entre trajetória e contato, com os 3 prêmi
 
 ## 2026-09-26 · Trajetória mais técnica
 Cada experiência mostra: período mês/ano, local e modalidade (coluna da esquerda); cargo como no LinkedIn · empresa; resumo de uma frase; 3 destaques técnicos (`points.p1..p3`, marcador em travessão); stack em mono. Conteúdo tirado do LinkedIn, reescrito curto e técnico; sem métricas inventadas. Intercâmbio em Brisbane (certificado B2) entrou em Formação.
+
+## 2026-09-26 · Trajetória com detalhes recolhidos
+A modalidade (presencial/remoto/híbrido) saiu do site; continua só no `docs/perfil.md`. Por padrão cada experiência mostra período, local, cargo · empresa e resumo; destaques e stack ficam num `<details>` "Mais detalhes" (sinal + que vira −, feito com linhas de 1px), aberto só no clique e sem JS.

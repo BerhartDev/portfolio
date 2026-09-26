@@ -82,13 +82,13 @@
   },
   "experience": {
     "title": "Experience",
+    "more": "More details",
     "items": {
       "lance": {
         "company": "Lance!",
         "role": "Full-Stack Developer II",
         "when": "Jul 2025 – present",
         "place": "Rio de Janeiro, Brazil",
-        "mode": "on-site",
         "summary": "Running a high-traffic sports news portal: production stability, incident response and safe changes alongside the product squads.",
         "points": {
           "p1": "Core Web Vitals: LCP, CLS and INP through resource prioritization, image optimization and compression.",
@@ -102,7 +102,6 @@
         "role": "IT Lead",
         "when": "Jul 2024 – Jun 2025",
         "place": "Toulouse, France",
-        "mode": "on-site",
         "summary": "End-to-end IT for a ~30-room auberge with a restaurant, during a working holiday visa in France.",
         "points": {
           "p1": "Network: guest and staff Wi-Fi isolated by VLAN, routers and switches.",
@@ -116,7 +115,6 @@
         "role": "Full-Stack Developer II",
         "when": "Feb 2022 – Apr 2024",
         "place": "São Paulo, Brazil",
-        "mode": "remote",
         "summary": "Technical lead on replacing a PHP monolith with a React front end and Node services on GCP, in a product with complex business rules and workflows.",
         "points": {
           "p1": "Strangler-pattern migration through cutover: REST/GraphQL contracts and removal of legacy coupling.",
@@ -130,7 +128,6 @@
         "role": "IT Manager and Full-Stack Developer",
         "when": "Apr – Nov 2021",
         "place": "Rio de Janeiro, Brazil",
-        "mode": "hybrid",
         "summary": "Built a small company’s IT from scratch on an open-source stack, with a focus on continuity and cost.",
         "points": {
           "p1": "Services: domain and authentication with Samba, Squid proxy, printing and access control.",
@@ -144,7 +141,6 @@
         "role": "IT Support and Back-End Developer",
         "when": "Apr 2020 – Apr 2021",
         "place": "Rio de Janeiro, Brazil",
-        "mode": "hybrid",
         "summary": "Networks, servers and internal applications, focused on maintenance, security and access policies.",
         "points": {
           "p1": "Network design, configuration and maintenance: switches and routers.",
@@ -158,7 +154,6 @@
         "role": "IT Assistant",
         "when": "Feb – Nov 2018",
         "place": "Rio de Janeiro, Brazil",
-        "mode": "on-site",
         "summary": "Infrastructure and support at Instituto Federal Fluminense.",
         "points": {
           "p1": "Computer network design and maintenance.",
