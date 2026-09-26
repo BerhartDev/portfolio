@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Rodar o projeto
+- Pedido: rodar o projeto.
+- Feito: `npm run dev` na porta 3000; `/pt/`, `/pt/projetos/` e `/pt/projetos/lance/` respondem 200. Sem mudança de código.
+- Pendente: favicon (o dev ainda loga erro em `/favicon.ico`).
+
 ## 2026-09-25 · Botões da barra com o mesmo tamanho
 - Pedido: deixar os botões da barra com tamanho mais parecido.
 - Feito: token `--control-h` (2.5rem); idioma, tema, CTA e menu com 40px de altura, fonte mono `--text-sm` e borda de 1px (idioma e tema em `--line`, CTA e menu em `--fg`); espaço entre controles reduzido. Medido no Edge via CDP: todos com 40px no desktop e no mobile.
