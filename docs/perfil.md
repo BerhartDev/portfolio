@@ -9,8 +9,11 @@ Desenvolvedor full stack no Rio de Janeiro. Node.js/TypeScript e React/Next.js, 
 
 ## Contato
 - E-mail: [PREENCHER]
-- GitHub: [PREENCHER]
+- GitHub: github.com/BerhartDev
 - LinkedIn: linkedin.com/in/bernardoknoblauch
+- Instagram: [PREENCHER]
+- LeetCode: [PREENCHER]
+- Hack The Box: [PREENCHER]
 
 ## Idiomas
 - Português: nativo

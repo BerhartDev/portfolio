@@ -11,6 +11,12 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Ícones de redes sociais
+- Pedido: ícones de LinkedIn, GitHub, Instagram, LeetCode e HackTheBox onde fizer sentido; ignorar os que não estiverem disponíveis.
+- Escolhas: GitHub confirmado como github.com/BerhartDev.
+- Feito: `SocialLinks` + `social-icons.ts` (traços do Simple Icons, CC0); ícones no `Hero` e no `SiteFooter`; `socialLinks` em `profile.ts` com LinkedIn e GitHub preenchidos; GitHub também passa a aparecer no Contato; rótulo `social.label` nos 4 idiomas; `docs/perfil.md` com GitHub e os outros como `[PREENCHER]`. Os 5 ícones conferidos em print com URLs temporárias, depois removidas.
+- Pendente: URLs de Instagram, LeetCode e Hack The Box (ficam ocultos até lá). No desktop, o link do LinkedIn no Contato quebra no meio da palavra (anterior a esta mudança).
+
 ## 2026-09-26 · Escuro por padrão e ícone no botão de tema
 - Pedido: dark mode como padrão; botão alternando entre bolinha cheia (claro) e meia lua (escuro).
 - Escolhas: o ícone mostra o tema atual; lua crescente.
