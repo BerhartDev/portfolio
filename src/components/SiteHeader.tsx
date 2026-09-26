@@ -1,6 +1,7 @@
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { blogUrl } from "@/lib/profile";
 import { homePath, projectsPath, type PathFor } from "@/lib/routes";
 import { Disclosure } from "./Disclosure";
 import { LocaleSwitcher } from "./LocaleSwitcher";
@@ -24,19 +25,25 @@ export async function SiteHeader({ locale, pathFor }: Props) {
   const isHome = pathFor === homePath;
   const home = isHome ? "" : homePath(locale);
 
-  const links = SECTIONS.map((id) => ({
-    id,
-    href: id === "projects" ? projectsPath(locale) : `${home}#${id}`,
-    label: t(`${id}.title`),
-    current: id === "projects" && pathFor === projectsPath,
-  }));
+  const links = [
+    ...SECTIONS.map((id) => ({
+      id: id as string,
+      href: id === "projects" ? projectsPath(locale) : `${home}#${id}`,
+      label: t(`${id}.title`),
+      current: id === "projects" && pathFor === projectsPath,
+      external: false,
+    })),
+    // Blog: site externo, na versão do idioma atual.
+    { id: "blog", href: blogUrl[locale], label: t("nav.blog"), current: false, external: true },
+  ];
 
   const list = (className?: string) => (
     <ul className={className}>
-      {links.map(({ id, href, label, current }) => (
+      {links.map(({ id, href, label, current, external }) => (
         <li key={id}>
-          <a href={href} className="link" aria-current={current ? "page" : undefined}>
+          <a href={href} className="link" aria-current={current ? "page" : undefined} hrefLang={external ? locale : undefined}>
             {label}
+            {external && <span aria-hidden="true"> ↗</span>}
           </a>
         </li>
       ))}

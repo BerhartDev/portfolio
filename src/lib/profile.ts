@@ -5,6 +5,14 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/bernardoknoblauch",
 };
 
+/** Blog, com a versão de cada idioma. */
+export const blogUrl: Record<"pt" | "en" | "fr" | "es", string> = {
+  pt: "https://beknologia.up.railway.app/pt-BR",
+  en: "https://beknologia.up.railway.app/en-US",
+  fr: "https://beknologia.up.railway.app/fr-FR",
+  es: "https://beknologia.up.railway.app/es-ES",
+};
+
 /** Redes com ícone no topo e no rodapé, nesta ordem. Sem URL, a rede não aparece. */
 export const SOCIAL_NETWORKS = ["linkedin", "github", "instagram", "leetcode", "hackthebox"] as const;
 export type SocialNetwork = (typeof SOCIAL_NETWORKS)[number];

@@ -75,3 +75,6 @@ Substitui "segue o sistema". Sem tema salvo, o site abre escuro para todo mundo:
 
 ## 2026-09-26 · Ícones provisórios levam à home
 Instagram, LeetCode e Hack The Box aparecem já, com `HOME_PLACEHOLDER` no lugar da URL: o link vai para a home no idioma atual e não leva `rel="me"`. Trocar pela URL real em `socialLinks` quando houver.
+
+## 2026-09-26 · Link do blog na navegação
+"Blog ↗" é o último link da barra e do menu mobile, apontando para a versão do idioma atual (`blogUrl` em `src/lib/profile.ts`: pt-BR, en-US, fr-FR, es-ES em beknologia.up.railway.app). Com um link a mais, a barra vira menu abaixo de 72rem (antes 64rem), para não quebrar em duas linhas em francês.

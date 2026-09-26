@@ -11,6 +11,14 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Link do blog na navegação
+- Pedido: link na nav para o blog, na versão do idioma atual.
+- Feito: `blogUrl` em `src/lib/profile.ts`; "Blog ↗" no fim da barra e do menu mobile (`SiteHeader`), com `hrefLang`; `nav.blog` nos 4 idiomas; menu mobile passa a valer abaixo de 72rem. Medido no Edge em 1152px: links numa linha só em pt, en, fr e es.
+
+## 2026-09-26 · Git push
+- Pedido: `git push`.
+- Feito: tentativa falhou com `Permission denied (publickey)`: o shell do Claude não tem a chave SSH. Orientado a rodar `! git push origin main` no prompt.
+
 ## 2026-09-26 · Ícones provisórios de Instagram, LeetCode e Hack The Box
 - Pedido: mostrar os ícones que faltavam, por enquanto levando para a home.
 - Feito: `HOME_PLACEHOLDER` em `src/lib/profile.ts`; `SocialLinks` recebe o `locale` e troca o marcador pela home no idioma atual (`/pt/`, `/fr/`…), sem `rel="me"`. Os 5 ícones aparecem no topo e no rodapé.
