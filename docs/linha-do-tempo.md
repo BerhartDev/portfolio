@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Foto de perfil e imagem de compartilhamento
+- Pedido: adicionar a foto de perfil (com dicas); depois, deixá-la atrás do topo, sem muito destaque, com nome e descrição por cima sobre um fundo que não prejudique a leitura, de um jeito diferente; usar a foto também no Open Graph.
+- Dicas dadas: a foto P&B com fundo escuro combina com a paleta; a nitidez da pele fica forte em tamanho grande, então a exibição é contida e com textura; no tema claro vira bloco escuro, então a opacidade é menor.
+- Feito: `public/profile/bernardo-{640,1086}.webp` (30KB e 77KB); `Hero` com a foto ao fundo, textura de linhas de 1px e faixas sólidas atrás do texto; token `--photo-opacity`; `hero.photoAlt` e `meta.ogAlt` nos 4 idiomas; `public/og.jpg` 1200×630 (70KB); `pageMetadata` com `og:image` e `summary_large_image`. Conferido no Edge em 1400, 1024 e 500px nos dois temas, sem rolagem horizontal.
+
 ## 2026-09-26 · Barra enxuta para caber em 1024px
 - Pedido: tirar Agora e Trajetória da navbar para funcionar em 1024px.
 - Feito: `SECTIONS` do `SiteHeader` reduzido a projetos, stack e contato (mais Blog); também sai do menu mobile. Ponto de corte do menu de volta a 64rem. Medido no Edge em 1024px: links numa linha em pt, en, fr e es; em 1000px aparece o botão de menu.

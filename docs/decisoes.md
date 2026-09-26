@@ -81,3 +81,6 @@ Instagram, LeetCode e Hack The Box aparecem já, com `HOME_PLACEHOLDER` no lugar
 
 ## 2026-09-26 · Barra só com Projetos, Stack, Contato e Blog
 Trajetória e Agora saíram da barra e do menu mobile (as seções continuam na home). Com isso, a barra volta a virar menu só abaixo de 64rem e cabe numa linha em 1024px nos 4 idiomas. Substitui o ponto de corte de 72rem da decisão do blog.
+
+## 2026-09-26 · Foto ao fundo do topo e imagem de Open Graph
+A foto de perfil (P&B) fica atrás do topo da home: metade direita no desktop (alinhada à borda do conteúdo), largura toda no mobile, com `object-fit: cover`, opacidade por token (`--photo-opacity`: 0.55 no escuro, 0.28 no claro) e textura de linhas de 1px a cada 3px na cor de `--bg` (máscara SVG, sem gradiente). O texto do topo fica sobre faixas sólidas de `--bg` (`box-decoration-break: clone`), que garantem a leitura sem gradiente nem blur. Arquivos WebP 640 e 1086px gerados pelo canvas do Edge, sem ferramenta nova; carregam com `fetchpriority="high"`. `public/og.jpg` (1200×630) usa a mesma linguagem, com texto neutro entre idiomas; `pageMetadata` passa a incluir `og:image` e `twitter:card=summary_large_image` em todas as páginas, com `alt` por idioma (`meta.ogAlt`).
