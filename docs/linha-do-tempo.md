@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Estudo de caso do VamosMarcar
+- Pedido: ler o projeto VamosMarcar (repositório `sweeney`) e preencher a página dele; imagens ficam para depois.
+- Feito: lidos README, `docs/` (visão geral, backend, banco, fluxo de booking, funcionalidades, comunicação, deploy), manifests e trechos do código (slots, transação de booking, auth). `content/projects/vamosmarcar.json` reescrito nos 4 idiomas: tag, resumo, período `2026–`, stack e as 4 seções (arquitetura, agendamento, segurança/operação, motivo do WhatsApp manual, resultado, próximos passos). Números só do que o repo comprova (111 commits, 11 módulos, 55 rotas, 8 modelos, 12 migrações); uso real `[PREENCHER]`; ausência de testes dita como próximo passo. Imagens não alteradas. `docs/perfil.md` atualizado.
+- Pendente: imagens reais; número de negócios ativos e agendamentos.
+
 ## 2026-09-26 · Posicionamento Node.js full stack
 - Pedido: trocar "Desenvolvedor Full-Stack II" por algo com Node no nome e ligar o site todo a Node, porque o foco são vagas de Node.
 - Escolhas: cargo "Desenvolvedor Node.js Full Stack", sem o "II". Node só onde foi real (Lance!, Auto Avaliar).

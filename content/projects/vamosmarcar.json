@@ -1,7 +1,17 @@
 {
   "order": 3,
+  "period": "2026–",
   "stack": [
-    "[PREENCHER]"
+    "Node.js",
+    "Express",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "Zod",
+    "Next.js",
+    "React",
+    "Luxon",
+    "Cloudflare"
   ],
   "links": [
     {
@@ -63,124 +73,400 @@
   ],
   "pt": {
     "title": "VamosMarcar",
-    "tag": "Produto próprio · SaaS",
-    "summary": "Agendamento para barbearias e salões.",
+    "tag": "Produto próprio · SaaS · Node.js",
+    "summary": "SaaS multi-tenant de agendamento para barbearias e salões. API em Node.js, Express e Prisma; web em Next.js.",
     "sections": {
       "context": [
         {
           "type": "p",
-          "text": "Meu SaaS de agendamento para barbearias e salões."
+          "text": "O VamosMarcar é o meu SaaS de agendamento online para barbearias e salões. Cada negócio tem uma página de links, pensada para a bio do Instagram, e um fluxo de agendamento em /{slug}/agendar. O dono gere tudo num painel; eu opero a plataforma num painel de administração separado."
+        },
+        {
+          "type": "p",
+          "text": "Desenvolvi sozinho, de abril a agosto de 2026: 111 commits num monorepo pnpm com a API, a web e pacotes de contratos compartilhados."
         }
       ],
       "problem": [
         {
           "type": "p",
-          "text": "[PREENCHER]"
+          "text": "Nesse público, o agendamento acontece por mensagem no WhatsApp, sem visão de agenda, sem histórico de clientes e sem controle de faltas."
+        },
+        {
+          "type": "p",
+          "text": "Um sistema para esse mercado precisa custar quase nada por cliente, funcionar bem no celular e não pedir que o cliente final crie conta."
         }
       ],
       "work": [
         {
+          "type": "h",
+          "text": "Arquitetura"
+        },
+        {
+          "type": "list",
+          "items": [
+            "API em Node.js 20, Express e TypeScript, organizada por domínio: 11 módulos (auth, agendamentos, horários, serviços, equipe, métricas…), cada um com controller, service e repository, e 55 rotas em /api/v1.",
+            "PostgreSQL com Prisma: 8 modelos e 12 migrações. Multi-tenant por businessId em toda linha de tenant, com invariantes checadas na aplicação e entrada validada com Zod.",
+            "Web em Next.js 15 e React 19. O browser fala só com o Next (BFF em Route Handlers), que chama a API: sem CORS, e a página pública de agendamento é renderizada no servidor com cache.",
+            "Contratos compartilhados entre API e web nos pacotes @sweeney/types e @sweeney/api-client."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Agendamento"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Modelo pedir-depois-confirmar: o pedido entra como pending, o dono confirma ou cancela e depois marca concluído ou no-show. Pending e confirmed bloqueiam o horário.",
+            "Horários livres calculados com Luxon no fuso do negócio: janelas semanais, agendamentos existentes, bloqueios de dia inteiro ou de faixa horária e corte global de novos horários. Um agendamento aceita vários serviços, somando as durações.",
+            "Checagem de sobreposição e gravação do agendamento na mesma transação.",
+            "Cancelamento pelo cliente com o link recebido e o mesmo telefone da marcação, respeitando uma janela configurável antes do horário."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Segurança e operação"
+        },
+        {
+          "type": "list",
+          "items": [
+            "JWT em cookie com o instante da última troca de senha (pwdAt): trocar a senha invalida as sessões antigas. Cookies e rotas separados para o admin da plataforma.",
+            "Rate limit próprio nas rotas de autenticação, sem confiar em X-Forwarded-For quando o proxy não é confiável.",
+            "CI no GitHub Actions e no Bitbucket Pipelines com typecheck, lint e build. Deploy preparado para Railway, com Cloudflare na borda (DNS, SSL, WAF) e Cloudflare Images para as fotos dos negócios."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Por que o WhatsApp é manual"
+        },
+        {
           "type": "p",
-          "text": "Cada negócio tem um link público de agendamento. O pedido entra como pendente e o dono confirma no painel. A agenda aceita bloqueios. As mensagens de WhatsApp saem com envio manual, por decisão consciente: [PREENCHER]"
+          "text": "As mensagens saem por links wa.me, que o dono ou o cliente enviam, sem Twilio nem WhatsApp Business API. Comparei os canais por custo fixo, custo por mensagem e esforço de operação: para o piloto, o wa.me usa o canal que o público já tem, com custo zero por mensagem. O SMS via Twilio existe no código e fica desligado enquanto não há credenciais."
         }
       ],
       "result": [
         {
+          "type": "list",
+          "items": [
+            "No ar em vamosmarcar.com.",
+            "Painel com agenda em dia, semana e mês, clientes agrupados por telefone, métricas por período com exportação em CSV e equipe com papéis de dono e funcionário.",
+            "Custo por mensagem enviada: zero."
+          ]
+        },
+        {
           "type": "p",
-          "text": "Stack e números: [PREENCHER]"
+          "text": "Negócios ativos e agendamentos: [PREENCHER]"
+        },
+        {
+          "type": "h",
+          "text": "Próximos passos"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Testes automatizados. Hoje a garantia no CI é typecheck, lint e build.",
+            "Aviso automático ao dono quando entra um pedido novo."
+          ]
         }
       ]
     }
   },
   "en": {
     "title": "VamosMarcar",
-    "tag": "My own product · SaaS",
-    "summary": "Booking for barbershops and salons.",
+    "tag": "Own product · SaaS · Node.js",
+    "summary": "Multi-tenant booking SaaS for barbershops and salons. API in Node.js, Express and Prisma; web app in Next.js.",
     "sections": {
       "context": [
         {
           "type": "p",
-          "text": "My SaaS for booking appointments at barbershops and salons."
+          "text": "VamosMarcar is my online booking SaaS for barbershops and salons. Each business gets a link page, meant for the Instagram bio, and a booking flow at /{slug}/agendar. Owners run everything from a dashboard; I operate the platform from a separate admin panel."
+        },
+        {
+          "type": "p",
+          "text": "I built it alone, from April to August 2026: 111 commits in a pnpm monorepo with the API, the web app and shared contract packages."
         }
       ],
       "problem": [
         {
           "type": "p",
-          "text": "[PREENCHER]"
+          "text": "For this audience, booking happens over WhatsApp messages, with no calendar view, no customer history and no tracking of no-shows."
+        },
+        {
+          "type": "p",
+          "text": "A system for this market has to cost almost nothing per customer, work well on a phone and not ask the end customer to create an account."
         }
       ],
       "work": [
         {
+          "type": "h",
+          "text": "Architecture"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Node.js 20, Express and TypeScript API organized by domain: 11 modules (auth, appointments, availability, services, team, metrics…), each with a controller, service and repository, and 55 routes under /api/v1.",
+            "PostgreSQL with Prisma: 8 models and 12 migrations. Multi-tenant by businessId on every tenant row, with invariants enforced in the application and input validated with Zod.",
+            "Web app in Next.js 15 and React 19. The browser only talks to Next (a BFF in Route Handlers), which calls the API: no CORS, and the public booking page is server-rendered with caching.",
+            "Contracts shared between API and web in the @sweeney/types and @sweeney/api-client packages."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Booking"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Request-then-confirm model: a request comes in as pending, the owner confirms or cancels it, then marks it completed or no-show. Pending and confirmed both block the slot.",
+            "Free slots computed with Luxon in the business time zone: weekly windows, existing appointments, full-day or time-range blocks and a global cutoff for new slots. One booking can include several services, adding up their durations.",
+            "Overlap check and appointment insert run in the same transaction.",
+            "Customers cancel with the link they received and the same phone number used to book, within a configurable window before the appointment."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Security and operations"
+        },
+        {
+          "type": "list",
+          "items": [
+            "JWT in a cookie carrying the time of the last password change (pwdAt): changing the password invalidates old sessions. Separate cookies and routes for the platform admin.",
+            "Custom rate limiting on auth routes, without trusting X-Forwarded-For when the proxy is not trusted.",
+            "CI on GitHub Actions and Bitbucket Pipelines running typecheck, lint and build. Deployment set up for Railway, with Cloudflare at the edge (DNS, SSL, WAF) and Cloudflare Images for business photos."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Why WhatsApp is manual"
+        },
+        {
           "type": "p",
-          "text": "Each business gets a public booking link. Requests come in as pending and the owner confirms them in the dashboard. The calendar supports blocked time. WhatsApp messages are sent manually, on purpose: [PREENCHER]"
+          "text": "Messages go out through wa.me links that the owner or the customer sends, with no Twilio and no WhatsApp Business API. I compared channels by fixed cost, cost per message and operational effort: for the pilot, wa.me uses the channel this audience already has, at zero cost per message. SMS through Twilio exists in the code and stays off until credentials are set."
         }
       ],
       "result": [
         {
+          "type": "list",
+          "items": [
+            "Live at vamosmarcar.com.",
+            "Dashboard with day, week and month calendar views, customers grouped by phone number, metrics by period with CSV export, and a team with owner and staff roles.",
+            "Cost per message sent: zero."
+          ]
+        },
+        {
           "type": "p",
-          "text": "Stack and numbers: [PREENCHER]"
+          "text": "Active businesses and bookings: [PREENCHER]"
+        },
+        {
+          "type": "h",
+          "text": "Next steps"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Automated tests. Today the CI safety net is typecheck, lint and build.",
+            "Automatic alert to the owner when a new request comes in."
+          ]
         }
       ]
     }
   },
   "fr": {
     "title": "VamosMarcar",
-    "tag": "Produit personnel · SaaS",
-    "summary": "Prise de rendez-vous pour barbiers et salons de coiffure.",
+    "tag": "Produit personnel · SaaS · Node.js",
+    "summary": "SaaS multi-tenant de prise de rendez-vous pour barbiers et salons. API en Node.js, Express et Prisma ; web en Next.js.",
     "sections": {
       "context": [
         {
           "type": "p",
-          "text": "Mon SaaS de prise de rendez-vous pour barbiers et salons de coiffure."
+          "text": "VamosMarcar est mon SaaS de prise de rendez-vous en ligne pour barbiers et salons de coiffure. Chaque commerce dispose d’une page de liens, pensée pour la bio Instagram, et d’un parcours de réservation sur /{slug}/agendar. Le gérant pilote tout depuis un tableau de bord ; j’administre la plateforme depuis un espace d’administration séparé."
+        },
+        {
+          "type": "p",
+          "text": "Je l’ai développé seul, d’avril à août 2026 : 111 commits dans un monorepo pnpm réunissant l’API, le web et des paquets de contrats partagés."
         }
       ],
       "problem": [
         {
           "type": "p",
-          "text": "[PREENCHER]"
+          "text": "Pour ce public, la prise de rendez-vous se fait par messages WhatsApp, sans vue d’agenda, sans historique clients et sans suivi des absences."
+        },
+        {
+          "type": "p",
+          "text": "Un outil pour ce marché doit coûter presque rien par client, bien fonctionner sur mobile et ne pas demander au client final de créer un compte."
         }
       ],
       "work": [
         {
+          "type": "h",
+          "text": "Architecture"
+        },
+        {
+          "type": "list",
+          "items": [
+            "API en Node.js 20, Express et TypeScript, organisée par domaine : 11 modules (auth, rendez-vous, disponibilités, prestations, équipe, métriques…), chacun avec controller, service et repository, et 55 routes sous /api/v1.",
+            "PostgreSQL avec Prisma : 8 modèles et 12 migrations. Multi-tenant par businessId sur chaque ligne de tenant, avec des invariants vérifiés dans l’application et des entrées validées avec Zod.",
+            "Web en Next.js 15 et React 19. Le navigateur ne parle qu’à Next (un BFF en Route Handlers), qui appelle l’API : pas de CORS, et la page publique de réservation est rendue côté serveur avec cache.",
+            "Contrats partagés entre API et web dans les paquets @sweeney/types et @sweeney/api-client."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Réservation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Modèle demande puis confirmation : la demande arrive en pending, le gérant la confirme ou l’annule, puis la marque terminée ou no-show. Pending et confirmed bloquent tous deux le créneau.",
+            "Créneaux libres calculés avec Luxon dans le fuseau du commerce : plages hebdomadaires, rendez-vous existants, blocages d’une journée ou d’une plage horaire et date limite globale pour les nouveaux créneaux. Une réservation accepte plusieurs prestations, en additionnant les durées.",
+            "Vérification des chevauchements et insertion du rendez-vous dans la même transaction.",
+            "Annulation par le client avec le lien reçu et le même numéro de téléphone, dans une fenêtre configurable avant le rendez-vous."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Sécurité et exploitation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "JWT en cookie portant l’instant du dernier changement de mot de passe (pwdAt) : changer de mot de passe invalide les anciennes sessions. Cookies et routes séparés pour l’administrateur de la plateforme.",
+            "Rate limiting maison sur les routes d’authentification, sans faire confiance à X-Forwarded-For quand le proxy n’est pas de confiance.",
+            "CI sur GitHub Actions et Bitbucket Pipelines avec typecheck, lint et build. Déploiement préparé pour Railway, avec Cloudflare en bordure (DNS, SSL, WAF) et Cloudflare Images pour les photos des commerces."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Pourquoi WhatsApp reste manuel"
+        },
+        {
           "type": "p",
-          "text": "Chaque commerce dispose d’un lien public de réservation. Les demandes arrivent en attente et le gérant les confirme depuis son tableau de bord. L’agenda accepte des créneaux bloqués. Les messages WhatsApp partent à la main, par choix délibéré : [PREENCHER]"
+          "text": "Les messages partent par des liens wa.me envoyés par le gérant ou le client, sans Twilio ni WhatsApp Business API. J’ai comparé les canaux selon le coût fixe, le coût par message et l’effort d’exploitation : pour le pilote, wa.me utilise le canal que ce public a déjà, à coût nul par message. L’envoi de SMS via Twilio existe dans le code et reste désactivé tant qu’il n’y a pas d’identifiants."
         }
       ],
       "result": [
         {
+          "type": "list",
+          "items": [
+            "En ligne sur vamosmarcar.com.",
+            "Tableau de bord avec agenda jour, semaine et mois, clients regroupés par numéro de téléphone, métriques par période avec export CSV, et équipe avec rôles de gérant et d’employé.",
+            "Coût par message envoyé : zéro."
+          ]
+        },
+        {
           "type": "p",
-          "text": "Stack et chiffres : [PREENCHER]"
+          "text": "Commerces actifs et rendez-vous : [PREENCHER]"
+        },
+        {
+          "type": "h",
+          "text": "Prochaines étapes"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tests automatisés. Aujourd’hui, le filet de sécurité de la CI est typecheck, lint et build.",
+            "Alerte automatique au gérant quand une nouvelle demande arrive."
+          ]
         }
       ]
     }
   },
   "es": {
     "title": "VamosMarcar",
-    "tag": "Producto propio · SaaS",
-    "summary": "Reservas para barberías y salones de belleza.",
+    "tag": "Producto propio · SaaS · Node.js",
+    "summary": "SaaS multi-tenant de reservas para barberías y salones. API en Node.js, Express y Prisma; web en Next.js.",
     "sections": {
       "context": [
         {
           "type": "p",
-          "text": "Mi SaaS de reservas para barberías y salones de belleza."
+          "text": "VamosMarcar es mi SaaS de reservas online para barberías y salones de belleza. Cada negocio tiene una página de enlaces, pensada para la bio de Instagram, y un flujo de reserva en /{slug}/agendar. El dueño gestiona todo desde un panel; yo opero la plataforma desde un panel de administración aparte."
+        },
+        {
+          "type": "p",
+          "text": "Lo desarrollé solo, de abril a agosto de 2026: 111 commits en un monorepo pnpm con la API, la web y paquetes de contratos compartidos."
         }
       ],
       "problem": [
         {
           "type": "p",
-          "text": "[PREENCHER]"
+          "text": "En este público, las reservas se hacen por mensajes de WhatsApp, sin vista de agenda, sin historial de clientes y sin control de ausencias."
+        },
+        {
+          "type": "p",
+          "text": "Un sistema para este mercado tiene que costar casi nada por cliente, funcionar bien en el móvil y no pedirle al cliente final que cree una cuenta."
         }
       ],
       "work": [
         {
+          "type": "h",
+          "text": "Arquitectura"
+        },
+        {
+          "type": "list",
+          "items": [
+            "API en Node.js 20, Express y TypeScript, organizada por dominio: 11 módulos (auth, reservas, disponibilidad, servicios, equipo, métricas…), cada uno con controller, service y repository, y 55 rutas bajo /api/v1.",
+            "PostgreSQL con Prisma: 8 modelos y 12 migraciones. Multi-tenant por businessId en cada fila de tenant, con invariantes verificadas en la aplicación y entrada validada con Zod.",
+            "Web en Next.js 15 y React 19. El navegador solo habla con Next (un BFF en Route Handlers), que llama a la API: sin CORS, y la página pública de reserva se renderiza en el servidor con caché.",
+            "Contratos compartidos entre API y web en los paquetes @sweeney/types y @sweeney/api-client."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Reservas"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Modelo pedir y luego confirmar: la solicitud entra como pending, el dueño la confirma o la cancela y después la marca como completada o no-show. Pending y confirmed bloquean el horario.",
+            "Horarios libres calculados con Luxon en la zona horaria del negocio: franjas semanales, reservas existentes, bloqueos de día completo o de franja horaria y un corte global para nuevos horarios. Una reserva admite varios servicios, sumando sus duraciones.",
+            "Comprobación de solapamiento e inserción de la reserva en la misma transacción.",
+            "Cancelación por el cliente con el enlace recibido y el mismo teléfono de la reserva, dentro de una ventana configurable antes del horario."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Seguridad y operación"
+        },
+        {
+          "type": "list",
+          "items": [
+            "JWT en cookie con el instante del último cambio de contraseña (pwdAt): cambiar la contraseña invalida las sesiones anteriores. Cookies y rutas separadas para el admin de la plataforma.",
+            "Rate limit propio en las rutas de autenticación, sin confiar en X-Forwarded-For cuando el proxy no es de confianza.",
+            "CI en GitHub Actions y Bitbucket Pipelines con typecheck, lint y build. Deploy preparado para Railway, con Cloudflare en el borde (DNS, SSL, WAF) y Cloudflare Images para las fotos de los negocios."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Por qué WhatsApp es manual"
+        },
+        {
           "type": "p",
-          "text": "Cada negocio tiene un enlace público de reservas. Las solicitudes entran como pendientes y el dueño las confirma en el panel. La agenda admite bloqueos. Los mensajes de WhatsApp se envían a mano, por decisión consciente: [PREENCHER]"
+          "text": "Los mensajes salen por enlaces wa.me que envía el dueño o el cliente, sin Twilio ni WhatsApp Business API. Comparé los canales por costo fijo, costo por mensaje y esfuerzo de operación: para el piloto, wa.me usa el canal que este público ya tiene, con costo cero por mensaje. El SMS vía Twilio existe en el código y queda desactivado mientras no haya credenciales."
         }
       ],
       "result": [
         {
+          "type": "list",
+          "items": [
+            "En línea en vamosmarcar.com.",
+            "Panel con agenda por día, semana y mes, clientes agrupados por teléfono, métricas por período con exportación a CSV y equipo con roles de dueño y empleado.",
+            "Costo por mensaje enviado: cero."
+          ]
+        },
+        {
           "type": "p",
-          "text": "Stack y números: [PREENCHER]"
+          "text": "Negocios activos y reservas: [PREENCHER]"
+        },
+        {
+          "type": "h",
+          "text": "Próximos pasos"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tests automatizados. Hoy la red de seguridad del CI es typecheck, lint y build.",
+            "Aviso automático al dueño cuando entra una solicitud nueva."
+          ]
         }
       ]
     }

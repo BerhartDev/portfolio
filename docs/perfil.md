@@ -99,11 +99,14 @@ O texto publicado dos projetos fica em `content/projects/<slug>.json` (4 idiomas
 - Resultado: [PREENCHER]
 
 ### 3. VamosMarcar · vamosmarcar.com
-- Contexto: meu SaaS de agendamento para barbearias e salões.
-- Problema: [PREENCHER]
-- O que fiz e por quê: link público por negócio; pedidos entram pendentes e o dono confirma no painel; bloqueios de agenda; mensagens de WhatsApp com envio manual por decisão consciente (motivo: [PREENCHER]).
-- Stack: [PREENCHER]
-- Resultado / números: [PREENCHER]
+Fonte: repositório `~/Github/sweeney` (docs e código), lido em 2026-09-26.
+- Contexto: meu SaaS multi-tenant de agendamento para barbearias e salões; página de links (bio do Instagram) + fluxo `/{slug}/agendar`, painel do dono (`/dashboard`) e painel de admin da plataforma (`/admin`). Feito sozinho, abr.–ago. 2026, 111 commits.
+- Problema: agendamento por mensagem no WhatsApp, sem agenda, histórico de clientes ou controle de faltas; precisa de custo marginal quase zero e não exigir conta do cliente final.
+- Stack: Node.js 20, Express, TypeScript, Prisma, PostgreSQL, Zod, JWT, Luxon, libphonenumber-js; Next.js 15, React 19, Tailwind; monorepo pnpm (`@sweeney/types`, `@sweeney/api-client`, `@sweeney/ui`); CI GitHub Actions + Bitbucket Pipelines (typecheck, lint, build); deploy documentado para Railway; Cloudflare (DNS, SSL, WAF, Images).
+- Números verificáveis no repo: 11 módulos de domínio, 55 rotas, 8 modelos Prisma, 12 migrações. Sem testes automatizados.
+- O que fiz: arquitetura por domínio (controller/service/repository), multi-tenant por `businessId`, BFF Next → Express, slots com Luxon no fuso do negócio, modelo pending → confirmed → completed/no_show, overlap + insert na mesma transação, JWT com `pwdAt`, rate limit próprio, métricas com CSV, equipe com papéis.
+- WhatsApp manual (motivo): links `wa.me` com custo zero por mensagem, sem Twilio nem WhatsApp Business API; decisão documentada em `docs/gestao-decisoes-comunicacao.md` do repo (matriz de custo fixo, variável e operação). SMS via Twilio existe no código, desligado sem credenciais.
+- Resultado / números de uso: [PREENCHER]
 
 ### 4. BEKNO · berhartdev.github.io/bekno-landing-page/pt/
 - Contexto: minha empresa de sites para pequenos negócios.
