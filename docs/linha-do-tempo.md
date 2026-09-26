@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-26 · Tema visível na barra mobile
+- Pedido: manter o botão de tema visível também na nav mobile.
+- Feito: `ThemeToggle` fora do wrapper `desktopOnly` no `SiteHeader` e removido do painel do menu. Medido no Edge em 390px: um botão de tema visível, sem rolagem horizontal; no desktop continua um só.
+
 ## 2026-09-26 · CTA "Meu trabalho" no topo
 - Pedido: CTA abaixo das redes sociais para ver todos os projetos; depois, trocar o texto para "Meu trabalho".
 - Feito: link em `Hero.tsx` para a página de projetos do idioma atual, estilo de botão com borda de 1px sobre `--bg` (legível sobre a foto), inversão no hover e seta que anda; `hero.cta` nos 4 idiomas ("Meu trabalho", "My work", "Mon travail", "Mi trabajo"). No caminho, o CSS do CTA tinha entrado no meio da lista de seletores `.name, .role, .lead, .sub` e estilizou o nome como botão; corrigido antes do commit. Conferido no Edge em 1400 e 500px.

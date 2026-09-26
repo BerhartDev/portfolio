@@ -16,7 +16,7 @@ type Props = { locale: Locale; pathFor: PathFor };
 
 /**
  * Barra fixa no topo. Desktop: nome, links, idioma, tema e CTA de contato.
- * Mobile: nome, idioma e botão de menu que abre um painel com links, tema e CTA.
+ * Mobile: nome, idioma, tema e botão de menu que abre um painel com links e CTA.
  * Toda página tem a seção #contact, então o CTA funciona em qualquer uma.
  */
 export async function SiteHeader({ locale, pathFor }: Props) {
@@ -70,9 +70,7 @@ export async function SiteHeader({ locale, pathFor }: Props) {
       </nav>
       <div className={styles.controls}>
         <LocaleSwitcher current={locale} label={t("nav.language")} names={names} hrefs={hrefs} />
-        <div className={styles.desktopOnly}>
-          <ThemeToggle label={t("nav.theme")} />
-        </div>
+        <ThemeToggle label={t("nav.theme")} />
         <div className={styles.desktopOnly}>{cta}</div>
         <Disclosure
           className={styles.menu}
@@ -90,10 +88,7 @@ export async function SiteHeader({ locale, pathFor }: Props) {
         >
           <div className={styles.panel}>
             <nav aria-label={t("nav.label")}>{list(styles.panelLinks)}</nav>
-            <div className={styles.panelFoot}>
-              <ThemeToggle label={t("nav.theme")} />
-              {cta}
-            </div>
+            <div className={styles.panelFoot}>{cta}</div>
           </div>
         </Disclosure>
       </div>

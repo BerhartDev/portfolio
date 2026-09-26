@@ -96,3 +96,6 @@ Home: topo → stack → projetos → trajetória → agora → contato (antes: 
 
 ## 2026-09-26 · Sem seção "Agora"
 A seção "Agora" saiu da home (componente `Now`, namespace `now` nos 4 idiomas e a seção do `docs/perfil.md`). Home: topo → stack → projetos → trajetória → contato.
+
+## 2026-09-26 · Tema sempre visível na barra
+O botão de tema fica na barra também no mobile (nome, idioma, tema, menu) e saiu do painel do menu, que ficou com links e CTA. Cabe em 390px sem rolagem horizontal.
