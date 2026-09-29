@@ -226,23 +226,31 @@
     "groups": {
       "backend": {
         "name": "Back-end",
-        "items": "Node.js, TypeScript, REST, GraphQL, files, workers et DLQ, cache, JWT et OAuth2, WordPress headless"
+        "items": "Node.js, NestJS, Express, Fastify, REST, GraphQL, tRPC, Kafka, RabbitMQ, AWS SQS, webhooks, passerelles de paiement"
       },
       "frontend": {
         "name": "Front-end",
-        "items": "React, Next.js, TypeScript, Core Web Vitals, SEO technique"
+        "items": "React, Next.js, TypeScript, Tailwind CSS, Redux Toolkit, Zustand, React Hook Form et Zod, React Testing Library, Playwright, Core Web Vitals"
+      },
+      "data": {
+        "name": "Données",
+        "items": "PostgreSQL, Redis, MySQL, Prisma, Drizzle, Supabase, multi-tenant, Row Level Security, pgvector"
       },
       "cloud": {
         "name": "Infrastructure et cloud",
-        "items": "AWS, GCP, Cloudflare, CI/CD avec rollback, réseau et VLAN, sauvegardes"
+        "items": "AWS, GCP, Cloudflare, Vercel, Docker, Kubernetes, Terraform, CI/CD, Linux"
       },
       "reliability": {
-        "name": "Fiabilité",
-        "items": "Observabilité, SLO, runbooks, circuit breakers, cache multiniveau, analyse des causes profondes"
+        "name": "Fiabilité et qualité",
+        "items": "Jest, Vitest, TDD, OpenTelemetry, Datadog, Prometheus et Grafana, Sentry, réponse aux incidents, k6"
       },
       "security": {
         "name": "Sécurité",
-        "items": "JWT, OAuth2, cyberdéfense, investigation numérique"
+        "items": "JWT et OAuth2, OWASP, SonarQube, Snyk, Burp Suite, OWASP ZAP, cyberdéfense, investigation numérique"
+      },
+      "media": {
+        "name": "Médias programmatiques",
+        "items": "Google Ad Manager, Google Tag Manager, monétisation d’un portail à fort trafic"
       }
     }
   },

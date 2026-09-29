@@ -22,6 +22,17 @@ Desenvolvedor Node.js full stack no Rio de Janeiro. APIs e serviços em Node.js/
 - Inglês: fluente
 - Francês: intermediário
 
+## Stack
+Fonte: lista enviada em 2026-09-29. Na home, Back-end continua primeiro.
+
+- Back-end: Node.js, NestJS, Express, Fastify, REST, GraphQL, tRPC, Kafka, RabbitMQ, AWS SQS, webhooks, gateways de pagamento
+- Front-end: React, Next.js, TypeScript, Tailwind CSS, Redux Toolkit, Zustand, React Hook Form e Zod, React Testing Library, Playwright, Core Web Vitals
+- Dados: PostgreSQL, Redis, MySQL, Prisma, Drizzle, Supabase, multi-tenant, Row Level Security, pgvector
+- Infra e cloud: AWS, GCP, Cloudflare, Vercel, Docker, Kubernetes, Terraform, CI/CD, Linux
+- Confiabilidade e qualidade: Jest, Vitest, TDD, OpenTelemetry, Datadog, Prometheus e Grafana, Sentry, resposta a incidentes, k6
+- Segurança: JWT e OAuth2, OWASP, SonarQube, Snyk, Burp Suite, OWASP ZAP, defesa cibernética, perícia forense
+- Mídia programática: Google Ad Manager, Google Tag Manager, monetização em portal de alto tráfego
+
 ## Formação
 - Tecnólogo em Defesa Cibernética e Perícia Forense (Estácio)
 - Técnico em Eletromecânica (IFF)

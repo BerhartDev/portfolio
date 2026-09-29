@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-29 · Stack da home
+- Pedido: atualizar a stack com a lista nova (front, back, dados, infra, confiabilidade e qualidade, segurança, mídia programática).
+- Feito: `messages/{pt,en,fr,es}.json`, `STACK_GROUPS` em `src/lib/profile.ts` (grupos `data` e `media`), coluna do rótulo em `Stack.module.css` de 13rem para 16rem, `docs/perfil.md` e `docs/decisoes.md`. Back-end continua primeiro. Sem commit.
+- Pendente: nada desta tarefa.
+
 ## 2026-09-26 · Lista de projetos quebrando no desktop
 - Pedido: a lista de projetos da home quebrava no desktop (print: nomes longos por cima do resumo, resumo espremido).
 - Causa: no grid desktop do `ProjectList`, a coluna da etiqueta era `auto` e crescia com etiquetas longas, e a do nome tinha mínimo fixo de 9rem, menor que "VamosMarcar" e "Beknologia".

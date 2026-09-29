@@ -226,23 +226,31 @@
     "groups": {
       "backend": {
         "name": "Back-end",
-        "items": "Node.js, TypeScript, REST, GraphQL, filas, workers e DLQ, cache, JWT e OAuth2, WordPress headless"
+        "items": "Node.js, NestJS, Express, Fastify, REST, GraphQL, tRPC, Kafka, RabbitMQ, AWS SQS, webhooks, gateways de pagamento"
       },
       "frontend": {
         "name": "Front-end",
-        "items": "React, Next.js, TypeScript, Core Web Vitals, SEO técnico"
+        "items": "React, Next.js, TypeScript, Tailwind CSS, Redux Toolkit, Zustand, React Hook Form e Zod, React Testing Library, Playwright, Core Web Vitals"
+      },
+      "data": {
+        "name": "Dados",
+        "items": "PostgreSQL, Redis, MySQL, Prisma, Drizzle, Supabase, multi-tenant, Row Level Security, pgvector"
       },
       "cloud": {
         "name": "Infra e cloud",
-        "items": "AWS, GCP, Cloudflare, CI/CD com rollback, redes e VLANs, backups"
+        "items": "AWS, GCP, Cloudflare, Vercel, Docker, Kubernetes, Terraform, CI/CD, Linux"
       },
       "reliability": {
-        "name": "Confiabilidade",
-        "items": "Observabilidade, SLOs, runbooks, circuit breakers, cache multinível, análise de causa raiz"
+        "name": "Confiabilidade e qualidade",
+        "items": "Jest, Vitest, TDD, OpenTelemetry, Datadog, Prometheus e Grafana, Sentry, resposta a incidentes, k6"
       },
       "security": {
         "name": "Segurança",
-        "items": "JWT, OAuth2, defesa cibernética, perícia forense"
+        "items": "JWT e OAuth2, OWASP, SonarQube, Snyk, Burp Suite, OWASP ZAP, defesa cibernética, perícia forense"
+      },
+      "media": {
+        "name": "Mídia programática",
+        "items": "Google Ad Manager, Google Tag Manager, monetização em portal de alto tráfego"
       }
     }
   },

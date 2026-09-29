@@ -111,3 +111,6 @@ A modalidade (presencial/remoto/híbrido) saiu do site; continua só no `docs/pe
 
 ## 2026-09-26 · Posicionamento Node.js full stack
 O Bernardo busca vagas de Node.js. O site passa a se apresentar como "Desenvolvedor Node.js full stack": `<title>`, meta description, `og:image:alt`, papel no topo, `public/og.jpg` (Node.js em destaque na linha de baixo). Stack com Back-end primeiro (Node.js à frente, com filas, cache, JWT/OAuth2). Na Lance! e na Auto Avaliar, o cargo exibido é "Desenvolvedor Node.js Full Stack" (sem o "II", a pedido; o título oficial fica registrado no `docs/perfil.md`), e resumos, destaques e stack começam por Node. "O que entrego" abre com APIs e serviços em Node.js/TypeScript. Nas experiências de infra e LAMP (Auberge, Jerimum, CIM3, IFF), Node não é atribuído.
+
+## 2026-09-29 · Stack da home atualizada
+A lista da home passou a ser a enviada pelo Bernardo: dois grupos novos (Dados, Mídia programática) e Confiabilidade renomeada para Confiabilidade e qualidade. Back-end continua primeiro, como em 2026-09-26. Nomes de produto ficam iguais nos quatro idiomas; só as frases soltas são traduzidas.
