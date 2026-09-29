@@ -11,6 +11,21 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-09-29 · Servidor de desenvolvimento no ar
+- Pedido: rodar o projeto.
+- Feito: `npm run dev` em http://localhost:3000.
+- Pendente: nada desta tarefa.
+
+## 2026-09-29 · Descrição do topo
+- Pedido: trocar a descrição pelo texto sobre sistemas no ar, redes antes de programar, o portal do Lance! e o deploy que ninguém nota.
+- Feito: `hero.role`, `hero.lead` e `hero.sub` em `messages/{pt,en,fr,es}.json`; `meta.description` com o primeiro parágrafo; `docs/perfil.md`. Sem commit.
+- Pendente: nada desta tarefa.
+
+## 2026-09-29 · Servidor de desenvolvimento parado
+- Pedido: derrubar o projeto.
+- Feito: encerrado o `next dev` que estava na porta 3000. A porta ficou livre.
+- Pendente: nada desta tarefa.
+
 ## 2026-09-29 · Stack da home
 - Pedido: atualizar a stack com a lista nova (front, back, dados, infra, confiabilidade e qualidade, segurança, mídia programática).
 - Feito: `messages/{pt,en,fr,es}.json`, `STACK_GROUPS` em `src/lib/profile.ts` (grupos `data` e `media`), coluna do rótulo em `Stack.module.css` de 13rem para 16rem, `docs/perfil.md` e `docs/decisoes.md`. Back-end continua primeiro. Sem commit.

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Bernardo Knoblauch · Desarrollador Node.js full stack",
-    "description": "Desarrollador Node.js full stack en Río de Janeiro. APIs y servicios en Node.js y TypeScript, colas, caché y observabilidad, con React y Next.js en el front.",
+    "description": "Desarrollador Node.js full stack en Río de Janeiro. Construyo y mantengo sistemas que tienen que seguir en línea.",
     "ogAlt": "Bernardo Knoblauch, desarrollador Node.js full stack."
   },
   "root": {
@@ -27,9 +27,9 @@
   },
   "hero": {
     "name": "Bernardo Knoblauch",
-    "role": "Desarrollador Node.js full stack en Río de Janeiro. APIs y servicios en Node.js y TypeScript; React y Next.js en el front.",
-    "lead": "Vengo de redes e infraestructura, pasé al desarrollo y hoy mantengo en producción un portal de alto tráfico.",
-    "sub": "Pienso como alguien a quien un servidor caído ya despertó de madrugada.",
+    "role": "Desarrollador Node.js full stack en Río de Janeiro. Construyo y mantengo sistemas que tienen que seguir en línea.",
+    "lead": "Antes de programar, trabajé en redes e infraestructura. Hoy me ocupo de un portal deportivo de alto tráfico en Lance!, del back-end en Node a Cloudflare.",
+    "sub": "El despliegue que prefiero es el que nadie nota.",
     "photoAlt": "Foto en blanco y negro de Bernardo Knoblauch.",
     "cta": "Mi trabajo"
   },

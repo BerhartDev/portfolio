@@ -3,11 +3,13 @@
 Única fonte de verdade para o conteúdo do site. Não inventar nada além do que está aqui. Faltou dado → `[PREENCHER]`.
 
 ## Quem sou
-Desenvolvedor Node.js full stack no Rio de Janeiro. APIs e serviços em Node.js/TypeScript, React/Next.js no front, com forte bagagem de infraestrutura, observabilidade e segurança.
+Desenvolvedor Node.js full stack no Rio de Janeiro. Construo e mantenho sistemas que precisam ficar no ar.
+
+Antes de programar, trabalhei com redes e infraestrutura. Hoje cuido de um portal esportivo de alto tráfego no Lance!, do back-end em Node à Cloudflare.
+
+Meu tipo favorito de deploy é o que ninguém nota.
 
 **Foco de carreira:** vagas de Node.js. O site apresenta Node primeiro onde ele é real (Lance!, Auto Avaliar); nas experiências de infra/LAMP não se atribui Node.
-
-**Fio condutor:** vim de redes e infra, migrei para desenvolvimento e hoje sustento em produção um portal de alto tráfego. Penso como quem já foi acordado de madrugada por servidor caído.
 
 ## Contato
 - E-mail: [PREENCHER]
