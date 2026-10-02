@@ -3,10 +3,12 @@ import { Awards } from "@/components/Awards";
 import { Contact } from "@/components/Contact";
 import { Experience } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
+import { JsonLd } from "@/components/JsonLd";
 import { Projects } from "@/components/Projects";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Stack } from "@/components/Stack";
+import { profilePage } from "@/lib/jsonld";
 import { resolveLocale, type LocaleParams } from "@/lib/locale";
 import { homePath } from "@/lib/routes";
 
@@ -14,9 +16,11 @@ export default async function HomePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params);
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nav" });
+  const meta = await getTranslations({ locale, namespace: "meta" });
 
   return (
     <div id="top" className="container">
+      <JsonLd data={profilePage(locale, meta("title"), meta("description"))} />
       <a href="#main" className="skip-link">
         {t("skip")}
       </a>

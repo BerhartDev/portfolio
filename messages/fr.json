@@ -2,7 +2,8 @@
   "meta": {
     "title": "Bernardo Knoblauch · Développeur full stack Node.js",
     "description": "Développeur full stack Node.js à Rio de Janeiro. Je construis et je maintiens des systèmes qui doivent rester en ligne.",
-    "ogAlt": "Bernardo Knoblauch, développeur full stack Node.js."
+    "ogAlt": "Bernardo Knoblauch, développeur full stack Node.js.",
+    "jobTitle": "Développeur full stack Node.js"
   },
   "root": {
     "continue": "Continuer en français"

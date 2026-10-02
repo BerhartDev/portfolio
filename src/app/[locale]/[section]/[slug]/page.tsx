@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Blocks } from "@/components/Blocks";
 import { Contact } from "@/components/Contact";
+import { JsonLd } from "@/components/JsonLd";
 import { Gallery } from "@/components/Gallery";
 import { PageIntro } from "@/components/PageIntro";
 import { Section } from "@/components/Section";
@@ -10,6 +11,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { routing } from "@/i18n/routing";
 import { resolveProjectsLocale } from "@/lib/locale";
+import { articleGraph } from "@/lib/jsonld";
 import { displayUrl } from "@/lib/profile";
 import { getProject, getProjects, SECTION_KEYS } from "@/lib/projects";
 import { PROJECTS_SEGMENT, projectPath, projectsPath } from "@/lib/routes";
@@ -73,6 +75,18 @@ export default async function ProjectArticlePage({ params }: Params) {
         {t("nav.skip")}
       </a>
       <SiteHeader locale={locale} pathFor={projectPath(project.slug)} />
+      <JsonLd
+        data={articleGraph(
+          locale,
+          projectPath(project.slug)(locale),
+          text.title,
+          t("article.metaTitle", { title: text.title }),
+          text.summary,
+          "Bernardo Knoblauch",
+          t("projects.title"),
+          projectsPath(locale),
+        )}
+      />
       <main id="main">
         <article>
           <PageIntro

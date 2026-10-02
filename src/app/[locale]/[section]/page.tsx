@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Contact } from "@/components/Contact";
+import { JsonLd } from "@/components/JsonLd";
 import { PageIntro } from "@/components/PageIntro";
 import { ProjectList } from "@/components/ProjectList";
 import { Section } from "@/components/Section";
@@ -8,8 +9,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { routing } from "@/i18n/routing";
 import { resolveProjectsLocale, type SectionParams } from "@/lib/locale";
+import { projectsPageGraph } from "@/lib/jsonld";
 import { getProjects } from "@/lib/projects";
-import { PROJECTS_SEGMENT, projectsPath } from "@/lib/routes";
+import { PROJECTS_SEGMENT, projectPath, projectsPath } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
@@ -39,6 +41,17 @@ export default async function ProjectsPage({ params }: SectionParams) {
         {t("nav.skip")}
       </a>
       <SiteHeader locale={locale} pathFor={projectsPath} />
+      <JsonLd
+        data={projectsPageGraph(
+          locale,
+          projectsPath(locale),
+          t("projectsPage.metaTitle"),
+          t("projectsPage.description"),
+          "Bernardo Knoblauch",
+          t("projects.title"),
+          getProjects().map((project) => ({ name: project[locale].title, path: projectPath(project.slug)(locale) })),
+        )}
+      />
       <main id="main">
         <PageIntro title={t("projectsPage.title")} lead={t("projectsPage.lead")}>
           <a href="#cases" className={styles.cta}>

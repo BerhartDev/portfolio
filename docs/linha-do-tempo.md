@@ -11,6 +11,61 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-02 · Verificação no navegador travou
+- Pedido: a checagem no navegador demorou demais.
+- Feito: parei essa checagem. O código já estava pronto: `<Analytics />` e `<SpeedInsights />` no layout de idioma. `typecheck`, `lint` e `build` tinham passado. Sem mudança de código.
+- Pendente: ativar os dois no painel da Vercel e publicar.
+
+## 2026-10-02 · Web Analytics e Speed Insights
+- Pedido: adicionar o Speed Insights da foto e o Web Analytics.
+- Feito: `@vercel/analytics` e `@vercel/speed-insights` no layout de idioma. README, `docs/status.md` e `docs/decisoes.md` atualizados. Sem commit.
+- Pendente: ativar os dois no painel da Vercel e publicar. Sem isso o painel continua vazio.
+
+## 2026-10-02 · Speed Insights da Vercel
+- Pedido: se o passo do painel da Vercel (pacote `@vercel/speed-insights` e componente `<SpeedInsights />`) já está no portfólio.
+- Feito: conferido `package.json` e o código. Não está instalado nem importado. Sem mudança de código.
+- Pendente: nada.
+
+## 2026-10-02 · O que falta para o domínio
+- Pedido: se ainda falta alguma coisa para o site usar bernardoknoblauch.com.
+- Feito: explicado que o código já grava essa URL no build. O que falta é o domínio ligado no provedor e um deploy com esse código. Sem mudança de código.
+- Pendente: apontar o DNS e publicar.
+
+## 2026-10-02 · URL pública sem variável no provedor
+- Pedido: corrigir a pendência de definir `NEXT_PUBLIC_SITE_URL` na Vercel ou no Cloudflare Pages para o deploy publicar em bernardoknoblauch.com.
+- Feito: `src/lib/site.ts` usa `https://bernardoknoblauch.com` no build de produção quando a variável não existe. O build deixa de falhar por URL ausente. README, `docs/status.md` e `docs/decisoes.md` atualizados. Sem commit.
+- Pendente: nada.
+
+## 2026-10-02 · SEO e domínio bernardoknoblauch.com
+- Pedido: preparar metadados e dados estruturados para o Google indexar o portfólio. URL nova: bernardoknoblauch.com.
+- Feito: `NEXT_PUBLIC_SITE_URL=https://bernardoknoblauch.com` em `.env.example` e `.env.local`. Metadados de página com autor e robots (`max-image-preview:large`). JSON-LD em `src/lib/jsonld.ts` e `src/components/JsonLd.tsx`, ligado no layout de idioma, na home, na página de projetos e no artigo. README, `docs/status.md` e `docs/decisoes.md` atualizados. Sem commit.
+- Pendente: definir a mesma variável no provedor e apontar o DNS. Sem isso o deploy não publica esse domínio.
+
+## 2026-10-02 · Endereço de volta na landing
+- Pedido: manter o endereço Ipanema, RJ.
+- Feito: local voltou ao contato da `bekno-landing-page`, nos três idiomas. O e-mail pessoal continua fora. Sem commit.
+- Pendente: nada.
+
+## 2026-10-02 · Contato da landing sem dados pessoais
+- Pedido: empresa opcional; opção Outros; tirar o e-mail da foto e outras menções que não são dados profissionais.
+- Feito: empresa deixa de ser obrigatória; serviço `other` (Outros / Other / Autre). Saíram `bernardoknob@gmail.com` e Ipanema do contato e do rodapé. Ficou o telefone. Arquivos em `bekno-landing-page`. Sem commit.
+- Pendente: nada.
+
+## 2026-10-02 · Telefone da landing da BEKNO
+- Pedido: atualizar o número para +5521973692691.
+- Feito: telefone nos três idiomas e WhatsApp do formulário em `bekno-landing-page`. Sem commit.
+- Pendente: nada.
+
+## 2026-10-02 · Chave do Web3Forms da BEKNO
+- Pedido: usar a access key `d6c386a3-ef43-4334-acc5-9a70122c4630` na landing da BEKNO.
+- Feito: troca em `.env.local` e nos workflows `.github/workflows/{deploy,ci,nextjs}.yml` de `bekno-landing-page`. A chave do portfólio não mudou. Sem commit.
+- Pendente: nada.
+
+## 2026-10-02 · Formulário na landing da BEKNO
+- Pedido: aplicar o mesmo formulário de contato na `bekno-landing-page`, com as regras e os dois botões, mantendo empresa e serviço.
+- Feito: `src/lib/contact.ts` e `src/components/ContactForm.tsx` na landing. Textos em `src/locales/{pt,en,fr}.json`. Formspree saiu. WhatsApp no número já publicado (`5522988071682`). E-mail via Web3Forms; a chave entrou em `.env.local` e nos workflows `.github/workflows/{deploy,ci,nextjs}.yml`. Sem commit e sem push.
+- Pendente: a caixa que recebe o e-mail continua a do portfólio (`bekno.adm@gmail.com`), não o endereço escrito na página.
+
 ## 2026-10-02 · Manter imagens de exemplo
 - Pedido: manter as imagens de exemplo por enquanto.
 - Feito: as de Lance!, Auto Avaliar e VamosMarcar ficam. `/bek.no.lo.ˈʒi.a/` ganhou os três wireframes em `public/projects/beknologia/` e em `images` de `content/projects/beknologia.json`. `docs/decisoes.md`, `docs/status.md`. Sem commit.

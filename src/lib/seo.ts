@@ -50,6 +50,20 @@ export async function pageMetadata({ locale, pathFor, title, description, type =
   return {
     title,
     description,
+    authors: [{ name: "Bernardo Knoblauch", url: absoluteUrl(homePath(locale)) }],
+    creator: "Bernardo Knoblauch",
+    publisher: "Bernardo Knoblauch",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     alternates: { canonical: path, languages: languageAlternates(pathFor) },
     openGraph: { type, url: path, siteName: "Bernardo Knoblauch", title, description, images: [image], ...ogLocales(locale) },
     twitter: { card: "summary_large_image", title, description, images: [image] },

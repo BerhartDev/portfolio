@@ -1,13 +1,11 @@
+const PUBLIC_SITE_URL = "https://bernardoknoblauch.com";
 const DEV_FALLBACK = "http://localhost:3000";
 
 function resolveSiteUrl(): string {
   const value = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
   if (value && value.startsWith("http")) return value;
-
-  // Em build de deploy (Vercel ou Cloudflare Pages), URL ausente é erro: canonical e sitemap sairiam errados.
-  if (process.env.VERCEL || process.env.CF_PAGES) {
-    throw new Error("NEXT_PUBLIC_SITE_URL não definida. Configure a URL pública do site (ex.: https://dominio.com).");
-  }
+  // Produção usa o domínio mesmo sem a variável no provedor. Local, sem env, fica no localhost.
+  if (process.env.NODE_ENV === "production") return PUBLIC_SITE_URL;
   return DEV_FALLBACK;
 }
 

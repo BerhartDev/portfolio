@@ -126,3 +126,12 @@ O formulário exige assunto (vaga, projeto ou outra), nome (2–80), e-mail e me
 
 ## 2026-10-01 · Contato com formulário
 A seção de contato ganha um formulário com nome, e-mail e mensagem, abaixo dos links. WhatsApp abre `wa.me/5521973692691` com o texto pronto; o visitante ainda toca em Enviar. E-mail faz POST para o Web3Forms (chave pública em `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`, caixa bekno.adm@gmail.com, que não aparece no site). Sem dependência nova e sem rota de API. O componente client só monta o envio; os textos chegam por props.
+
+## 2026-10-02 · Domínio e dados estruturados
+O site público é `https://bernardoknoblauch.com`, sem barra final, em `NEXT_PUBLIC_SITE_URL`. Cada página de idioma leva JSON-LD: `Person` e `WebSite` (o `@id` não muda com o idioma); `ProfilePage` na home; `CollectionPage`, `ItemList` e `BreadcrumbList` na página de projetos; `Article`, `WebPage` e `BreadcrumbList` no artigo. Sem data de publicação. `sameAs` só com link real: LinkedIn, GitHub, Discord e o blog do idioma. E-mail fica de fora até existir. A raiz `/` continua `noindex`.
+
+## 2026-10-02 · Web Analytics e Speed Insights
+`@vercel/analytics` e `@vercel/speed-insights` no layout de `/pt /en /fr /es`. A raiz `/` não entra, porque só redireciona. Os scripts são os da Vercel (`/_vercel/insights/script.js` e o de Speed Insights) e só enviam dados no site publicado, com os dois produtos ligados no painel. Sem banner: os dois são sem cookie.
+
+## 2026-10-02 · URL pública no código
+`https://bernardoknoblauch.com` fica em `src/lib/site.ts`. O build de produção usa essa URL mesmo sem `NEXT_PUBLIC_SITE_URL` na Vercel ou no Cloudflare Pages. A variável, se existir, substitui. Em desenvolvimento, sem a variável, o fallback continua `http://localhost:3000`.
