@@ -11,6 +11,41 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-02 · Manter imagens de exemplo
+- Pedido: manter as imagens de exemplo por enquanto.
+- Feito: as de Lance!, Auto Avaliar e VamosMarcar ficam. `/bek.no.lo.ˈʒi.a/` ganhou os três wireframes em `public/projects/beknologia/` e em `images` de `content/projects/beknologia.json`. `docs/decisoes.md`, `docs/status.md`. Sem commit.
+- Pendente: trocar por capturas reais quando existirem.
+
+## 2026-10-02 · Problema do blog para quem escreve
+- Pedido: o problema do blog é uma solução fácil para redatores e editores, cobrindo publicação, analytics, autenticação e o que vai nesse sentido; evitar texto repetido.
+- Feito: problema reescrito nos 4 idiomas em `content/projects/beknologia.json`. Resumo, contexto e resultado deixam de repetir cache, ISR e a data das fases. `docs/perfil.md`. Sem commit.
+- Pendente: nada desta tarefa.
+
+## 2026-10-02 · Por que os projetos estão sem imagem de exemplo
+- Pedido: por que os projetos estão sem imagem de exemplo.
+- Feito: nada no site. A lista da home e de `/projetos/` é só texto. Lance!, Auto Avaliar e VamosMarcar têm 3 wireframes no artigo. `/bek.no.lo.ˈʒi.a/` foi criado com `images` vazio, então a seção não aparece.
+- Pendente: imagens reais, e as de exemplo do blog, se forem pedidas.
+
+## 2026-10-02 · Jira fica para depois
+- Pedido: deixar a parte do Jira para depois.
+- Feito: nada no site. O card da tradução automática não será aberto nesta sessão.
+- Pendente: conectar o Jira e criar o card.
+
+## 2026-10-02 · Data e defeitos fora do texto do blog
+- Pedido: não colocar a data em que o blog foi feito nem defeitos (exemplo: “a tradução não é automática”); criar um card desse problema no Jira e dizer como conectar.
+- Feito: saíram o parágrafo de julho de 2026, o campo `period` e a frase de que a tradução não é automática, nos 4 idiomas, em `content/projects/beknologia.json`. A versão por locale no CMS ficou. `docs/perfil.md` sem a data e sem “não máquina”.
+- Pendente: o card no Jira. Não há conector Atlassian nesta sessão; o card espera a conexão.
+
+## 2026-10-02 · Texto do blog a partir dos docs
+- Pedido: a descrição não é “4 idiomas”, é multilíngue; ler os docs em `~/Github/blog-beknologia` e trazer mais informação para a home e para a página do projeto.
+- Feito: resumo e artigo em `content/projects/beknologia.json` (4 idiomas) com o que está na spec e nos ADRs: i18n por campo, páginas, `proxy.ts`, `generateStaticParams`, Theme Settings, premium sem backfill, papel padrão na sessão, `notFound()` 200. `docs/perfil.md`. Sem commit. Sem recolocar a hospedagem no Railway.
+- Pendente: nada desta tarefa.
+
+## 2026-10-02 · Projetos: BEKNO e nome do blog
+- Pedido: tirar o BEKNO; trocar Beknologia por `/bek.no.lo.ˈʒi.a/` e adaptar os outros idiomas (en beknology, fr beknologie, es também); tirar a hospedagem no Railway.
+- Feito: apagado `content/projects/bekno.json` e as imagens de exemplo. Título e menções no artigo em `beknologia.json`. Espanhol ficou `beknología`. Saíram stack, link, seção de deploy e a linha “no ar em”. O texto “O que entrego” deixa de citar a BEKNO. `docs/perfil.md`, `docs/status.md`. Sem commit.
+- Pendente: o link “Blog” da barra continua em `beknologia.up.railway.app`, porque é o endereço do site.
+
 ## 2026-10-02 · Link do Discord
 - Pedido: usar o ID `1497263395781742663`.
 - Feito: `profile.discord` em `src/lib/profile.ts` e `docs/perfil.md`. O ícone do topo, do contato e do rodapé aponta para `https://discord.com/users/1497263395781742663`. Sem commit.

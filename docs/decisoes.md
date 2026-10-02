@@ -115,6 +115,9 @@ O Bernardo busca vagas de Node.js. O site passa a se apresentar como "Desenvolve
 ## 2026-09-29 · Stack da home atualizada
 A lista da home passou a ser a enviada pelo Bernardo: dois grupos novos (Dados, Mídia programática) e Confiabilidade renomeada para Confiabilidade e qualidade. Back-end continua primeiro, como em 2026-09-26. Nomes de produto ficam iguais nos quatro idiomas; só as frases soltas são traduzidas.
 
+## 2026-10-02 · Imagens de exemplo ficam
+Os wireframes `exemplo-*.svg` permanecem nos artigos até haver captura real. Lance!, Auto Avaliar e VamosMarcar já tinham os três. `/bek.no.lo.ˈʒi.a/` entra com o mesmo conjunto, rotulado BEKNOLOGY. A lista da home e a página de projetos continuam sem miniatura.
+
 ## 2026-10-02 · Ícones no contato
 A seção de contato não lista e-mail, LinkedIn e GitHub em texto. Ficam os ícones de WhatsApp, LinkedIn, GitHub e Discord. O Discord também entra na fileira do topo e do rodapé. Sem URL, o ícone do Discord leva à home até o link ser preenchido.
 

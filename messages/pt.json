@@ -51,7 +51,7 @@
     "cta": "Ver projetos",
     "pitch": {
       "title": "O que entrego",
-      "body": "Construo e mantenho APIs e serviços em Node.js e TypeScript, e cuido do que vem depois do deploy. Hoje sustento em produção um portal esportivo de alto tráfego, com Next.js no front. Antes, liderei a migração de um monólito PHP para serviços em Node na GCP. Por fora, mantenho dois produtos: a BEKNO, que faz sites para pequenos negócios, e o VamosMarcar, de agendamento para barbearias e salões.",
+      "body": "Construo e mantenho APIs e serviços em Node.js e TypeScript, e cuido do que vem depois do deploy. Hoje sustento em produção um portal esportivo de alto tráfego, com Next.js no front. Antes, liderei a migração de um monólito PHP para serviços em Node na GCP. Por fora, mantenho o VamosMarcar, de agendamento para barbearias e salões.",
       "items": {
         "api": "APIs e serviços em Node.js e TypeScript: REST, GraphQL, filas e cache",
         "performance": "Performance e Core Web Vitals",

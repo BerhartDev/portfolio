@@ -51,7 +51,7 @@
     "cta": "See projects",
     "pitch": {
       "title": "What I deliver",
-      "body": "I build and run APIs and services in Node.js and TypeScript, and I look after what happens after the deploy. Today I keep a high-traffic sports portal running in production, with Next.js on the front end. Before that, I led the migration of a PHP monolith to Node services on GCP. On the side, I run two products: BEKNO, which builds websites for small businesses, and VamosMarcar, a booking system for barbershops and salons.",
+      "body": "I build and run APIs and services in Node.js and TypeScript, and I look after what happens after the deploy. Today I keep a high-traffic sports portal running in production, with Next.js on the front end. Before that, I led the migration of a PHP monolith to Node services on GCP. On the side, I run VamosMarcar, a booking system for barbershops and salons.",
       "items": {
         "api": "Node.js and TypeScript APIs and services: REST, GraphQL, queues and caching",
         "performance": "Performance and Core Web Vitals",
