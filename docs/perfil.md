@@ -12,9 +12,13 @@ Meu tipo favorito de deploy é o que ninguém nota.
 **Foco de carreira:** vagas de Node.js. O site apresenta Node primeiro onde ele é real (Lance!, Auto Avaliar); nas experiências de infra/LAMP não se atribui Node.
 
 ## Contato
-- E-mail: [PREENCHER]
+- E-mail público: [PREENCHER]
+- WhatsApp do formulário: 5521973692691 (informado como 21973692691; o 55 é o código do Brasil)
+- Na seção de contato, só ícones: WhatsApp (`wa.me`), LinkedIn, GitHub e Discord. Sem lista em texto.
+- Formulário: assunto (vaga, projeto ou outra), nome, e-mail e mensagem. WhatsApp abre `wa.me` com o texto pronto. E-mail via Web3Forms (access key pública, conta bekno.adm@gmail.com). Esse endereço não aparece no site. No navegador: e-mail de provedor conhecido ou domínio de empresa (caixa temporária recusada), mensagem de 20 a 2000 caracteres, espera de 3 segundos, 3 envios por hora, links `http`/`www` retirados do texto enviado.
 - GitHub: github.com/BerhartDev
 - LinkedIn: linkedin.com/in/bernardoknoblauch
+- Discord: discord.com/users/1497263395781742663 (usuário berh4rt; o link usa o ID numérico)
 - Instagram: [PREENCHER]
 - LeetCode: [PREENCHER]
 - Hack The Box: [PREENCHER]

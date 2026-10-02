@@ -256,10 +256,30 @@
   },
   "contact": {
     "title": "Contato",
-    "lead": "Sem formulário. Escreva direto ou me chame no LinkedIn.",
     "email": "E-mail",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "name": "Nome",
+    "message": "Mensagem",
+    "whatsapp": "Enviar por WhatsApp",
+    "emailSubmit": "Enviar por e-mail",
+    "sending": "Enviando",
+    "sent": "Mensagem enviada.",
+    "error": "Não foi possível enviar. Tente de novo ou use o WhatsApp.",
+    "subject": "Contato pelo portfólio",
+    "topic": "Assunto",
+    "topicPlaceholder": "Escolha",
+    "topicJob": "Vaga",
+    "topicProject": "Projeto",
+    "topicOther": "Outra mensagem",
+    "errName": "Informe seu nome.",
+    "errEmail": "O e-mail não é válido.",
+    "errEmailDomain": "Use um e-mail de um provedor conhecido, não uma caixa temporária.",
+    "errMessage": "A mensagem precisa de pelo menos 20 caracteres.",
+    "errMessageLong": "A mensagem passa de 2000 caracteres.",
+    "errTopic": "Escolha o assunto.",
+    "errFast": "Espere alguns segundos antes de enviar.",
+    "errLimit": "Espere um pouco antes de enviar de novo.",
+    "linksRemoved": "Tirei os links da mensagem.",
+    "template": "Olá. Meu nome é %name%.\nE-mail: %email%\nAssunto: %topic%\n\n%message%"
   },
   "social": {
     "label": "Perfis"

@@ -30,12 +30,12 @@ Para ver o build: sirva a pasta `out/` com qualquer servidor estático, por exem
 
 ## Deploy
 
-A variável `NEXT_PUBLIC_SITE_URL` é obrigatória no deploy (ex.: `https://dominio.com`, sem barra final). O build falha na Vercel e no Cloudflare Pages se ela estiver vazia.
+A variável `NEXT_PUBLIC_SITE_URL` é obrigatória no deploy (ex.: `https://dominio.com`, sem barra final). O build falha na Vercel e no Cloudflare Pages se ela estiver vazia. `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` liga o botão de e-mail do contato; sem ela, esse botão fica desligado.
 
 ### Vercel
 
 1. Importe o repositório. O framework é detectado como Next.js.
-2. Em *Settings → Environment Variables*, defina `NEXT_PUBLIC_SITE_URL`.
+2. Em *Settings → Environment Variables*, defina `NEXT_PUBLIC_SITE_URL` e `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
 3. Deploy. Com `output: 'export'`, a Vercel publica o conteúdo de `out/` como estático.
 4. Domínio: *Settings → Domains*.
 
@@ -43,7 +43,7 @@ A variável `NEXT_PUBLIC_SITE_URL` é obrigatória no deploy (ex.: `https://domi
 
 1. *Workers & Pages → Create → Pages → Connect to Git*.
 2. Build command: `npm run build` · Build output directory: `out`.
-3. Variáveis de ambiente: `NEXT_PUBLIC_SITE_URL` e `NODE_VERSION=24`.
+3. Variáveis de ambiente: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` e `NODE_VERSION=24`.
 4. Domínio: *Custom domains*.
 
 O Cloudflare Pages serve `out/404.html` para rotas inexistentes e `/pt/` a partir de `pt/index.html` (por isso `trailingSlash: true`).

@@ -114,3 +114,12 @@ O Bernardo busca vagas de Node.js. O site passa a se apresentar como "Desenvolve
 
 ## 2026-09-29 · Stack da home atualizada
 A lista da home passou a ser a enviada pelo Bernardo: dois grupos novos (Dados, Mídia programática) e Confiabilidade renomeada para Confiabilidade e qualidade. Back-end continua primeiro, como em 2026-09-26. Nomes de produto ficam iguais nos quatro idiomas; só as frases soltas são traduzidas.
+
+## 2026-10-02 · Ícones no contato
+A seção de contato não lista e-mail, LinkedIn e GitHub em texto. Ficam os ícones de WhatsApp, LinkedIn, GitHub e Discord. O Discord também entra na fileira do topo e do rodapé. Sem URL, o ícone do Discord leva à home até o link ser preenchido.
+
+## 2026-10-02 · Formulário só com contato legível
+O formulário exige assunto (vaga, projeto ou outra), nome (2–80), e-mail e mensagem (20–2000). E-mail de provedor conhecido passa; domínio de empresa passa; caixa temporária (Mailinator, Yopmail e os mais usados) não. Espera de 3 segundos e 3 envios por hora neste navegador (`localStorage`). Links `http` e `www` saem do texto enviado. Sem captcha. A chave pública do Web3Forms e o número no JavaScript continuam fora desse filtro.
+
+## 2026-10-01 · Contato com formulário
+A seção de contato ganha um formulário com nome, e-mail e mensagem, abaixo dos links. WhatsApp abre `wa.me/5521973692691` com o texto pronto; o visitante ainda toca em Enviar. E-mail faz POST para o Web3Forms (chave pública em `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`, caixa bekno.adm@gmail.com, que não aparece no site). Sem dependência nova e sem rota de API. O componente client só monta o envio; os textos chegam por props.

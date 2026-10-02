@@ -11,6 +11,36 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-02 · Link do Discord
+- Pedido: usar o ID `1497263395781742663`.
+- Feito: `profile.discord` em `src/lib/profile.ts` e `docs/perfil.md`. O ícone do topo, do contato e do rodapé aponta para `https://discord.com/users/1497263395781742663`. Sem commit.
+- Pendente: nada desta tarefa.
+
+## 2026-10-02 · URL do Discord
+- Pedido: como fica a URL do perfil, com o nome de usuário `berh4rt`.
+- Feito: nenhuma alteração no site. O Discord não monta o link com o nome de usuário; o formato é `https://discord.com/users/` mais o ID numérico.
+- Pendente: o ID numérico, para trocar o ícone que hoje leva à home.
+
+## 2026-10-02 · Ícones no contato
+- Pedido: tirar a lista em texto e deixar ícones de WhatsApp, LinkedIn, GitHub e Discord; incluir o Discord também na primeira seção.
+- Feito: `Contact.tsx` usa `SocialLinks` com `CONTACT_NETWORKS`. Discord no topo e no rodapé (`SOCIAL_NETWORKS`). Ícones do Simple Icons. URL do Discord continua `[PREENCHER]` e o ícone leva à home. `docs/perfil.md`, `docs/decisoes.md`, `docs/status.md`. Sem commit.
+- Pendente: URL do Discord.
+
+## 2026-10-02 · Texto do contato
+- Pedido: tirar o parágrafo de regras acima dos links. Avisar só se o envio não passar, em texto pequeno sob o campo.
+- Feito: removido `contact.lead` nos 4 idiomas e o parágrafo em `Contact.tsx`. Os avisos de campo continuam no `.hint`. Sem commit.
+- Pendente: nada desta tarefa.
+
+## 2026-10-02 · Filtro do formulário de contato
+- Pedido: receber só contatos legítimos, com dados para responder, no que cabe num site estático.
+- Feito: assunto obrigatório; validação de nome, e-mail e mensagem; recusa de caixa temporária; espera de 3 segundos; 3 envios por hora no `localStorage`; links `http`/`www` retirados do texto. Avisos nos 4 idiomas. `src/lib/contact.ts`, `ContactForm.tsx`, `messages/*.json`, `docs/perfil.md`, `docs/decisoes.md`. Sem commit.
+- Pendente: Worker na Cloudflare para esconder a access key e limitar por IP.
+
+## 2026-10-01 · Formulário de contato
+- Pedido: formulário funcional que manda os dados para o WhatsApp com a mensagem pronta, e também por e-mail gratuito.
+- Feito: `ContactForm` na seção de contato (home, projetos e artigos). WhatsApp `5521973692691` via `wa.me`. E-mail via Web3Forms, chave em `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (`.env.example` e README). Textos nos 4 idiomas. `docs/perfil.md`, `docs/decisoes.md`, `CLAUDE.md`. Sem commit.
+- Pendente: definir `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` no deploy; e-mail público continua `[PREENCHER]`.
+
 ## 2026-09-29 · Servidor de desenvolvimento no ar
 - Pedido: rodar o projeto.
 - Feito: `npm run dev` em http://localhost:3000.

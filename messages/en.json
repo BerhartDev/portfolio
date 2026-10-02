@@ -256,10 +256,30 @@
   },
   "contact": {
     "title": "Contact",
-    "lead": "No form. Email me directly or reach out on LinkedIn.",
     "email": "Email",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "name": "Name",
+    "message": "Message",
+    "whatsapp": "Send via WhatsApp",
+    "emailSubmit": "Send via email",
+    "sending": "Sending",
+    "sent": "Message sent.",
+    "error": "Could not send. Try again or use WhatsApp.",
+    "subject": "Portfolio contact",
+    "topic": "Topic",
+    "topicPlaceholder": "Choose",
+    "topicJob": "Job",
+    "topicProject": "Project",
+    "topicOther": "Other",
+    "errName": "Enter your name.",
+    "errEmail": "That email is not valid.",
+    "errEmailDomain": "Use an email from a known provider, not a temporary inbox.",
+    "errMessage": "The message needs at least 20 characters.",
+    "errMessageLong": "The message is over 2000 characters.",
+    "errTopic": "Choose a topic.",
+    "errFast": "Wait a few seconds before sending.",
+    "errLimit": "Wait a moment before sending again.",
+    "linksRemoved": "Links were removed from the message.",
+    "template": "Hello. My name is %name%.\nEmail: %email%\nTopic: %topic%\n\n%message%"
   },
   "social": {
     "label": "Profiles"
