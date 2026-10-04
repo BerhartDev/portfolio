@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-04 · Favicon centralizado
+- Pedido: centralizar o desenho do favicon.
+- Feito: disco branco movido de `cx=502.7` para `cx=512.74` (centro do viewBox) numa cópia do SVG; `favicon.ico`, `icon.png` e `apple-icon.png` gerados de novo. Medido: área opaca de 22 a 489px nos dois eixos, centro em 255,5 de 512. O SVG original em Downloads não foi alterado.
+
 ## 2026-10-04 · Favicon "BK"
 - Pedido: usar `Ativo 2.svg` como favicon sem quebrar a proporção.
 - Feito: o SVG (monograma "BK" sobre disco branco, quadrado) foi rasterizado pelo canvas do Edge em tamanhos quadrados: `src/app/favicon.ico` (16, 32 e 48px), `src/app/icon.png` (512px) e `src/app/apple-icon.png` (180px, fundo branco por causa do iOS). O Next gera as tags no `<head>` da home, da raiz `/` e do 404, conferido no `out/`. Fecha a pendência do erro em `/favicon.ico`. `docs/status.md` e `docs/decisoes.md` atualizados.
