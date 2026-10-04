@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-04 · Favicon no linktree e no blog
+- Pedido: usar o mesmo favicon no linktree e no blog.
+- Feito: `favicon.ico`, `icon.png` e `apple-icon.png` copiados do portfólio. `linktree-page`: arquivos em `public/` e três `<link>` no `<head>` do `index.html`, com caminho relativo como as outras imagens da página (funciona com o `base` do Vite e com links.bekno.com.br); `npm run build` gera os arquivos e as tags no `dist/`. `blog-beknologia`: o `apps/web/src/app/favicon.ico` padrão do create-next-app foi trocado e entraram `icon.png` e `apple-icon.png`; `lint`, `type-check` e `build` passam (os avisos de Redis no build são esperados sem Redis local) e as três rotas aparecem no manifesto. Sem commit nos dois repositórios.
+- Pendente: commit e deploy do linktree e do blog.
+
 ## 2026-10-04 · Favicon centralizado
 - Pedido: centralizar o desenho do favicon.
 - Feito: disco branco movido de `cx=502.7` para `cx=512.74` (centro do viewBox) numa cópia do SVG; `favicon.ico`, `icon.png` e `apple-icon.png` gerados de novo. Medido: área opaca de 22 a 489px nos dois eixos, centro em 255,5 de 512. O SVG original em Downloads não foi alterado.
