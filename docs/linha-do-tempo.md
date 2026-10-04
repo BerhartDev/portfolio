@@ -11,6 +11,10 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-04 · Favicon "BK"
+- Pedido: usar `Ativo 2.svg` como favicon sem quebrar a proporção.
+- Feito: o SVG (monograma "BK" sobre disco branco, quadrado) foi rasterizado pelo canvas do Edge em tamanhos quadrados: `src/app/favicon.ico` (16, 32 e 48px), `src/app/icon.png` (512px) e `src/app/apple-icon.png` (180px, fundo branco por causa do iOS). O Next gera as tags no `<head>` da home, da raiz `/` e do 404, conferido no `out/`. Fecha a pendência do erro em `/favicon.ico`. `docs/status.md` e `docs/decisoes.md` atualizados.
+
 ## 2026-10-02 · Verificação no navegador travou
 - Pedido: a checagem no navegador demorou demais.
 - Feito: parei essa checagem. O código já estava pronto: `<Analytics />` e `<SpeedInsights />` no layout de idioma. `typecheck`, `lint` e `build` tinham passado. Sem mudança de código.

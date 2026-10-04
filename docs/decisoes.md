@@ -135,3 +135,6 @@ O site público é `https://bernardoknoblauch.com`, sem barra final, em `NEXT_PU
 
 ## 2026-10-02 · URL pública no código
 `https://bernardoknoblauch.com` fica em `src/lib/site.ts`. O build de produção usa essa URL mesmo sem `NEXT_PUBLIC_SITE_URL` na Vercel ou no Cloudflare Pages. A variável, se existir, substitui. Em desenvolvimento, sem a variável, o fallback continua `http://localhost:3000`.
+
+## 2026-10-04 · Favicon "BK"
+O favicon vem do monograma "BK" (`Ativo 2.svg`, viewBox quadrado de 1025px com um PNG de 1024px embutido). O SVG não é usado direto porque pesa 270KB. Ele foi rasterizado pelo canvas do Edge, sem ferramenta nova e sem distorcer (saídas quadradas): `src/app/favicon.ico` (PNGs de 16, 32 e 48px dentro do ICO, 4,6KB), `src/app/icon.png` (512px, fundo transparente) e `src/app/apple-icon.png` (180px, fundo branco, porque o iOS troca transparente por preto e o "BK" sumiria). O Next gera as tags `<link rel="icon">` e `apple-touch-icon` em todas as páginas, inclusive na raiz e no 404.
