@@ -11,7 +11,8 @@ export const PROJECTS_SEGMENT: Record<Locale, string> = {
 /** Caminho de uma página em cada idioma. Base de canonical, hreflang, sitemap e seletor de idioma. */
 export type PathFor = (locale: Locale) => string;
 
-export const homePath: PathFor = (locale) => `/${locale}/`;
+/** Português é a origem `/`. Os outros idiomas ficam no prefixo. */
+export const homePath: PathFor = (locale) => (locale === "pt" ? "/" : `/${locale}/`);
 
 export const projectsPath: PathFor = (locale) => `/${locale}/${PROJECTS_SEGMENT[locale]}/`;
 

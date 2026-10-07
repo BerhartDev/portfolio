@@ -11,6 +11,26 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-07 · Home indexável em /
+- Pedido: analisar metadados e dados estruturados da página principal e prepará-la para indexação. Idioma continua na rota. Rich result só com o que o Google documenta para uma pessoa.
+- Feito: `/` indexa com canonical, hreflang, Open Graph e Twitter. `/pt/` fica `noindex` com canonical `/`. `homePath` do português é `/`. `ProfilePage.mainEntity` é o `Person` com cargo, frase, foto do topo e sameAs. Sitemap lista a raiz no lugar de `/pt/`. Rastreador não é redirecionado. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Desfazer Jenkins e o botão ao lado
+- Pedido: desfazer os dois últimos pedidos.
+- Feito: Jenkins saiu da stack nos quatro idiomas e de `docs/perfil.md`. O botão "Meu trabalho" voltou para baixo dos ícones, também no desktop. A fonte menor do topo no desktop permanece. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Botão ao lado das redes no desktop
+- Pedido: no desktop, o botão "Meu trabalho" fica ao lado dos ícones de rede. No mobile, continua abaixo.
+- Feito: a partir de 60rem, ícones e botão ficam na mesma linha. Abaixo disso, a ordem em coluna não muda. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Jenkins na stack
+- Pedido: adicionar Jenkins na stack.
+- Feito: entrou em Infra e cloud, depois de CI/CD, nos quatro idiomas e em `docs/perfil.md`. Sem commit.
+- Pendente: nada.
+
 ## 2026-10-07 · Fonte menor só no desktop
 - Pedido: a redução das fontes do topo vale apenas no desktop.
 - Feito: abaixo de 60rem o nome, o parágrafo e a frase voltaram ao tamanho anterior, e a reserva do nome no mobile voltou a 40cqw. A partir de 60rem continuam os tamanhos menores. Sem commit.

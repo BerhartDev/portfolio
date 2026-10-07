@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Awards } from "@/components/Awards";
@@ -20,7 +21,7 @@ export async function Home({ locale }: { locale: Locale }) {
 
   return (
     <div id="top" className="container">
-      <JsonLd data={profilePage(locale, meta("title"), meta("description"))} />
+      <JsonLd data={profilePage(locale, meta("title"), meta("description"), meta("jobTitle"))} />
       <a href="#main" className="skip-link">
         {t("skip")}
       </a>
@@ -37,6 +38,13 @@ export async function Home({ locale }: { locale: Locale }) {
       <SiteFooter locale={locale} />
     </div>
   );
+}
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = await resolveLocale(params);
+  // /pt/ repete a home de /. O canonical já é /; esta cópia não entra no índice.
+  if (locale !== "pt") return {};
+  return { robots: { index: false, follow: true } };
 }
 
 export default async function HomePage({ params }: LocaleParams) {

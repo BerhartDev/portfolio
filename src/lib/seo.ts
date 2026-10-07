@@ -12,7 +12,7 @@ export function absoluteUrl(path: string): string {
 }
 
 /**
- * hreflang de todas as versões. x-default: na home, a raiz (que redireciona pelo idioma);
+ * hreflang de todas as versões. x-default: na home, `/` (português indexável);
  * nas outras páginas, a versão no idioma padrão.
  */
 export function languageAlternates(pathFor: PathFor, absolute = false): Record<string, string> {

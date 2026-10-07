@@ -8,6 +8,8 @@ import { Metrics } from "@/components/consent/Metrics";
 import { JsonLd } from "@/components/JsonLd";
 import { mono, sans } from "@/lib/fonts";
 import { identityGraph } from "@/lib/jsonld";
+import { homePath } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { themeScript } from "@/lib/theme-script";
 import "@/styles/globals.css";
@@ -18,15 +20,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations({ locale: LOCALE, namespace: "meta" });
   return {
     metadataBase: new URL(SITE_URL),
-    title: t("title"),
-    description: t("description"),
-    robots: { index: false, follow: true },
-    alternates: { canonical: "/pt/" },
+    ...(await pageMetadata({ locale: LOCALE, pathFor: homePath, title: t("title"), description: t("description") })),
   };
 }
 
-// Escolha salva → idiomas do navegador → português. Só sai da raiz se o idioma for outro.
-const redirectScript = `(function(){var A=${JSON.stringify(routing.locales)},O=${JSON.stringify(routing.locales.filter((locale) => locale !== "pt"))},s;try{s=localStorage.getItem("locale")}catch(e){}if(A.indexOf(s)<0){s="pt";var n=navigator.languages||[navigator.language];for(var i=0;i<n.length;i++){var p=String(n[i]||"").slice(0,2).toLowerCase();if(A.indexOf(p)>=0){s=p;break}}}if(O.indexOf(s)>=0)location.replace("/"+s+"/")})()`;
+// Escolha salva → idiomas do navegador → português. Rastreador fica na raiz para indexar o português.
+const redirectScript = `(function(){var ua=navigator.userAgent||"";if(/googlebot|bingbot|duckduckbot|baiduspider|yandex|slurp|applebot|facebookexternalhit|twitterbot|linkedinbot|embedly|pinterest|redditbot|slackbot|telegrambot|whatsapp|discordbot/i.test(ua))return;var A=${JSON.stringify(routing.locales)},O=${JSON.stringify(routing.locales.filter((locale) => locale !== "pt"))},s;try{s=localStorage.getItem("locale")}catch(e){}if(A.indexOf(s)<0){s="pt";var n=navigator.languages||[navigator.language];for(var i=0;i<n.length;i++){var p=String(n[i]||"").slice(0,2).toLowerCase();if(A.indexOf(p)>=0){s=p;break}}}if(O.indexOf(s)>=0)location.replace("/"+s+"/")})()`;
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   setRequestLocale(LOCALE);
@@ -40,7 +39,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: redirectScript }} />
       </head>
       <body>
-        <JsonLd data={identityGraph(LOCALE, t("jobTitle"))} />
+        <JsonLd data={identityGraph(LOCALE, t("jobTitle"), t("description"))} />
         <ConsentProvider>
           {children}
           <CookieConsentBanner

@@ -139,6 +139,9 @@ O site público é `https://bernardoknoblauch.com`, sem barra final, em `NEXT_PU
 ## 2026-10-04 · Favicon "BK"
 O favicon vem do monograma "BK" (`Ativo 2.svg`, viewBox quadrado de 1025px com um PNG de 1024px embutido). O SVG não é usado direto porque pesa 270KB. Ele foi rasterizado pelo canvas do Edge, sem ferramenta nova e sem distorcer (saídas quadradas): `src/app/favicon.ico` (PNGs de 16, 32 e 48px dentro do ICO, 4,6KB), `src/app/icon.png` (512px, fundo transparente) e `src/app/apple-icon.png` (180px, fundo branco, porque o iOS troca transparente por preto e o "BK" sumiria). O Next gera as tags `<link rel="icon">` e `apple-touch-icon` em todas as páginas, inclusive na raiz e no 404.
 
+## 2026-10-07 · Home indexável em /
+`/` é a home em português que o Google indexa: canonical, hreflang `pt` e `x-default` apontam para ela. `/pt/` continua existindo, com `noindex` e o mesmo canonical, para não competir. O seletor em português liga `/`. O JSON-LD da home é `ProfilePage` com o `Person` dentro de `mainEntity` (nome, cargo, frase visível, foto do topo e perfis reais). Sem seguidores, data ou nota. Rastreador não é redirecionado da raiz. Idioma continua na rota, não em parâmetro.
+
 ## 2026-10-07 · Raiz fica em português
 `/` renderiza a home em português e não redireciona para `/pt/`. O script da raiz só faz `location.replace` para `/en/`, `/fr/` ou `/es/`, quando a escolha salva ou o idioma do navegador é um desses. Sem escolha e sem idioma conhecido, fica em português. Sem JavaScript não há refresh. `/` continua `noindex`, com canonical em `/pt/`. As rotas `/pt /en /fr /es` não mudam.
 

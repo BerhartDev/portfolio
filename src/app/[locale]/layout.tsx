@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <JsonLd data={identityGraph(locale, t("jobTitle"))} />
+        <JsonLd data={identityGraph(locale, t("jobTitle"), t("description"))} />
         <ConsentProvider>
           {children}
           <CookieConsentBanner

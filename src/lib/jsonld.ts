@@ -2,6 +2,7 @@
 // Sem data de publicação: o conteúdo não tem data verificável.
 import type { Locale } from "next-intl";
 import { blogUrl, profile } from "./profile";
+import { homePath } from "./routes";
 import { absoluteUrl } from "./seo";
 import { SITE_URL } from "./site";
 
@@ -19,29 +20,44 @@ const OG_IMAGE: Node = {
   height: 630,
 };
 
+/** Foto visível no topo. O card de Open Graph não é a imagem da pessoa. */
+const PORTRAIT: Node = {
+  "@type": "ImageObject",
+  url: absoluteUrl("/profile/bernardo-1086.webp"),
+  width: 1086,
+  height: 1448,
+};
+
 /** Perfis reais. Instagram, LeetCode e Hack The Box ainda não têm URL. */
 function sameAs(locale: Locale): string[] {
   return [profile.linkedin, profile.github, profile.discord, blogUrl[locale]];
 }
 
-/** Pessoa e site, iguais em todas as páginas de idioma. O @id não muda com o idioma. */
-export function identityGraph(locale: Locale, jobTitle: string): Node[] {
-  return [
-    {
-      "@type": "Person",
-      "@id": PERSON_ID,
-      name: "Bernardo Knoblauch",
-      url: absoluteUrl(`/${locale}/`),
-      jobTitle,
-      telephone: `+${profile.whatsapp}`,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Rio de Janeiro",
-        addressCountry: "BR",
-      },
-      knowsLanguage: ["pt-BR", "en", "fr"],
-      sameAs: sameAs(locale),
+/** Pessoa. O @id não muda com o idioma. Sem seguidores, data ou nota: isso não está na página. */
+export function personNode(locale: Locale, jobTitle: string, description: string): Node {
+  return {
+    "@type": "Person",
+    "@id": PERSON_ID,
+    name: "Bernardo Knoblauch",
+    url: absoluteUrl(homePath(locale)),
+    jobTitle,
+    description,
+    image: PORTRAIT,
+    telephone: `+${profile.whatsapp}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Rio de Janeiro",
+      addressCountry: "BR",
     },
+    knowsLanguage: ["pt-BR", "en", "fr"],
+    sameAs: sameAs(locale),
+  };
+}
+
+/** Pessoa e site, iguais em todas as páginas de idioma. */
+export function identityGraph(locale: Locale, jobTitle: string, description: string): Node[] {
+  return [
+    personNode(locale, jobTitle, description),
     {
       "@type": "WebSite",
       "@id": WEBSITE_ID,
@@ -53,8 +69,9 @@ export function identityGraph(locale: Locale, jobTitle: string): Node[] {
   ];
 }
 
-export function profilePage(locale: Locale, name: string, description: string): Node {
-  const url = absoluteUrl(`/${locale}/`);
+/** ProfilePage com a pessoa dentro de mainEntity, como o Google pede para o rich result. */
+export function profilePage(locale: Locale, name: string, description: string, jobTitle: string): Node {
+  const url = absoluteUrl(homePath(locale));
   return {
     "@type": "ProfilePage",
     "@id": `${url}#webpage`,
@@ -64,8 +81,8 @@ export function profilePage(locale: Locale, name: string, description: string): 
     inLanguage: IN_LANGUAGE[locale],
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": PERSON_ID },
-    mainEntity: { "@id": PERSON_ID },
-    primaryImageOfPage: OG_IMAGE,
+    mainEntity: personNode(locale, jobTitle, description),
+    primaryImageOfPage: PORTRAIT,
   };
 }
 
@@ -97,7 +114,7 @@ export function projectsPageGraph(
   const url = absoluteUrl(pagePath);
   return [
     breadcrumb(pagePath, [
-      { name: homeName, path: `/${locale}/` },
+      { name: homeName, path: homePath(locale) },
       { name: projectsName, path: pagePath },
     ]),
     {
@@ -138,7 +155,7 @@ export function articleGraph(
   const url = absoluteUrl(pagePath);
   return [
     breadcrumb(pagePath, [
-      { name: homeName, path: `/${locale}/` },
+      { name: homeName, path: homePath(locale) },
       { name: projectsName, path: projectsPagePath },
       { name: headline, path: pagePath },
     ]),
