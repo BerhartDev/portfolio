@@ -4,14 +4,14 @@
   container-type: inline-size; /* cqw: medidas da foto relativas à largura do topo */
   display: grid;
   gap: var(--space-6);
-  padding-block: var(--space-8) var(--space-9);
+  padding-block: var(--space-7) var(--space-9);
 }
 
 /* Foto ao fundo: retrato 3:4 no canto direito, alinhado ao topo do nome, discreto e sem receber clique. */
 .photo {
   position: absolute;
   z-index: -1;
-  top: var(--space-8);
+  top: var(--space-7);
   right: 0;
   width: 40%;
   aspect-ratio: 3 / 4;
@@ -162,6 +162,17 @@
 
   .name {
     grid-column: 1 / -1;
+    font-size: clamp(2.25rem, 1.5rem + 3.4vw, 4.5rem);
+  }
+
+  .lead {
+    font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.7rem);
+    line-height: 1.35;
+  }
+
+  .sub {
+    font-size: 1.125rem;
+    line-height: 1.5;
   }
 
   .text {

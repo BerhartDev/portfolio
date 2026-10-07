@@ -11,6 +11,21 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-07 · Fonte menor só no desktop
+- Pedido: a redução das fontes do topo vale apenas no desktop.
+- Feito: abaixo de 60rem o nome, o parágrafo e a frase voltaram ao tamanho anterior, e a reserva do nome no mobile voltou a 40cqw. A partir de 60rem continuam os tamanhos menores. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Topo um pouco menor
+- Pedido: diminuir um pouco as fontes para a primeira seção caber melhor na altura da tela.
+- Feito: no topo da home, o nome foi de no máximo 5,25rem para 4,5rem, o parágrafo principal de 2rem para 1,7rem e a frase de baixo de 1,25rem para 1,125rem. No mobile, a reserva de altura do nome passou de 40cqw para 32cqw. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Menos espaço abaixo da barra
+- Pedido: reduzir um pouco o espaço entre a navbar e o início do conteúdo.
+- Feito: o topo da home passou de `--space-8` para `--space-7`; a foto acompanha. A abertura das páginas internas passou de `--space-7` para `--space-6`. Sem commit.
+- Pendente: nada.
+
 ## 2026-10-07 · Raiz sem salto para /pt
 - Pedido: a origem `/` redirecionava para `/pt` e piscava. Manter a origem em português e só trocar se o idioma for outro.
 - Feito: `/` renderiza a home em português. O script só redireciona para `/en/`, `/fr/` ou `/es/`. Sem meta refresh. Canonical da raiz continua `/pt/` e a página segue `noindex`. Sem commit.
