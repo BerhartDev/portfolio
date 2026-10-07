@@ -229,3 +229,8 @@ export function getProjects(): Project[] {
 export function getProject(slug: string): Project | undefined {
   return getProjects().find((p) => p.slug === slug);
 }
+
+/** Nome só na página de projetos. Artigo e home usam o título do idioma. */
+export function projectsPageName(project: Project, locale: Locale): string {
+  return project.slug === "beknologia" ? "beknologia" : project[locale].title;
+}

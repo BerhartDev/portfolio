@@ -137,5 +137,10 @@ Fonte: repositório `~/Github/blog-beknologia` (README, `docs/`, ADRs), lido em 
 - Resultado / números de uso: [PREENCHER]
 
 ### 5. AgiotaLegal
-- App. Ainda não está no ar. Sem artigo no site até haver o que contar.
-- Nome, o que faz, stack, período: [PREENCHER]
+Fonte: repositório `~/Github/agiotalegal` (README, `docs/SPEC.md`, `docs/arquitetura.md`, ADRs, `schema.prisma`), lido em 2026-10-07. A branch local `main` ainda não tem commits. Sem domínio público no repositório.
+- Contexto: cobranças e assinaturas para pequenos negócios. Serviço com periodicidade única, semanal, mensal, anual ou a cada N dias. Assinatura com valor por cliente. Pix em toda cobrança. Lembrete antes e depois do vencimento, por WhatsApp ou e-mail. Multi-tenant, com modo demonstração.
+- Problema: gerar a cobrança no dia certo, anexar o Pix e lembrar o cliente, sem custo por transação e sem gateway.
+- Stack: Node.js 22, pnpm, Turborepo. Web: Next.js 16, React 19, next-intl (pt/en), CSS Modules. API: Express 5, Prisma 6, PostgreSQL 16, Zod. Worker: BullMQ + Redis. Deploy documentado: Vercel atrás do Cloudflare; API e worker no Railway.
+- O que fiz: BFF (o navegador não chama a API); 13 modelos Prisma; Pix estático (BR Code) gerado na leitura, baixa manual; WhatsApp manual por `wa.me` como padrão; argon2id, TOTP, sessão opaca, AES-256-GCM; piso de 90% de cobertura no domínio, exigido pelo repositório.
+- Resultado / números de uso: [PREENCHER]. Domínio público: [PREENCHER].
+- Imagens: três wireframes de exemplo em `public/projects/agiotalegal/`. Capturas reais: [PREENCHER].

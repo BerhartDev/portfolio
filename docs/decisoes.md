@@ -142,6 +142,24 @@ O favicon vem do monograma "BK" (`Ativo 2.svg`, viewBox quadrado de 1025px com u
 ## 2026-10-07 · Home indexável em /
 `/` é a home em português que o Google indexa: canonical, hreflang `pt` e `x-default` apontam para ela. `/pt/` continua existindo, com `noindex` e o mesmo canonical, para não competir. O seletor em português liga `/`. O JSON-LD da home é `ProfilePage` com o `Person` dentro de `mainEntity` (nome, cargo, frase visível, foto do topo e perfis reais). Sem seguidores, data ou nota. Rastreador não é redirecionado da raiz. Idioma continua na rota, não em parâmetro.
 
+## 2026-10-07 · Imagens do AgiotaLegal
+O artigo e o cartão do AgiotaLegal usam três wireframes de exemplo, no mesmo formato dos outros projetos, até haver captura real.
+
+## 2026-10-07 · Página do AgiotaLegal
+O AgiotaLegal tem artigo. O texto sai do repositório local `agiotalegal` (spec, arquitetura, schema). Não há domínio público nem commits nessa branch, então uso e endereço ficam em aberto.
+
+## 2026-10-07 · Card de projeto clicável
+Na página de projetos, o cartão inteiro é o link do artigo. "Saiba mais" é só o rótulo. Projeto sem artigo não é clicável.
+
+## 2026-10-07 · Ordem na página de projetos
+Na página de projetos, Estudos de caso vem antes de O que entrego. Não há botão "Ver projetos" nessa página.
+
+## 2026-10-07 · Nome beknologia na página de projetos
+Na página de projetos o item se chama beknologia, nos quatro idiomas. No artigo e na home o título continua o de cada idioma: /bek.no.lo.ˈʒi.a/, beknology, beknologie, beknología.
+
+## 2026-10-07 · Grade na página de projetos
+A página de projetos lista os itens numa grade: imagem, nome numa faixa sólida, etiqueta, resumo e "Saiba mais" para o artigo. Não usa o link externo do projeto. Item sem artigo não tem o botão. A home continua com a lista numerada.
+
 ## 2026-10-07 · Landing pages fora da lista
 Landing pages não é um item da lista. Entra só no texto da página de projetos, quando houver o que escrever.
 

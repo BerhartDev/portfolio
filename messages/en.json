@@ -47,9 +47,8 @@
   "projectsPage": {
     "title": "Projects",
     "metaTitle": "Projects · Bernardo Knoblauch",
-    "description": "Projects by Bernardo Knoblauch: VamosMarcar, beknology, and AgiotaLegal, which is not live yet.",
-    "lead": "Two case studies that are live, and one that is still on the way.",
-    "cta": "See projects",
+    "description": "Projects by Bernardo Knoblauch: VamosMarcar, beknologia, and AgiotaLegal.",
+    "lead": "Three case studies. AgiotaLegal has no public domain yet.",
     "pitch": {
       "title": "What I deliver",
       "body": "I build and run APIs and services in Node.js and TypeScript, and I look after what happens after the deploy. Today I keep a high-traffic sports portal running in production, with Next.js on the front end. Before that, I led the migration of a PHP monolith to Node services on GCP. On the side, I run VamosMarcar, a booking system for barbershops and salons.",
@@ -64,7 +63,8 @@
       },
       "terms": "Engagement model and availability: [PREENCHER]"
     },
-    "cases": "Case studies"
+    "cases": "Case studies",
+    "more": "Learn more"
   },
   "article": {
     "metaTitle": "{title} · Bernardo Knoblauch",

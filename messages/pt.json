@@ -47,9 +47,8 @@
   "projectsPage": {
     "title": "Projetos",
     "metaTitle": "Projetos · Bernardo Knoblauch",
-    "description": "Projetos de Bernardo Knoblauch: VamosMarcar, /bek.no.lo.ˈʒi.a/ e o AgiotaLegal, que ainda não está no ar.",
-    "lead": "Dois estudos de caso no ar, e um que ainda chega.",
-    "cta": "Ver projetos",
+    "description": "Projetos de Bernardo Knoblauch: VamosMarcar, beknologia e AgiotaLegal.",
+    "lead": "Três estudos de caso. O AgiotaLegal ainda não tem domínio público.",
     "pitch": {
       "title": "O que entrego",
       "body": "Construo e mantenho APIs e serviços em Node.js e TypeScript, e cuido do que vem depois do deploy. Hoje sustento em produção um portal esportivo de alto tráfego, com Next.js no front. Antes, liderei a migração de um monólito PHP para serviços em Node na GCP. Por fora, mantenho o VamosMarcar, de agendamento para barbearias e salões.",
@@ -64,7 +63,8 @@
       },
       "terms": "Formato de trabalho e disponibilidade: [PREENCHER]"
     },
-    "cases": "Estudos de caso"
+    "cases": "Estudos de caso",
+    "more": "Saiba mais"
   },
   "article": {
     "metaTitle": "{title} · Bernardo Knoblauch",

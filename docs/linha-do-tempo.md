@@ -11,6 +11,36 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-07 · Imagens do AgiotaLegal
+- Pedido: colocar o espaço para as imagens.
+- Feito: três wireframes de exemplo em `public/projects/agiotalegal/`, ligados em `agiotalegal.json`. A primeira aparece no cartão; as três na galeria do artigo. Capturas reais continuam [PREENCHER]. Sem commit.
+- Pendente: trocar os wireframes por telas reais.
+
+## 2026-10-07 · Página do AgiotaLegal
+- Pedido: gerar uma página genérica do AgiotaLegal com o que houver no projeto em ~/Github/agiotalegal.
+- Feito: `agiotalegal.json` deixou de ser `soon` e virou artigo nos quatro idiomas, a partir do README, da spec, da arquitetura e do schema (13 modelos). Sem domínio público e sem commits na branch local: o resultado ficou [PREENCHER]. Sem commit.
+- Pendente: domínio público e números de uso.
+
+## 2026-10-07 · Card de projeto clicável
+- Pedido: o card inteiro abre o artigo.
+- Feito: na página de projetos, o cartão com artigo é um único link. "Saiba mais" continua visível, sem um segundo link. O AgiotaLegal segue sem link. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Ordem na página de projetos
+- Pedido: trocar Estudos de caso com O que entrego, e tirar o botão Ver projetos dessa página.
+- Feito: os estudos de caso vêm logo depois da abertura; O que entrego fica em seguida. O botão e o texto `projectsPage.cta` saíram nos quatro idiomas. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Nome beknologia na página de projetos
+- Pedido: mudar o nome para beknologia, só na página de projetos.
+- Feito: o cartão, a descrição e o JSON-LD dessa página usam "beknologia" nos quatro idiomas. O artigo e a lista da home continuam com o título de cada idioma. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Grade na página de projetos
+- Pedido: organizar a página de projetos como a de bekno.com.br/projetos, mantendo os textos. O botão abre o artigo do projeto, com o rótulo "Saiba mais", e não o site externo.
+- Feito: `ProjectCards` na página de projetos (grade 1/2/3 colunas, primeira imagem, faixa com o nome, etiqueta e resumo). O link vai para o artigo. O AgiotaLegal fica sem link. A lista numerada da home não mudou. Sem commit.
+- Pendente: nada.
+
 ## 2026-10-07 · Landing pages fora da lista
 - Pedido: tirar o Landing pages; vai entrar só na página de projetos.
 - Feito: apaguei `content/projects/landing-pages.json`. A lista ficou VamosMarcar, /bek.no.lo.ˈʒi.a/ e AgiotaLegal. Ajustei a abertura da página de projetos nos quatro idiomas. Sem commit.

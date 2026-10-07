@@ -1,24 +1,261 @@
 {
   "order": 3,
-  "soon": true,
+  "stack": ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Next.js", "React", "Redis", "Cloudflare"],
+  "images": [
+    {
+      "src": "/projects/agiotalegal/exemplo-1.svg",
+      "width": 1600,
+      "height": 1000,
+      "alt": {
+        "pt": "Imagem de exemplo 1 de AgiotaLegal: wireframe genérico, não é uma tela real do projeto.",
+        "en": "Sample image 1 for AgiotaLegal: a generic wireframe, not a real screen from the project.",
+        "fr": "Image d’exemple 1 pour AgiotaLegal : wireframe générique, pas un écran réel du projet.",
+        "es": "Imagen de ejemplo 1 de AgiotaLegal: wireframe genérico, no es una pantalla real del proyecto."
+      },
+      "caption": {
+        "pt": "Imagem de exemplo. [PREENCHER]",
+        "en": "Sample image. [PREENCHER]",
+        "fr": "Image d’exemple. [PREENCHER]",
+        "es": "Imagen de ejemplo. [PREENCHER]"
+      }
+    },
+    {
+      "src": "/projects/agiotalegal/exemplo-2.svg",
+      "width": 1200,
+      "height": 900,
+      "alt": {
+        "pt": "Imagem de exemplo 2 de AgiotaLegal: wireframe genérico, não é uma tela real do projeto.",
+        "en": "Sample image 2 for AgiotaLegal: a generic wireframe, not a real screen from the project.",
+        "fr": "Image d’exemple 2 pour AgiotaLegal : wireframe générique, pas un écran réel du projet.",
+        "es": "Imagen de ejemplo 2 de AgiotaLegal: wireframe genérico, no es una pantalla real del proyecto."
+      },
+      "caption": {
+        "pt": "Imagem de exemplo. [PREENCHER]",
+        "en": "Sample image. [PREENCHER]",
+        "fr": "Image d’exemple. [PREENCHER]",
+        "es": "Imagen de ejemplo. [PREENCHER]"
+      }
+    },
+    {
+      "src": "/projects/agiotalegal/exemplo-3.svg",
+      "width": 1200,
+      "height": 900,
+      "alt": {
+        "pt": "Imagem de exemplo 3 de AgiotaLegal: wireframe genérico, não é uma tela real do projeto.",
+        "en": "Sample image 3 for AgiotaLegal: a generic wireframe, not a real screen from the project.",
+        "fr": "Image d’exemple 3 pour AgiotaLegal : wireframe générique, pas un écran réel du projet.",
+        "es": "Imagen de ejemplo 3 de AgiotaLegal: wireframe genérico, no es una pantalla real del proyecto."
+      },
+      "caption": {
+        "pt": "Imagem de exemplo. [PREENCHER]",
+        "en": "Sample image. [PREENCHER]",
+        "fr": "Image d’exemple. [PREENCHER]",
+        "es": "Imagen de ejemplo. [PREENCHER]"
+      }
+    }
+  ],
   "pt": {
     "title": "AgiotaLegal",
-    "tag": "Em breve",
-    "summary": "App. Ainda não está no ar."
+    "tag": "Produto próprio · Cobranças · Node.js",
+    "summary": "Cobranças e assinaturas para pequenos negócios, com Pix em cada cobrança e lembrete por WhatsApp ou e-mail.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "O AgiotaLegal é um sistema multi-tenant de cobranças. O negócio cadastra o que vende, associa clientes e o sistema gera a cobrança no vencimento, com Pix e lembrete."
+        },
+        {
+          "type": "p",
+          "text": "A web está em português e inglês. O navegador fala só com o Next. A API em Express fica atrás dele."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "A cobrança tem de sair no dia certo, levar um Pix e avisar o cliente antes e depois do vencimento, sem custo por transação e sem gateway."
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Monorepo pnpm. A web é Next.js 16 e React 19, na Vercel, atrás do Cloudflare. A API é Express 5, Prisma 6 e PostgreSQL 16, no Railway, com um worker BullMQ e Redis no mesmo código. Os contratos ficam em Zod, num pacote compartilhado. O schema tem 13 modelos."
+        },
+        {
+          "type": "p",
+          "text": "O serviço aceita cobrança única, semanal, mensal, anual ou a cada N dias. A assinatura pode ter um valor próprio por cliente. Os valores ficam em centavos, de R$ 0,01 a R$ 1.000.000,00. A cobrança nasce 7 dias antes do vencimento. O atraso vira no fim do dia, no fuso da conta."
+        },
+        {
+          "type": "p",
+          "text": "O Pix é um BR Code estático, montado na hora com a chave da conta, o valor e o identificador da cobrança. Não fica gravado. A baixa é manual, porque não há gateway."
+        },
+        {
+          "type": "p",
+          "text": "O canal padrão é o WhatsApp manual: o sistema prepara o texto e um link wa.me, e quem envia é o usuário. E-mail e a API da Meta também existem. Mensagem só sai para cliente que consentiu."
+        },
+        {
+          "type": "p",
+          "text": "Senha com argon2id, 2FA TOTP e sessão opaca em cookie httpOnly. Segredos com AES-256-GCM. O domínio dos testes tem piso de 90% no repositório."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Ainda sem domínio público. Números de uso: [PREENCHER]."
+        }
+      ]
+    }
   },
   "en": {
     "title": "AgiotaLegal",
-    "tag": "Coming soon",
-    "summary": "App. Not live yet."
+    "tag": "Own product · Billing · Node.js",
+    "summary": "Charges and subscriptions for small businesses, with Pix on every charge and a reminder by WhatsApp or email.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "AgiotaLegal is a multi-tenant billing system. A business registers what it sells, attaches customers, and the system creates the charge on the due date, with Pix and a reminder."
+        },
+        {
+          "type": "p",
+          "text": "The web app is in Portuguese and English. The browser talks only to Next.js. The Express API sits behind it."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "The charge has to go out on the right day, carry a Pix code, and tell the customer before and after the due date, with no per-transaction fee and no payment gateway."
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "pnpm monorepo. The web app is Next.js 16 and React 19, on Vercel, behind Cloudflare. The API is Express 5, Prisma 6, and PostgreSQL 16, on Railway, with a BullMQ and Redis worker in the same codebase. Contracts live in Zod, in a shared package. The schema has 13 models."
+        },
+        {
+          "type": "p",
+          "text": "A service can be a one-off, weekly, monthly, yearly, or every N days. A subscription can carry its own amount per customer. Amounts are stored in cents, from R$ 0.01 to R$ 1,000,000.00. A charge is created 7 days before it is due. It becomes overdue at the end of that day, in the account time zone."
+        },
+        {
+          "type": "p",
+          "text": "Pix is a static BR Code, built on read from the account key, the amount, and the charge id. It is not stored. Settlement is manual, because there is no gateway."
+        },
+        {
+          "type": "p",
+          "text": "The default channel is manual WhatsApp: the system prepares the text and a wa.me link, and the user sends it. Email and the Meta API are there too. A message goes out only when the customer has consented."
+        },
+        {
+          "type": "p",
+          "text": "Passwords use argon2id, with TOTP 2FA and an opaque session in an httpOnly cookie. Secrets use AES-256-GCM. Domain tests in the repo have a 90% floor."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "No public domain yet. Usage numbers: [PREENCHER]."
+        }
+      ]
+    }
   },
   "fr": {
     "title": "AgiotaLegal",
-    "tag": "Bientôt",
-    "summary": "Application. Pas encore en ligne."
+    "tag": "Produit personnel · Facturation · Node.js",
+    "summary": "Factures et abonnements pour les petites entreprises, avec un Pix sur chaque facture et un rappel par WhatsApp ou par e-mail.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "AgiotaLegal est un système de facturation multi-tenant. L’entreprise enregistre ce qu’elle vend, associe des clients, et le système crée la facture à l’échéance, avec un Pix et un rappel."
+        },
+        {
+          "type": "p",
+          "text": "Le site est en portugais et en anglais. Le navigateur ne parle qu’au Next.js. L’API Express est derrière."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "La facture doit partir le bon jour, porter un Pix et prévenir le client avant et après l’échéance, sans coût par transaction et sans passerelle de paiement."
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Monorepo pnpm. Le web est en Next.js 16 et React 19, sur Vercel, derrière Cloudflare. L’API est en Express 5, Prisma 6 et PostgreSQL 16, sur Railway, avec un worker BullMQ et Redis dans le même code. Les contrats sont en Zod, dans un paquet partagé. Le schéma a 13 modèles."
+        },
+        {
+          "type": "p",
+          "text": "Un service peut être unique, hebdomadaire, mensuel, annuel ou tous les N jours. L’abonnement peut avoir un montant propre par client. Les montants sont en centimes, de R$ 0,01 à R$ 1 000 000,00. La facture naît 7 jours avant l’échéance. Le retard tombe en fin de journée, dans le fuseau du compte."
+        },
+        {
+          "type": "p",
+          "text": "Le Pix est un BR Code statique, construit à la lecture avec la clé du compte, le montant et l’identifiant de la facture. Il n’est pas stocké. Le règlement est manuel, faute de passerelle."
+        },
+        {
+          "type": "p",
+          "text": "Le canal par défaut est WhatsApp manuel : le système prépare le texte et un lien wa.me, et c’est l’utilisateur qui envoie. L’e-mail et l’API Meta existent aussi. Un message ne part que si le client a consenti."
+        },
+        {
+          "type": "p",
+          "text": "Mot de passe en argon2id, 2FA TOTP et session opaque dans un cookie httpOnly. Secrets en AES-256-GCM. Les tests du domaine ont un plancher de 90 % dans le dépôt."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Pas encore de domaine public. Chiffres d’usage : [PREENCHER]."
+        }
+      ]
+    }
   },
   "es": {
     "title": "AgiotaLegal",
-    "tag": "Pronto",
-    "summary": "App. Todavía no está en línea."
+    "tag": "Producto propio · Cobros · Node.js",
+    "summary": "Cobros y suscripciones para pequeños negocios, con Pix en cada cobro y un aviso por WhatsApp o correo.",
+    "sections": {
+      "context": [
+        {
+          "type": "p",
+          "text": "AgiotaLegal es un sistema de cobros multi-tenant. El negocio registra lo que vende, asocia clientes y el sistema genera el cobro en el vencimiento, con Pix y un aviso."
+        },
+        {
+          "type": "p",
+          "text": "La web está en portugués e inglés. El navegador solo habla con Next.js. La API en Express queda detrás."
+        }
+      ],
+      "problem": [
+        {
+          "type": "p",
+          "text": "El cobro tiene que salir el día correcto, llevar un Pix y avisar al cliente antes y después del vencimiento, sin costo por transacción y sin pasarela."
+        }
+      ],
+      "work": [
+        {
+          "type": "p",
+          "text": "Monorepo pnpm. La web es Next.js 16 y React 19, en Vercel, detrás de Cloudflare. La API es Express 5, Prisma 6 y PostgreSQL 16, en Railway, con un worker BullMQ y Redis en el mismo código. Los contratos están en Zod, en un paquete compartido. El schema tiene 13 modelos."
+        },
+        {
+          "type": "p",
+          "text": "El servicio acepta cobro único, semanal, mensual, anual o cada N días. La suscripción puede tener un valor propio por cliente. Los valores van en centavos, de R$ 0,01 a R$ 1.000.000,00. El cobro nace 7 días antes del vencimiento. El atraso cae al final del día, en la zona horaria de la cuenta."
+        },
+        {
+          "type": "p",
+          "text": "El Pix es un BR Code estático, armado al leerlo con la clave de la cuenta, el valor y el identificador del cobro. No se guarda. La baja es manual, porque no hay pasarela."
+        },
+        {
+          "type": "p",
+          "text": "El canal por defecto es WhatsApp manual: el sistema prepara el texto y un enlace wa.me, y quien envía es el usuario. También existen el correo y la API de Meta. El mensaje solo sale si el cliente consintió."
+        },
+        {
+          "type": "p",
+          "text": "Contraseña con argon2id, 2FA TOTP y sesión opaca en una cookie httpOnly. Secretos con AES-256-GCM. Las pruebas de dominio tienen un piso del 90 % en el repositorio."
+        }
+      ],
+      "result": [
+        {
+          "type": "p",
+          "text": "Todavía sin dominio público. Números de uso: [PREENCHER]."
+        }
+      ]
+    }
   }
 }
