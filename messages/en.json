@@ -287,7 +287,13 @@
   },
   "footer": {
     "copyright": "© {year} Bernardo Knoblauch",
-    "note": "Static site, no tracking."
+    "cloudflare": "Protected by Cloudflare"
+  },
+  "consent": {
+    "heading": "Cookies",
+    "message": "We use analytics cookies to understand how the site is used. You can accept or reject them.",
+    "accept": "Accept",
+    "reject": "Reject"
   },
   "notFound": {
     "title": "Page not found.",

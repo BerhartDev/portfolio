@@ -10,7 +10,7 @@
 4. Setup, i18n + redirecionamento da raiz, tema sem flash, seções, SEO (canonical, hreflang, OG, sitemap, robots, JSON-LD, 404), README de deploy. Domínio: `https://bernardoknoblauch.com`.
 5. Projetos em `content/projects/*.json`, página de projetos com URLs traduzidas, artigo por projeto, home com lista em links, seletor de idioma que mantém a página. Página de projetos com bloco único "O que entrego" e CTA; galeria de imagens em carrossel; barra de navegação fixa com menu mobile e idioma em dropdown; tema escuro por padrão com botão de ícone; ícones de redes no topo e no rodapé; foto de perfil ao fundo do topo; imagem de Open Graph; favicon "BK".
 6. Formulário de contato (WhatsApp e e-mail) com assunto obrigatório, validação no navegador, recusa de caixa temporária e 3 envios por hora.
-7. Web Analytics e Speed Insights da Vercel no layout dos idiomas (`@vercel/analytics`, `@vercel/speed-insights`).
+7. Web Analytics e Speed Insights da Vercel no layout dos idiomas (`@vercel/analytics`, `@vercel/speed-insights`), só depois do aceite. Banner de consentimento no mesmo modelo do blog. GA4 espera `NEXT_PUBLIC_GA_ID`. Selo oficial da Cloudflare no rodapé.
 
 ## Próximos passos
 1. Preencher os `[PREENCHER]` em `docs/perfil.md` e depois em `content/projects/*.json`, `messages/*.json` e `src/lib/profile.ts` (e-mail, Instagram, LeetCode, Hack The Box).

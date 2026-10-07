@@ -38,7 +38,7 @@ O build de produção usa `https://bernardoknoblauch.com` mesmo sem `NEXT_PUBLIC
 2. Em *Settings → Environment Variables*, defina `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
 3. Deploy. Com `output: 'export'`, a Vercel publica o conteúdo de `out/` como estático.
 4. Domínio: *Settings → Domains*.
-5. No painel, ative Web Analytics e Speed Insights. O layout já inclui `<Analytics />` e `<SpeedInsights />`. Os eventos só aparecem depois do deploy, numa visita ao site publicado.
+5. No painel, ative Web Analytics e Speed Insights. Os dois, e o GA4 (`NEXT_PUBLIC_GA_ID`), só carregam depois que o visitante aceita o banner.
 
 ### Cloudflare Pages
 

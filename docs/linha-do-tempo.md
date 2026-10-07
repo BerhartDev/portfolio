@@ -11,6 +11,26 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-07 · Banner sem nome de ferramenta
+- Pedido: não citar ferramentas na mensagem do consentimento.
+- Feito: os quatro idiomas ficam só com cookies de análise e a escolha de aceitar ou recusar. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Texto do banner no padrão de mercado
+- Pedido: melhorar a mensagem do consentimento e deixá-la no padrão de mercado.
+- Feito: os quatro idiomas passam a dizer que o site usa cookies de análise e que a Vercel e o Google Analytics só recebem dados no aceite. Botões Aceitar e Recusar mantidos. Sem commit.
+- Pendente: nada.
+
+## 2026-10-07 · Checagem no navegador parou
+- Pedido: se a tarefa tinha travado.
+- Feito: explicado que o código já estava pronto e só a abertura no navegador foi interrompida. Sem mudança de código.
+- Pendente: nada.
+
+## 2026-10-07 · Selo Cloudflare e consentimento
+- Pedido: selo da Cloudflare no rodapé, tirar "site estático sem rastreamento" e usar a validação de consentimento do blog, porque os dados vão para a Vercel e irão para o GA4.
+- Feito: selo oficial em `public/cloudflare-badge.png` no rodapé. Frase removida nos 4 idiomas. Banner com aceite/recusa (`localStorage` `cookie-consent`). Vercel Analytics, Speed Insights e GA4 só carregam no aceite. GA4 ainda sem id (`NEXT_PUBLIC_GA_ID`). Sem commit.
+- Pendente: preencher `NEXT_PUBLIC_GA_ID` quando a propriedade existir.
+
 ## 2026-10-04 · Favicon no linktree e no blog
 - Pedido: usar o mesmo favicon no linktree e no blog.
 - Feito: `favicon.ico`, `icon.png` e `apple-icon.png` copiados do portfólio. `linktree-page`: arquivos em `public/` e três `<link>` no `<head>` do `index.html`, com caminho relativo como as outras imagens da página (funciona com o `base` do Vite e com links.bekno.com.br); `npm run build` gera os arquivos e as tags no `dist/`. `blog-beknologia`: o `apps/web/src/app/favicon.ico` padrão do create-next-app foi trocado e entraram `icon.png` e `apple-icon.png`; `lint`, `type-check` e `build` passam (os avisos de Redis no build são esperados sem Redis local) e as três rotas aparecem no manifesto. Sem commit nos dois repositórios.

@@ -139,5 +139,8 @@ O site público é `https://bernardoknoblauch.com`, sem barra final, em `NEXT_PU
 ## 2026-10-04 · Favicon "BK"
 O favicon vem do monograma "BK" (`Ativo 2.svg`, viewBox quadrado de 1025px com um PNG de 1024px embutido). O SVG não é usado direto porque pesa 270KB. Ele foi rasterizado pelo canvas do Edge, sem ferramenta nova e sem distorcer (saídas quadradas): `src/app/favicon.ico` (PNGs de 16, 32 e 48px dentro do ICO, 4,6KB), `src/app/icon.png` (512px, fundo transparente) e `src/app/apple-icon.png` (180px, fundo branco, porque o iOS troca transparente por preto e o "BK" sumiria). O Next gera as tags `<link rel="icon">` e `apple-touch-icon` em todas as páginas, inclusive na raiz e no 404.
 
+## 2026-10-07 · Consentimento antes da medição
+O banner segue o do blog (`cookie-consent` no `localStorage`, aceite ou recusa). Vercel Analytics, Speed Insights e GA4 só montam com aceite. Sem `NEXT_PUBLIC_GA_ID` no formato `G-…`, o GA4 não entra. A frase "Site estático, sem rastreamento." saiu do rodapé. No lugar, o selo oficial "Protected by Cloudflare" (`public/cloudflare-badge.png`, sem alteração), com link para cloudflare.com.
+
 ## 2026-10-04 · Favicon centralizado
 No `Ativo 2.svg` original o disco branco estava em `cx=502.7` (centro do viewBox: 512.74). A cópia usada para gerar os ícones teve o `cx` corrigido para 512.74; o "BK" já estava centrado. Medido no `icon.png`: área opaca de 22 a 489px nos dois eixos, centro em 255,5. O arquivo original em Downloads não foi alterado.

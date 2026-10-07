@@ -10,3 +10,14 @@
   font-size: var(--text-xs);
   color: var(--muted);
 }
+
+.badge {
+  display: block;
+  line-height: 0;
+}
+
+.badge img {
+  display: block;
+  height: 2.25rem;
+  width: auto;
+}
