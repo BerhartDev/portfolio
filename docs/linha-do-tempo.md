@@ -11,6 +11,11 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-07 · Raiz sem salto para /pt
+- Pedido: a origem `/` redirecionava para `/pt` e piscava. Manter a origem em português e só trocar se o idioma for outro.
+- Feito: `/` renderiza a home em português. O script só redireciona para `/en/`, `/fr/` ou `/es/`. Sem meta refresh. Canonical da raiz continua `/pt/` e a página segue `noindex`. Sem commit.
+- Pendente: nada.
+
 ## 2026-10-07 · Banner sem nome de ferramenta
 - Pedido: não citar ferramentas na mensagem do consentimento.
 - Feito: os quatro idiomas ficam só com cookies de análise e a escolha de aceitar ou recusar. Sem commit.

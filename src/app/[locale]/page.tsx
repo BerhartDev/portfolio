@@ -1,3 +1,4 @@
+import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Awards } from "@/components/Awards";
 import { Contact } from "@/components/Contact";
@@ -12,8 +13,7 @@ import { profilePage } from "@/lib/jsonld";
 import { resolveLocale, type LocaleParams } from "@/lib/locale";
 import { homePath } from "@/lib/routes";
 
-export default async function HomePage({ params }: LocaleParams) {
-  const locale = await resolveLocale(params);
+export async function Home({ locale }: { locale: Locale }) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nav" });
   const meta = await getTranslations({ locale, namespace: "meta" });
@@ -37,4 +37,8 @@ export default async function HomePage({ params }: LocaleParams) {
       <SiteFooter locale={locale} />
     </div>
   );
+}
+
+export default async function HomePage({ params }: LocaleParams) {
+  return <Home locale={await resolveLocale(params)} />;
 }
