@@ -9,6 +9,7 @@ Para adicionar um projeto, crie um arquivo novo. Para tirar um projeto do site, 
 ```jsonc
 {
   "order": 1,                         // posição nas listas (menor primeiro)
+  "soon": true,                      // opcional: aparece na lista, sem artigo nem URL
   "period": "2025–",                  // opcional, igual em todos os idiomas
   "stack": ["Next.js", "AWS"],        // opcional
   "links": [{ "url": "https://…" }],  // opcional
@@ -28,7 +29,7 @@ Para adicionar um projeto, crie um arquivo novo. Para tirar um projeto do site, 
 }
 ```
 
-Os 4 idiomas e as 4 seções são obrigatórios. Cada seção precisa de pelo menos um bloco.
+Os 4 idiomas são obrigatórios. Sem `soon`, as 4 seções também são, e cada uma precisa de pelo menos um bloco. Com `soon: true`, bastam título, etiqueta e resumo: o item entra na lista e não ganha página.
 
 ## Imagens (galeria)
 

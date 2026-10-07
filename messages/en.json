@@ -47,8 +47,8 @@
   "projectsPage": {
     "title": "Projects",
     "metaTitle": "Projects · Bernardo Knoblauch",
-    "description": "Case studies by Bernardo Knoblauch, Node.js full stack developer: a high-traffic sports portal, a PHP monolith migration to Node, and my own products.",
-    "lead": "What I have built and keep running in production, written up as case studies: context, problem, what I did and the outcome.",
+    "description": "Projects by Bernardo Knoblauch: VamosMarcar, beknology, and AgiotaLegal, which is not live yet.",
+    "lead": "Two case studies that are live, and one that is still on the way.",
     "cta": "See projects",
     "pitch": {
       "title": "What I deliver",

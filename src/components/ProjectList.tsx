@@ -12,20 +12,31 @@ export function ProjectList({ locale, projects, detailed = false }: Props) {
       {projects.map((project, i) => {
         const text = project[locale];
         const meta = detailed ? [project.period, project.stack.join(", ")].filter(Boolean).join(" · ") : "";
-        return (
-          <li key={project.slug}>
-            <a href={projectPath(project.slug)(locale)} className={styles.row}>
-              <span className={styles.num} aria-hidden="true">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className={styles.name}>{text.title}</span>
-              <span className={styles.summary}>{text.summary}</span>
-              <span className={styles.tag}>{text.tag}</span>
-              {meta && <span className={styles.meta}>{meta}</span>}
+        const inner = (
+          <>
+            <span className={styles.num} aria-hidden="true">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span className={styles.name}>{text.title}</span>
+            <span className={styles.summary}>{text.summary}</span>
+            <span className={styles.tag}>{text.tag}</span>
+            {meta && <span className={styles.meta}>{meta}</span>}
+            {!project.soon && (
               <span className={styles.arrow} aria-hidden="true">
                 →
               </span>
-            </a>
+            )}
+          </>
+        );
+        return (
+          <li key={project.slug}>
+            {project.soon ? (
+              <div className={`${styles.row} ${styles.soon}`}>{inner}</div>
+            ) : (
+              <a href={projectPath(project.slug)(locale)} className={styles.row}>
+                {inner}
+              </a>
+            )}
           </li>
         );
       })}

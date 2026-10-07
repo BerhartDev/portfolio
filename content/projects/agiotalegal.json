@@ -1,0 +1,24 @@
+{
+  "order": 3,
+  "soon": true,
+  "pt": {
+    "title": "AgiotaLegal",
+    "tag": "Em breve",
+    "summary": "App. Ainda não está no ar."
+  },
+  "en": {
+    "title": "AgiotaLegal",
+    "tag": "Coming soon",
+    "summary": "App. Not live yet."
+  },
+  "fr": {
+    "title": "AgiotaLegal",
+    "tag": "Bientôt",
+    "summary": "Application. Pas encore en ligne."
+  },
+  "es": {
+    "title": "AgiotaLegal",
+    "tag": "Pronto",
+    "summary": "App. Todavía no está en línea."
+  }
+}

@@ -11,6 +11,16 @@ Formato:
 - Pendente: o que ficou para depois, se houver.
 ```
 
+## 2026-10-07 · Landing pages fora da lista
+- Pedido: tirar o Landing pages; vai entrar só na página de projetos.
+- Feito: apaguei `content/projects/landing-pages.json`. A lista ficou VamosMarcar, /bek.no.lo.ˈʒi.a/ e AgiotaLegal. Ajustei a abertura da página de projetos nos quatro idiomas. Sem commit.
+- Pendente: o texto de landing pages na página de projetos, quando você escrever.
+
+## 2026-10-07 · Lista de projetos
+- Pedido: na parte de projetos, deixar só VamosMarcar, /bek.no.lo.ˈʒi.a/, o app AgiotaLegal (em breve) e outro que são só landing pages, ainda sem nome.
+- Feito: saíram `lance.json` e `autoavaliar.json`. Entraram `agiotalegal.json` e `landing-pages.json` com `soon: true` (lista, sem artigo). Título provisório "Landing pages". Ordem: VamosMarcar, blog, AgiotaLegal, Landing pages. Lance! e Auto Avaliar continuam na trajetória. Sem commit.
+- Pendente: nome definitivo das landing pages; o que o AgiotaLegal faz, quando houver.
+
 ## 2026-10-07 · Home indexável em /
 - Pedido: analisar metadados e dados estruturados da página principal e prepará-la para indexação. Idioma continua na rota. Rich result só com o que o Google documenta para uma pessoa.
 - Feito: `/` indexa com canonical, hreflang, Open Graph e Twitter. `/pt/` fica `noindex` com canonical `/`. `homePath` do português é `/`. `ProfilePage.mainEntity` é o `Person` com cargo, frase, foto do topo e sameAs. Sitemap lista a raiz no lugar de `/pt/`. Rastreador não é redirecionado. Sem commit.

@@ -10,7 +10,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { routing } from "@/i18n/routing";
 import { resolveProjectsLocale, type SectionParams } from "@/lib/locale";
 import { projectsPageGraph } from "@/lib/jsonld";
-import { getProjects } from "@/lib/projects";
+import { getCaseStudies, getProjects } from "@/lib/projects";
 import { PROJECTS_SEGMENT, projectPath, projectsPath } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
@@ -49,7 +49,7 @@ export default async function ProjectsPage({ params }: SectionParams) {
           t("projectsPage.description"),
           "Bernardo Knoblauch",
           t("projects.title"),
-          getProjects().map((project) => ({ name: project[locale].title, path: projectPath(project.slug)(locale) })),
+          getCaseStudies().map((project) => ({ name: project[locale].title, path: projectPath(project.slug)(locale) })),
         )}
       />
       <main id="main">

@@ -101,6 +101,8 @@ Projeto e manutenção de redes; instalação de SOs e antivírus; políticas de
 ## Projetos (estudo de caso)
 Formato: contexto → problema → o que fiz e por quê → resultado.
 
+Lista pública: VamosMarcar, /bek.no.lo.ˈʒi.a/, AgiotaLegal (em breve). Landing pages não entra na lista; fica só na página de projetos, quando houver texto. Lance! e Auto Avaliar saíram da lista pública em 2026-10-07; o texto de referência fica abaixo. A trajetória profissional não muda.
+
 O texto publicado dos projetos fica em `content/projects/<slug>.json` (4 idiomas). Esta seção guarda os dados de referência; ao completar um `[PREENCHER]` aqui, atualize o JSON do projeto também.
 
 ### 1. Lance!
@@ -133,3 +135,7 @@ Fonte: repositório `~/Github/blog-beknologia` (README, `docs/`, ADRs), lido em 
 - O que fiz: SSG + ISR com webhook de revalidação por tag; rotas de conteúdo sem `generateStaticParams`; cache handler próprio em Redis (sobrevive a restart; dois bugs achados em teste de falha real e corrigidos: promise rejeitada memorizada e reconexão infinita → `reconnectStrategy: false`, timeout 2 s, ~0,5 s degradado); cache REST do Strapi em Redis (plugin da comunidade p/ v5); Firebase Auth com Custom Claims só no servidor (papel padrão na sessão, sem Cloud Function), session cookies, Draft Mode e conteúdo premium por papel; SEO por locale (slug real no hreflang/sitemap), JSON-LD, OG dinâmico, RSS; GA4 com consentimento LGPD. `notFound()` em página com streaming devolve 200 com noindex.
 - Sem testes automatizados. Domínio próprio e CDN adiados.
 - Resultado / números de uso: [PREENCHER]
+
+### 5. AgiotaLegal
+- App. Ainda não está no ar. Sem artigo no site até haver o que contar.
+- Nome, o que faz, stack, período: [PREENCHER]

@@ -142,6 +142,12 @@ O favicon vem do monograma "BK" (`Ativo 2.svg`, viewBox quadrado de 1025px com u
 ## 2026-10-07 · Home indexável em /
 `/` é a home em português que o Google indexa: canonical, hreflang `pt` e `x-default` apontam para ela. `/pt/` continua existindo, com `noindex` e o mesmo canonical, para não competir. O seletor em português liga `/`. O JSON-LD da home é `ProfilePage` com o `Person` dentro de `mainEntity` (nome, cargo, frase visível, foto do topo e perfis reais). Sem seguidores, data ou nota. Rastreador não é redirecionado da raiz. Idioma continua na rota, não em parâmetro.
 
+## 2026-10-07 · Landing pages fora da lista
+Landing pages não é um item da lista. Entra só no texto da página de projetos, quando houver o que escrever.
+
+## 2026-10-07 · Lista pública de projetos
+A lista mostra VamosMarcar, /bek.no.lo.ˈʒi.a/, AgiotaLegal e Landing pages. Os dois últimos têm `soon: true`: entram na lista, sem página e sem sitemap. O título "Landing pages" é provisório. Lance! e Auto Avaliar saíram da lista; continuam na trajetória.
+
 ## 2026-10-07 · Raiz fica em português
 `/` renderiza a home em português e não redireciona para `/pt/`. O script da raiz só faz `location.replace` para `/en/`, `/fr/` ou `/es/`, quando a escolha salva ou o idioma do navegador é um desses. Sem escolha e sem idioma conhecido, fica em português. Sem JavaScript não há refresh. `/` continua `noindex`, com canonical em `/pt/`. As rotas `/pt /en /fr /es` não mudam.
 

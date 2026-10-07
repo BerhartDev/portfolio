@@ -37,6 +37,8 @@ export type ProjectImage = {
 export type Project = {
   slug: string;
   order: number;
+  /** Sem artigo: aparece na lista, não vira rota. */
+  soon: boolean;
   period?: string;
   stack: string[];
   links: ProjectLink[];
@@ -142,8 +144,16 @@ function parseBlock(ctx: Ctx, value: unknown, path: string): Block {
   }
 }
 
-function parseText(ctx: Ctx, value: unknown, path: string): ProjectText {
+function parseText(ctx: Ctx, value: unknown, path: string, soon: boolean): ProjectText {
   const t = obj(ctx, value, path);
+  if (soon) {
+    return {
+      title: str(ctx, t.title, `${path}.title`),
+      tag: str(ctx, t.tag, `${path}.tag`),
+      summary: str(ctx, t.summary, `${path}.summary`),
+      sections: { context: [], problem: [], work: [], result: [] },
+    };
+  }
   const s = obj(ctx, t.sections, `${path}.sections`);
   const sections = Object.fromEntries(
     SECTION_KEYS.map((key) => {
@@ -168,10 +178,13 @@ function parseProject(file: string, raw: unknown): Project {
   if (!SLUG.test(slug)) throw new ContentError(file, "nome do arquivo", "deve ser minúsculo, com letras, números e hífens");
   const p = obj(ctx, raw, "raiz");
   if (typeof p.order !== "number") throw new ContentError(file, "order", "deve ser um número");
-  const texts = Object.fromEntries(routing.locales.map((l) => [l, parseText(ctx, p[l], l)])) as Record<Locale, ProjectText>;
+  if (p.soon !== undefined && p.soon !== true) throw new ContentError(file, "soon", "deve ser true");
+  const soon = p.soon === true;
+  const texts = Object.fromEntries(routing.locales.map((l) => [l, parseText(ctx, p[l], l, soon)])) as Record<Locale, ProjectText>;
   return {
     slug,
     order: p.order,
+    soon,
     period: optStr(ctx, p.period, "period"),
     stack: arr(ctx, p.stack ?? [], "stack").map((s, i) => str(ctx, s, `stack[${i}]`)),
     links: arr(ctx, p.links ?? [], "links").map((l, i) => {
@@ -200,6 +213,11 @@ function loadProjects(): Project[] {
 }
 
 let cache: Project[] | undefined;
+
+/** Projetos com artigo. Os marcados `soon` ficam só na lista. */
+export function getCaseStudies(): Project[] {
+  return getProjects().filter((project) => !project.soon);
+}
 
 /** Todos os projetos, ordenados por `order`. No dev, relê a pasta a cada chamada para refletir edições nos JSONs. */
 export function getProjects(): Project[] {

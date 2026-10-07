@@ -25,6 +25,10 @@
   outline-offset: -2px;
 }
 
+.soon {
+  pointer-events: none;
+}
+
 .num,
 .tag,
 .meta {

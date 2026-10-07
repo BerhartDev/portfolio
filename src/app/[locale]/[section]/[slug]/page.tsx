@@ -13,7 +13,7 @@ import { routing } from "@/i18n/routing";
 import { resolveProjectsLocale } from "@/lib/locale";
 import { articleGraph } from "@/lib/jsonld";
 import { displayUrl } from "@/lib/profile";
-import { getProject, getProjects, SECTION_KEYS } from "@/lib/projects";
+import { getCaseStudies, getProject, SECTION_KEYS } from "@/lib/projects";
 import { PROJECTS_SEGMENT, projectPath, projectsPath } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
@@ -25,14 +25,14 @@ export const dynamicParams = false;
 // Com output: export, cada combinação precisa de todos os parâmetros.
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    getProjects().map((p) => ({ locale, section: PROJECTS_SEGMENT[locale], slug: p.slug })),
+    getCaseStudies().map((p) => ({ locale, section: PROJECTS_SEGMENT[locale], slug: p.slug })),
   );
 }
 
 async function resolve(params: Params["params"]) {
   const locale = await resolveProjectsLocale(params);
   const project = getProject((await params).slug);
-  if (!project) notFound();
+  if (!project || project.soon) notFound();
   return { locale, project };
 }
 
@@ -55,7 +55,7 @@ export default async function ProjectArticlePage({ params }: Params) {
   const t = await getTranslations({ locale });
   const text = project[locale];
 
-  const projects = getProjects();
+  const projects = getCaseStudies();
   const i = projects.findIndex((p) => p.slug === project.slug);
   const prev = projects[i - 1];
   const next = projects[i + 1];
